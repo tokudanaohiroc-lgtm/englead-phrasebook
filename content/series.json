@@ -1,0 +1,11 @@
+[
+  {
+    "id": "001",
+    "topic": "Online Meetings",
+    "ja": "オンライン会議で使える英語",
+    "category": "接続・開始",
+    "file": "content/01_online-meetings.json",
+    "status": "done",
+    "phrases": 100
+  }
+]
