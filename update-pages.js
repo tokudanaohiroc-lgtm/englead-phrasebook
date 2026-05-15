@@ -429,7 +429,7 @@ function renderPhrasePage(cat, phrases) {
     '    <div class="header-left">\n' +
     '      <div class="header-logo-row">\n' +
     '        <img class="header-logo" src="' + LOGO_WHITE + '" alt="ENGLEAD">\n' +
-    '        <span class="header-series">Business English Series &nbsp;#001</span>\n' +
+    '        <span class="header-series">Phrasebook No.001 &nbsp;Online Meetings</span>\n' +
     '      </div>\n' +
     '      <div class="header-title">オンライン会議の' + cat.ja + 'に使えるフレーズ</div>\n' +
     '      <div class="header-title2">100 Essential Phrases for Virtual Meetings</div>\n' +
@@ -441,7 +441,7 @@ function renderPhrasePage(cat, phrases) {
     '  </div>\n' +
     '  <div class="phrase-grid">\n' + cells + '  </div>\n' +
     '  <div class="footer">\n' +
-    '    <span>ENGLEAD Business English Series #001</span>\n' +
+    '    <span>ENGLEAD Phrasebook No.001: Online Meetings</span>\n' +
     '    <span style="color:#1B2A5E;font-weight:700;">' + cat.ja + ' / ' + cat.en + '</span>\n' +
     '  </div>\n' +
     '</div>\n</body>\n</html>';
@@ -471,7 +471,7 @@ function renderRoleplayPage(cat, rp) {
     '    <div class="header-left">\n' +
     '      <div class="header-logo-row">\n' +
     '        <img class="header-logo" src="' + LOGO_WHITE + '" alt="ENGLEAD">\n' +
-    '        <span class="header-series">Business English Series &nbsp;#001</span>\n' +
+    '        <span class="header-series">Phrasebook No.001 &nbsp;Online Meetings</span>\n' +
     '      </div>\n' +
     '      <div class="header-title">オンライン会議の' + cat.ja + 'のフレーズ</div>\n' +
     '      <div class="header-title2">ロールプレイをしてみよう</div>\n' +
@@ -540,7 +540,7 @@ function renderRoleplayPage(cat, rp) {
     '    </div>\n' +
     '  </div>\n' +
     '  <div class="footer">\n' +
-    '    <span>ENGLEAD Business English Series #001</span>\n' +
+    '    <span>ENGLEAD Phrasebook No.001: Online Meetings</span>\n' +
     '    <span style="color:#1B2A5E;font-weight:700;">' + cat.ja + ' / Role Play</span>\n' +
     '  </div>\n' +
     '</div>\n</body>\n</html>';
@@ -572,7 +572,7 @@ function renderCoverPage() {
     '    <div class="cover-left">\n' +
     '      <div class="cover-top">\n' +
     '        <img class="cover-logo" src="' + LOGO_WHITE + '" alt="ENGLEAD">\n' +
-    '        <span class="cover-series">Business English Series &nbsp;#001</span>\n' +
+    '        <span class="cover-series">Phrasebook No.001 &nbsp;Online Meetings</span>\n' +
     '      </div>\n' +
     '      <div class="cover-en-title">Online Meetings</div>\n' +
     '      <div class="cover-ja-title">オンライン会議で使える英語</div>\n' +
@@ -633,7 +633,7 @@ function renderHowtoPage() {
     '    <div class="header-left">\n' +
     '      <div class="header-logo-row">\n' +
     '        <img class="header-logo" src="' + LOGO_WHITE + '" alt="ENGLEAD">\n' +
-    '        <span class="header-series">Business English Series &nbsp;#001</span>\n' +
+    '        <span class="header-series">Phrasebook No.001 &nbsp;Online Meetings</span>\n' +
     '      </div>\n' +
     '      <div class="header-title">フレーズブックの使い方</div>\n' +
     '      <div class="header-title2">How to Use This Phrasebook</div>\n' +
@@ -665,7 +665,7 @@ function renderHowtoPage() {
     '    </div>\n' +
     '  </div>\n' +
     '  <div class="footer">\n' +
-    '    <span>ENGLEAD Business English Series #001</span>\n' +
+    '    <span>ENGLEAD Phrasebook No.001: Online Meetings</span>\n' +
     '    <span style="color:#1B2A5E;font-weight:700;">使い方ガイド</span>\n' +
     '  </div>\n' +
     '</div>\n</body>\n</html>';

@@ -6,7 +6,7 @@ const os = require('os');
 
 const OUTPUT_DIR = path.join(__dirname, 'output');
 const DESKTOP = path.join(os.homedir(), 'Desktop');
-const FILENAME = 'ENGLEAD_Phrasebook_001.pdf';
+const FILENAME = 'ENGLEAD_Phrasebook_OnlineMeeting_001.pdf';
 
 const SLIDES = [
   'cover.html',     'howto.html',
