@@ -1,9 +1,10 @@
 var fs = require('fs');
+var path = require('path');
 
-var logoWhiteB64 = fs.readFileSync('/tmp/logo-white-b64.txt', 'utf8').trim();
+var logoWhiteB64 = fs.readFileSync(path.join(__dirname, 'assets', 'englead-logo-primary-white.png')).toString('base64');
 var LOGO_WHITE = 'data:image/png;base64,' + logoWhiteB64;
 
-var data = JSON.parse(fs.readFileSync('/Users/naohirotokuda/englead-phrasebook/content/01_online-meetings.json', 'utf8'));
+var data = JSON.parse(fs.readFileSync(path.join(__dirname, 'content', '01_online-meetings.json'), 'utf8'));
 
 // ── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -808,7 +809,7 @@ function renderCtaPage() {
 
 // ── Generate all pages ────────────────────────────────────────────────────────
 
-var outDir = '/Users/naohirotokuda/englead-phrasebook/output/';
+var outDir = path.join(__dirname, 'output') + '/';
 
 fs.writeFileSync(outDir + 'cover.html', renderCoverPage());
 console.log('cover.html');
