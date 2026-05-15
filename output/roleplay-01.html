@@ -32,7 +32,8 @@ body { font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif; 
 .scene-desc { font-size: 10.5px; color: #555; line-height: 1.6; }
 .characters { display: flex; flex-direction: column; gap: 5px; }
 .char-row { display: flex; align-items: center; gap: 8px; }
-.char-photo { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; object-position: center top; flex-shrink: 0; border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+.char-photo-wrap { width: 26px; height: 26px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+.char-photo { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 .char-avatar-circle { width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: #fff; flex-shrink: 0; }
 .char-name { font-size: 10px; font-weight: 700; color: #222; }
 .char-role { font-size: 9px; color: #888; }
@@ -40,24 +41,25 @@ body { font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif; 
 .culture-label { font-size: 8.5px; font-weight: 800; letter-spacing: 0.12em; color: #2E5896; text-transform: uppercase; margin-bottom: 3px; }
 .culture-text { font-size: 9.5px; color: #444; line-height: 1.5; }
 .right-col { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
-.convo-area { flex: 1; padding: 8px 16px 4px; display: flex; flex-direction: column; gap: 3px; overflow: hidden; }
+.convo-area { flex: 1; padding: 6px 14px 4px; display: flex; flex-direction: column; gap: 2px; overflow: hidden; }
 .convo-label { font-size: 8.5px; font-weight: 800; letter-spacing: 0.14em; color: #999; text-transform: uppercase; margin-bottom: 2px; }
 .bubble-row { display: flex; gap: 8px; align-items: flex-start; }
 .bubble-row.right { flex-direction: row-reverse; }
-.avatar { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; object-position: center top; flex-shrink: 0; margin-top: 2px; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+.avatar-wrap { width: 26px; height: 26px; border-radius: 50%; overflow: hidden; flex-shrink: 0; margin-top: 2px; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+.avatar { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 .avatar-circle { width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: #fff; flex-shrink: 0; margin-top: 2px; }
 .bubble-wrap { display: flex; flex-direction: column; gap: 1px; max-width: 68%; }
 .bubble-row.right .bubble-wrap { align-items: flex-end; }
 .bubble-name { font-size: 9px; font-weight: 700; color: #888; padding: 0 4px; }
-.bubble { padding: 6px 11px; border-radius: 12px; font-size: 15px; font-weight: 500; line-height: 1.45; color: #111; }
+.bubble { padding: 5px 10px; border-radius: 12px; font-size: 13px; font-weight: 500; line-height: 1.45; color: #111; }
 .bubble.kenta { background: #EEF2FB; border-radius: 4px 12px 12px 12px; }
 .bubble.other { background: #F5F5F5; border-radius: 12px 4px 12px 12px; }
 .bubble strong { color: #C0392B; font-weight: 800; }
 .phrase-ref { display: inline-flex; align-items: center; background: #D4A843; color: #fff; font-size: 8.5px; font-weight: 800; padding: 1px 5px; border-radius: 10px; margin-left: 4px; vertical-align: middle; white-space: nowrap; }
-.key-points { flex-shrink: 0; border-top: 1px solid #e8e8e8; padding: 8px 18px; background: #FAFBFD; }
-.key-points-label { font-size: 8.5px; font-weight: 800; letter-spacing: 0.12em; color: #2E5896; text-transform: uppercase; margin-bottom: 5px; }
-.key-points-grid { display: flex; flex-direction: column; gap: 5px; }
-.key-point-item { display: flex; flex-direction: row; align-items: baseline; gap: 12px; background: #EEF2FB; border-left: 3px solid #2E5896; border-radius: 0 4px 4px 0; padding: 5px 12px; }
+.key-points { flex-shrink: 0; border-top: 1px solid #e8e8e8; padding: 6px 16px; background: #FAFBFD; }
+.key-points-label { font-size: 8.5px; font-weight: 800; letter-spacing: 0.12em; color: #2E5896; text-transform: uppercase; margin-bottom: 4px; }
+.key-points-grid { display: flex; flex-direction: column; gap: 4px; }
+.key-point-item { display: flex; flex-direction: row; align-items: baseline; gap: 12px; background: #EEF2FB; border-left: 3px solid #2E5896; border-radius: 0 4px 4px 0; padding: 4px 10px; }
 .kp-phrase { font-size: 12px; font-weight: 800; color: #1B2A5E; flex-shrink: 0; min-width: 160px; }
 .kp-desc { font-size: 11px; color: #444; line-height: 1.45; }
 .footer { height: 22px; flex-shrink: 0; border-top: 1px solid #e8e8e8; display: flex; justify-content: space-between; align-items: center; padding: 0 16px; font-size: 9px; color: #c0c0c0; }
@@ -95,27 +97,27 @@ body { font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif; 
         <div class="scene-desc">Kenjiが主催。チームは米国・欧州に分散。<br>開始直後に次々トラブルが起きるが、<br>身についたフレーズで冷静に対処する。</div>
         <div class="characters">
           <div class="char-row">
-            <img class="char-photo" src="../assets/avatars/kenta.png" alt="Kenta" onerror="this.outerHTML='<div class=&quot;char-avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'">
+            <div class="char-photo-wrap"><img class="char-photo" src="../assets/avatars/kenta.png" alt="Kenta" onerror="this.parentNode.outerHTML='<div class=&quot;char-avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'"></div>
             <div><div class="char-name">Kenta</div><div class="char-role">シカゴ駐在・チームリード</div></div>
           </div>
           <div class="char-row">
-            <img class="char-photo" src="../assets/avatars/akari.png" alt="Akari" onerror="this.outerHTML='<div class=&quot;char-avatar-circle&quot; style=&quot;background:#8E4A1E;&quot;>A</div>'">
+            <div class="char-photo-wrap"><img class="char-photo" src="../assets/avatars/akari.png" alt="Akari" onerror="this.parentNode.outerHTML='<div class=&quot;char-avatar-circle&quot; style=&quot;background:#8E4A1E;&quot;>A</div>'"></div>
             <div><div class="char-name">Akari</div><div class="char-role">東京本社・マーケター</div></div>
           </div>
           <div class="char-row">
-            <img class="char-photo" src="../assets/avatars/sarah.png" alt="Sarah">
+            <div class="char-photo-wrap"><img class="char-photo" src="../assets/avatars/sarah.png" alt="Sarah"></div>
             <div><div class="char-name">Sarah</div><div class="char-role">NY オフィス</div></div>
           </div>
           <div class="char-row">
-            <img class="char-photo" src="../assets/avatars/marcus.png" alt="Marcus" onerror="this.outerHTML='<div class=&quot;char-avatar-circle&quot; style=&quot;background:#1E5E7A;&quot;>M</div>'">
+            <div class="char-photo-wrap"><img class="char-photo" src="../assets/avatars/marcus.png" alt="Marcus" onerror="this.parentNode.outerHTML='<div class=&quot;char-avatar-circle&quot; style=&quot;background:#1E5E7A;&quot;>M</div>'"></div>
             <div><div class="char-name">Marcus</div><div class="char-role">LA・ITエンジニア</div></div>
           </div>
           <div class="char-row">
-            <img class="char-photo" src="../assets/avatars/tom.png" alt="Tom">
+            <div class="char-photo-wrap"><img class="char-photo" src="../assets/avatars/tom.png" alt="Tom"></div>
             <div><div class="char-name">Tom</div><div class="char-role">ベルリン リモート</div></div>
           </div>
           <div class="char-row">
-            <img class="char-photo" src="../assets/avatars/mei.png" alt="Mei" onerror="this.outerHTML='<div class=&quot;char-avatar-circle&quot; style=&quot;background:#3E5E3E;&quot;>M</div>'">
+            <div class="char-photo-wrap"><img class="char-photo" src="../assets/avatars/mei.png" alt="Mei" onerror="this.parentNode.outerHTML='<div class=&quot;char-avatar-circle&quot; style=&quot;background:#3E5E3E;&quot;>M</div>'"></div>
             <div><div class="char-name">Mei</div><div class="char-role">シンガポール・マーケター</div></div>
           </div>
         </div>
@@ -129,47 +131,47 @@ body { font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif; 
       <div class="convo-area">
         <div class="convo-label">Conversation</div>
         <div class="bubble-row">
-          <img class="avatar" src="../assets/avatars/kenta.png" alt="Kenta" onerror="this.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'">
+          <div class="avatar-wrap"><img class="avatar" src="../assets/avatars/kenta.png" alt="Kenta" onerror="this.parentNode.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'"></div>
           <div class="bubble-wrap"><div class="bubble-name">Kenta</div>
           <div class="bubble kenta">Hey, can everyone <strong>hear me okay</strong>? <span class="phrase-ref">01</span></div></div>
         </div>
         <div class="bubble-row right">
-          <img class="avatar" src="../assets/avatars/sarah.png" alt="Sarah" onerror="this.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'">
+          <div class="avatar-wrap"><img class="avatar" src="../assets/avatars/sarah.png" alt="Sarah" onerror="this.parentNode.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>S</div>'"></div>
           <div class="bubble-wrap"><div class="bubble-name">Sarah</div>
           <div class="bubble other">Loud and clear! Tom — <strong>you're on mute</strong>. <span class="phrase-ref">02</span></div></div>
         </div>
         <div class="bubble-row right">
-          <img class="avatar" src="../assets/avatars/tom.png" alt="Tom" onerror="this.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'">
+          <div class="avatar-wrap"><img class="avatar" src="../assets/avatars/tom.png" alt="Tom" onerror="this.parentNode.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>T</div>'"></div>
           <div class="bubble-wrap"><div class="bubble-name">Tom</div>
           <div class="bubble other">Sorry about that! Can you hear me now?</div></div>
         </div>
         <div class="bubble-row">
-          <img class="avatar" src="../assets/avatars/kenta.png" alt="Kenta" onerror="this.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'">
+          <div class="avatar-wrap"><img class="avatar" src="../assets/avatars/kenta.png" alt="Kenta" onerror="this.parentNode.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'"></div>
           <div class="bubble-wrap"><div class="bubble-name">Kenta</div>
           <div class="bubble kenta">Perfect. Let's <strong>go ahead and get started</strong>. I'll <strong>drop the agenda in the chat</strong>. <span class="phrase-ref">03</span> <span class="phrase-ref">07</span></div></div>
         </div>
         <div class="bubble-row right">
-          <img class="avatar" src="../assets/avatars/sarah.png" alt="Sarah" onerror="this.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'">
+          <div class="avatar-wrap"><img class="avatar" src="../assets/avatars/sarah.png" alt="Sarah" onerror="this.parentNode.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>S</div>'"></div>
           <div class="bubble-wrap"><div class="bubble-name">Sarah</div>
           <div class="bubble other">Got it. <strong>Can you see my screen</strong>? I want to pull up the deck. <span class="phrase-ref">06</span></div></div>
         </div>
         <div class="bubble-row">
-          <img class="avatar" src="../assets/avatars/kenta.png" alt="Kenta" onerror="this.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'">
+          <div class="avatar-wrap"><img class="avatar" src="../assets/avatars/kenta.png" alt="Kenta" onerror="this.parentNode.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'"></div>
           <div class="bubble-wrap"><div class="bubble-name">Kenta</div>
           <div class="bubble kenta">Yep, all good. <strong>Just a heads-up</strong> — I'm <strong>recording this call</strong>. <span class="phrase-ref">08</span></div></div>
         </div>
         <div class="bubble-row right">
-          <img class="avatar" src="../assets/avatars/sarah.png" alt="Sarah" onerror="this.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'">
+          <div class="avatar-wrap"><img class="avatar" src="../assets/avatars/sarah.png" alt="Sarah" onerror="this.parentNode.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>S</div>'"></div>
           <div class="bubble-wrap"><div class="bubble-name">Sarah</div>
           <div class="bubble other">No problem. Everyone, <strong>feel free to use the chat</strong> for questions! <span class="phrase-ref">09</span></div></div>
         </div>
         <div class="bubble-row right">
-          <img class="avatar" src="../assets/avatars/tom.png" alt="Tom" onerror="this.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'">
+          <div class="avatar-wrap"><img class="avatar" src="../assets/avatars/tom.png" alt="Tom" onerror="this.parentNode.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>T</div>'"></div>
           <div class="bubble-wrap"><div class="bubble-name">Tom</div>
           <div class="bubble other">Thanks. <strong>I'm going to share my screen</strong> for the Berlin numbers — just getting it ready. <span class="phrase-ref">05</span></div></div>
         </div>
         <div class="bubble-row">
-          <img class="avatar" src="../assets/avatars/kenta.png" alt="Kenta" onerror="this.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'">
+          <div class="avatar-wrap"><img class="avatar" src="../assets/avatars/kenta.png" alt="Kenta" onerror="this.parentNode.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'"></div>
           <div class="bubble-wrap"><div class="bubble-name">Kenta</div>
           <div class="bubble kenta">Take your time. <strong>We'll give it another minute</strong>. <span class="phrase-ref">04</span></div></div>
         </div>

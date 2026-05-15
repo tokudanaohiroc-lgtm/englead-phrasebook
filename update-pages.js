@@ -41,7 +41,7 @@ function renderPhraseCell(p) {
 function renderBubble(speaker, textHtml, refs) {
   var isRight = speaker !== 'kenta';
   var name = speaker === 'kenta' ? 'Kenta' : (speaker.charAt(0).toUpperCase() + speaker.slice(1));
-  var avatarHtml = '<img class="avatar" src="../assets/avatars/' + speaker + '.png" alt="' + name + '" onerror="this.outerHTML=\'<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>\'">';
+  var avatarHtml = '<div class="avatar-wrap"><img class="avatar" src="../assets/avatars/' + speaker + '.png" alt="' + name + '" onerror="this.parentNode.outerHTML=\'<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>' + name.charAt(0) + '</div>\'"></div>';
   var refsHtml = '';
   if (refs && refs.length) {
     for (var r = 0; r < refs.length; r++) {
@@ -379,7 +379,8 @@ var ROLEPLAY_CSS = '* { box-sizing: border-box; margin: 0; padding: 0; }\n' +
 '.scene-desc { font-size: 10.5px; color: #555; line-height: 1.6; }\n' +
 '.characters { display: flex; flex-direction: column; gap: 5px; }\n' +
 '.char-row { display: flex; align-items: center; gap: 8px; }\n' +
-'.char-photo { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; object-position: center top; flex-shrink: 0; border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }\n' +
+'.char-photo-wrap { width: 26px; height: 26px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }\n' +
+'.char-photo { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }\n' +
 '.char-avatar-circle { width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: #fff; flex-shrink: 0; }\n' +
 '.char-name { font-size: 10px; font-weight: 700; color: #222; }\n' +
 '.char-role { font-size: 9px; color: #888; }\n' +
@@ -387,24 +388,25 @@ var ROLEPLAY_CSS = '* { box-sizing: border-box; margin: 0; padding: 0; }\n' +
 '.culture-label { font-size: 8.5px; font-weight: 800; letter-spacing: 0.12em; color: #2E5896; text-transform: uppercase; margin-bottom: 3px; }\n' +
 '.culture-text { font-size: 9.5px; color: #444; line-height: 1.5; }\n' +
 '.right-col { flex: 1; display: flex; flex-direction: column; overflow: hidden; }\n' +
-'.convo-area { flex: 1; padding: 8px 16px 4px; display: flex; flex-direction: column; gap: 3px; overflow: hidden; }\n' +
+'.convo-area { flex: 1; padding: 6px 14px 4px; display: flex; flex-direction: column; gap: 2px; overflow: hidden; }\n' +
 '.convo-label { font-size: 8.5px; font-weight: 800; letter-spacing: 0.14em; color: #999; text-transform: uppercase; margin-bottom: 2px; }\n' +
 '.bubble-row { display: flex; gap: 8px; align-items: flex-start; }\n' +
 '.bubble-row.right { flex-direction: row-reverse; }\n' +
-'.avatar { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; object-position: center top; flex-shrink: 0; margin-top: 2px; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }\n' +
+'.avatar-wrap { width: 26px; height: 26px; border-radius: 50%; overflow: hidden; flex-shrink: 0; margin-top: 2px; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }\n' +
+'.avatar { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }\n' +
 '.avatar-circle { width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: #fff; flex-shrink: 0; margin-top: 2px; }\n' +
 '.bubble-wrap { display: flex; flex-direction: column; gap: 1px; max-width: 68%; }\n' +
 '.bubble-row.right .bubble-wrap { align-items: flex-end; }\n' +
 '.bubble-name { font-size: 9px; font-weight: 700; color: #888; padding: 0 4px; }\n' +
-'.bubble { padding: 6px 11px; border-radius: 12px; font-size: 15px; font-weight: 500; line-height: 1.45; color: #111; }\n' +
+'.bubble { padding: 5px 10px; border-radius: 12px; font-size: 13px; font-weight: 500; line-height: 1.45; color: #111; }\n' +
 '.bubble.kenta { background: #EEF2FB; border-radius: 4px 12px 12px 12px; }\n' +
 '.bubble.other { background: #F5F5F5; border-radius: 12px 4px 12px 12px; }\n' +
 '.bubble strong { color: #C0392B; font-weight: 800; }\n' +
 '.phrase-ref { display: inline-flex; align-items: center; background: #D4A843; color: #fff; font-size: 8.5px; font-weight: 800; padding: 1px 5px; border-radius: 10px; margin-left: 4px; vertical-align: middle; white-space: nowrap; }\n' +
-'.key-points { flex-shrink: 0; border-top: 1px solid #e8e8e8; padding: 8px 18px; background: #FAFBFD; }\n' +
-'.key-points-label { font-size: 8.5px; font-weight: 800; letter-spacing: 0.12em; color: #2E5896; text-transform: uppercase; margin-bottom: 5px; }\n' +
-'.key-points-grid { display: flex; flex-direction: column; gap: 5px; }\n' +
-'.key-point-item { display: flex; flex-direction: row; align-items: baseline; gap: 12px; background: #EEF2FB; border-left: 3px solid #2E5896; border-radius: 0 4px 4px 0; padding: 5px 12px; }\n' +
+'.key-points { flex-shrink: 0; border-top: 1px solid #e8e8e8; padding: 6px 16px; background: #FAFBFD; }\n' +
+'.key-points-label { font-size: 8.5px; font-weight: 800; letter-spacing: 0.12em; color: #2E5896; text-transform: uppercase; margin-bottom: 4px; }\n' +
+'.key-points-grid { display: flex; flex-direction: column; gap: 4px; }\n' +
+'.key-point-item { display: flex; flex-direction: row; align-items: baseline; gap: 12px; background: #EEF2FB; border-left: 3px solid #2E5896; border-radius: 0 4px 4px 0; padding: 4px 10px; }\n' +
 '.kp-phrase { font-size: 12px; font-weight: 800; color: #1B2A5E; flex-shrink: 0; min-width: 160px; }\n' +
 '.kp-desc { font-size: 11px; color: #444; line-height: 1.45; }\n' +
 '.footer { height: 22px; flex-shrink: 0; border-top: 1px solid #e8e8e8; display: flex; justify-content: space-between; align-items: center; padding: 0 16px; font-size: 9px; color: #c0c0c0; }\n';
@@ -497,27 +499,27 @@ function renderRoleplayPage(cat, rp) {
     '        <div class="scene-desc">' + rp.sceneDesc + '</div>\n' +
     '        <div class="characters">\n' +
     '          <div class="char-row">\n' +
-    '            <img class="char-photo" src="../assets/avatars/kenta.png" alt="Kenta" onerror="this.outerHTML=\'<div class=&quot;char-avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>\'">\n' +
+    '            <div class="char-photo-wrap"><img class="char-photo" src="../assets/avatars/kenta.png" alt="Kenta" onerror="this.parentNode.outerHTML=\'<div class=&quot;char-avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>\'"></div>\n' +
     '            <div><div class="char-name">Kenta</div><div class="char-role">シカゴ駐在・チームリード</div></div>\n' +
     '          </div>\n' +
     '          <div class="char-row">\n' +
-    '            <img class="char-photo" src="../assets/avatars/akari.png" alt="Akari" onerror="this.outerHTML=\'<div class=&quot;char-avatar-circle&quot; style=&quot;background:#8E4A1E;&quot;>A</div>\'">\n' +
+    '            <div class="char-photo-wrap"><img class="char-photo" src="../assets/avatars/akari.png" alt="Akari" onerror="this.parentNode.outerHTML=\'<div class=&quot;char-avatar-circle&quot; style=&quot;background:#8E4A1E;&quot;>A</div>\'"></div>\n' +
     '            <div><div class="char-name">Akari</div><div class="char-role">東京本社・マーケター</div></div>\n' +
     '          </div>\n' +
     '          <div class="char-row">\n' +
-    '            <img class="char-photo" src="../assets/avatars/sarah.png" alt="Sarah">\n' +
+    '            <div class="char-photo-wrap"><img class="char-photo" src="../assets/avatars/sarah.png" alt="Sarah"></div>\n' +
     '            <div><div class="char-name">Sarah</div><div class="char-role">NY オフィス</div></div>\n' +
     '          </div>\n' +
     '          <div class="char-row">\n' +
-    '            <img class="char-photo" src="../assets/avatars/marcus.png" alt="Marcus" onerror="this.outerHTML=\'<div class=&quot;char-avatar-circle&quot; style=&quot;background:#1E5E7A;&quot;>M</div>\'">\n' +
+    '            <div class="char-photo-wrap"><img class="char-photo" src="../assets/avatars/marcus.png" alt="Marcus" onerror="this.parentNode.outerHTML=\'<div class=&quot;char-avatar-circle&quot; style=&quot;background:#1E5E7A;&quot;>M</div>\'"></div>\n' +
     '            <div><div class="char-name">Marcus</div><div class="char-role">LA・ITエンジニア</div></div>\n' +
     '          </div>\n' +
     '          <div class="char-row">\n' +
-    '            <img class="char-photo" src="../assets/avatars/tom.png" alt="Tom">\n' +
+    '            <div class="char-photo-wrap"><img class="char-photo" src="../assets/avatars/tom.png" alt="Tom"></div>\n' +
     '            <div><div class="char-name">Tom</div><div class="char-role">ベルリン リモート</div></div>\n' +
     '          </div>\n' +
     '          <div class="char-row">\n' +
-    '            <img class="char-photo" src="../assets/avatars/mei.png" alt="Mei" onerror="this.outerHTML=\'<div class=&quot;char-avatar-circle&quot; style=&quot;background:#3E5E3E;&quot;>M</div>\'">\n' +
+    '            <div class="char-photo-wrap"><img class="char-photo" src="../assets/avatars/mei.png" alt="Mei" onerror="this.parentNode.outerHTML=\'<div class=&quot;char-avatar-circle&quot; style=&quot;background:#3E5E3E;&quot;>M</div>\'"></div>\n' +
     '            <div><div class="char-name">Mei</div><div class="char-role">シンガポール・マーケター</div></div>\n' +
     '          </div>\n' +
     '        </div>\n' +
