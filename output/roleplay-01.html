@@ -32,7 +32,7 @@ body { font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif; 
 .scene-desc { font-size: 10.5px; color: #555; line-height: 1.6; }
 .characters { display: flex; flex-direction: column; gap: 5px; }
 .char-row { display: flex; align-items: center; gap: 8px; }
-.char-photo-wrap { width: 26px; height: 26px; border-radius: 50%; overflow: hidden; flex-shrink: 0; border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+.char-photo-wrap { width: 26px; height: 26px; border-radius: 50%; overflow: hidden; clip-path: circle(50% at center); flex-shrink: 0; }
 .char-photo { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 .char-avatar-circle { width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: #fff; flex-shrink: 0; }
 .char-name { font-size: 10px; font-weight: 700; color: #222; }
@@ -45,7 +45,7 @@ body { font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif; 
 .convo-label { font-size: 8.5px; font-weight: 800; letter-spacing: 0.14em; color: #999; text-transform: uppercase; margin-bottom: 2px; }
 .bubble-row { display: flex; gap: 8px; align-items: flex-start; }
 .bubble-row.right { flex-direction: row-reverse; }
-.avatar-wrap { width: 26px; height: 26px; border-radius: 50%; overflow: hidden; flex-shrink: 0; margin-top: 2px; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+.avatar-wrap { width: 26px; height: 26px; border-radius: 50%; overflow: hidden; clip-path: circle(50% at center); flex-shrink: 0; margin-top: 2px; }
 .avatar { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 .avatar-circle { width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; color: #fff; flex-shrink: 0; margin-top: 2px; }
 .bubble-wrap { display: flex; flex-direction: column; gap: 1px; max-width: 68%; }
