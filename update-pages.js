@@ -3,6 +3,38 @@ const fs = require('fs');
 const logoWhiteB64 = fs.readFileSync('/tmp/logo-white-b64.txt', 'utf8').trim();
 const LOGO_WHITE = 'data:image/png;base64,' + logoWhiteB64;
 
+const data = JSON.parse(fs.readFileSync('/Users/naohirotokuda/englead-phrasebook/content/01_online-meetings.json', 'utf8'));
+
+function esc(str) {
+  return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function applyEmphasis(text, emphasisList) {
+  var result = esc(text);
+  for (var i = 0; i < emphasisList.length; i++) {
+    var em = esc(emphasisList[i]);
+    result = result.split(em).join('<span class="em">' + em + '</span>');
+  }
+  return result;
+}
+
+function renderPhraseCell(p) {
+  var badge = p.type === 'idiom'
+    ? '<span class="type-badge" style="background:#C0392B;">イディオム</span>'
+    : '<span class="type-badge" style="background:#1A3B6B;">フレーズ</span>';
+  var noteHtml = p.street_note
+    ? '\n      <div class="street-note">' + esc(p.street_note) + '</div>'
+    : '';
+  var num = p.num < 10 ? '0' + p.num : String(p.num);
+  return '    <div class="phrase-cell">\n' +
+    '      <div class="phrase-top"><span class="phrase-num">' + num + '</span><span class="phrase-en">' + applyEmphasis(p.phrase_en, p.emphasis) + '</span></div>\n' +
+    '      <div class="phrase-ja">' + esc(p.phrase_ja) + '</div>\n' +
+    '      <div class="phrase-katakana">' + esc(p.katakana) + '</div>\n' +
+    '      <div class="phrase-phonics">' + esc(p.phonics) + '</div>\n' +
+    '      <div class="phrase-meta">' + badge + '<span class="phrase-scene">' + esc(p.scene) + '</span></div>' + noteHtml + '\n' +
+    '    </div>\n';
+}
+
 // ── ROLEPLAY PAGE ──────────────────────────────────────────────────────
 const roleplayHtml = '<!DOCTYPE html>\n' +
 '<html lang="ja">\n' +
@@ -225,6 +257,12 @@ fs.writeFileSync('/Users/naohirotokuda/englead-phrasebook/output/prototype-rolep
 console.log('Roleplay page updated');
 
 // ── PHRASE PAGE ──────────────────────────────────────────────────────
+var phraseCellsHtml = data.phrases
+  .filter(function(p) { return p.category === 'connection'; })
+  .slice(0, 10)
+  .map(renderPhraseCell)
+  .join('');
+
 const phraseHtml = '<!DOCTYPE html>\n' +
 '<html lang="ja">\n' +
 '<head>\n' +
@@ -281,78 +319,7 @@ const phraseHtml = '<!DOCTYPE html>\n' +
 '    </div>\n' +
 '  </div>\n' +
 '  <div class="phrase-grid">\n' +
-'    <div class="phrase-cell">\n' +
-'      <div class="phrase-top"><span class="phrase-num">01</span><span class="phrase-en">Can everyone <span class="em">hear me okay</span>?</span></div>\n' +
-'      <div class="phrase-ja">皆さん、聞こえていますか？</div>\n' +
-'      <div class="phrase-katakana">キャン　エブリワン　ヒア　ミー　オーケー</div>\n' +
-'      <div class="phrase-phonics">/k&#230;n &#712;&#603;vri&#716;w&#652;n h&#618;r mi&#720; o&#650;&#712;ke&#618;/</div>\n' +
-'      <div class="phrase-meta"><span class="type-badge" style="background:#1A3B6B;">フレーズ</span><span class="phrase-scene">会議開始直後の定番マイク確認。全員への問いかけ感が出る。</span></div>\n' +
-'    </div>\n' +
-'    <div class="phrase-cell">\n' +
-'      <div class="phrase-top"><span class="phrase-num">02</span><span class="phrase-en">You\'re <span class="em">on mute</span>.</span></div>\n' +
-'      <div class="phrase-ja">ミュートになっていますよ。</div>\n' +
-'      <div class="phrase-katakana">ユア　オン　ミュート</div>\n' +
-'      <div class="phrase-phonics">/j&#650;&#601;r &#594;n mju&#720;t/</div>\n' +
-'      <div class="phrase-meta"><span class="type-badge" style="background:#1A3B6B;">フレーズ</span><span class="phrase-scene">発言しようとした参加者がミュートのまま話しているとき。</span></div>\n' +
-'      <div class="street-note">&#x1F4A1;「You\'re muted!」とも。短く端的でOK。</div>\n' +
-'    </div>\n' +
-'    <div class="phrase-cell">\n' +
-'      <div class="phrase-top"><span class="phrase-num">03</span><span class="phrase-en">Let\'s <span class="em">go ahead</span> and <span class="em">get started</span>.</span></div>\n' +
-'      <div class="phrase-ja">それでは始めましょう。</div>\n' +
-'      <div class="phrase-katakana">レッツ　ゴー　アヘッド　アンド　ゲット　スターテッド</div>\n' +
-'      <div class="phrase-phonics">/l&#603;ts &#609;o&#650; &#601;&#712;h&#603;d &amp;nd &#609;&#603;t &#712;st&#593;&#720;rt&#618;d/</div>\n' +
-'      <div class="phrase-meta"><span class="type-badge" style="background:#1A3B6B;">フレーズ</span><span class="phrase-scene">時間になったら使う開始宣言。「go ahead」が踏み出しのニュアンスを加える。</span></div>\n' +
-'    </div>\n' +
-'    <div class="phrase-cell">\n' +
-'      <div class="phrase-top"><span class="phrase-num">04</span><span class="phrase-en">We\'ll <span class="em">give it another minute</span> for people to join.</span></div>\n' +
-'      <div class="phrase-ja">もう少し入室を待ちましょう。</div>\n' +
-'      <div class="phrase-katakana">ウィル　ギブ　イット　アナザー　ミニット…</div>\n' +
-'      <div class="phrase-phonics">/wi&#720;l &#609;&#618;v &#618;t &#601;&#712;n&#652;&#240;&#601;r &#712;m&#618;n&#618;t f&#601;r &#712;pi&#720;p&#601;l t&#601; d&#658;&#596;&#618;n/</div>\n' +
-'      <div class="phrase-meta"><span class="type-badge" style="background:#1A3B6B;">フレーズ</span><span class="phrase-scene">参加者がまだ揃っていないとき、少し待つことを全員に伝える。</span></div>\n' +
-'    </div>\n' +
-'    <div class="phrase-cell">\n' +
-'      <div class="phrase-top"><span class="phrase-num">05</span><span class="phrase-en">I\'m going to <span class="em">share my screen</span>.</span></div>\n' +
-'      <div class="phrase-ja">画面を共有します。</div>\n' +
-'      <div class="phrase-katakana">アイム　ゴーイング　トゥ　シェア　マイ　スクリーン</div>\n' +
-'      <div class="phrase-phonics">/a&#618;m &#712;&#609;o&#650;&#618;&#331; t&#601; &#643;&#603;r ma&#618; skri&#720;n/</div>\n' +
-'      <div class="phrase-meta"><span class="type-badge" style="background:#1A3B6B;">フレーズ</span><span class="phrase-scene">資料を見せる前の事前告知。いきなり共有より先に言うのがマナー。</span></div>\n' +
-'    </div>\n' +
-'    <div class="phrase-cell">\n' +
-'      <div class="phrase-top"><span class="phrase-num">06</span><span class="phrase-en">Just a <span class="em">heads-up</span> &#8212; I\'m <span class="em">recording this call</span>.</span></div>\n' +
-'      <div class="phrase-ja">念のため、この通話を録音します。</div>\n' +
-'      <div class="phrase-katakana">ジャスト　ア　ヘッズアップ　アイム　レコーディング　ジス　コール</div>\n' +
-'      <div class="phrase-phonics">/d&#658;&#652;st &#601; &#712;h&#603;dz&#716;&#652;p a&#618;m r&#618;&#712;k&#596;&#720;rd&#618;&#331; &#240;&#618;s k&#596;&#720;l/</div>\n' +
-'      <div class="phrase-meta"><span class="type-badge" style="background:#C0392B;">イディオム</span><span class="phrase-scene">録音の事前告知。「heads-up」は「念のためお知らせ」のニュアンス。</span></div>\n' +
-'      <div class="street-note">&#x1F4A1;「heads-up」は単独でも前置き表現として汎用的に使える。</div>\n' +
-'    </div>\n' +
-'    <div class="phrase-cell">\n' +
-'      <div class="phrase-top"><span class="phrase-num">07</span><span class="phrase-en"><span class="em">Feel free to</span> use the chat if you have questions.</span></div>\n' +
-'      <div class="phrase-ja">質問はチャットに気軽に入れてください。</div>\n' +
-'      <div class="phrase-katakana">フィール　フリー　トゥ　ユーズ　ザ　チャット…</div>\n' +
-'      <div class="phrase-phonics">/fi&#720;l fri&#720; t&#601; ju&#720;z &#240;&#601; t&#643;&aelig;t &#618;f ju&#720; h&aelig;v &#712;kw&#603;st&#643;&#601;nz/</div>\n' +
-'      <div class="phrase-meta"><span class="type-badge" style="background:#1A3B6B;">フレーズ</span><span class="phrase-scene">「feel free to」は丁寧な許可の表現。気軽にどうぞ、というニュアンス。</span></div>\n' +
-'    </div>\n' +
-'    <div class="phrase-cell">\n' +
-'      <div class="phrase-top"><span class="phrase-num">08</span><span class="phrase-en">I\'ll <span class="em">drop</span> the agenda <span class="em">in the chat</span>.</span></div>\n' +
-'      <div class="phrase-ja">アジェンダをチャットに貼ります。</div>\n' +
-'      <div class="phrase-katakana">アイル　ドロップ　ジ　アジェンダ　イン　ザ　チャット</div>\n' +
-'      <div class="phrase-phonics">/a&#618;l dr&#594;p &#240;&#618; &#601;&#712;d&#658;&#603;nd&#601; &#618;n &#240;&#601; t&#643;&aelig;t/</div>\n' +
-'      <div class="phrase-meta"><span class="type-badge" style="background:#1A3B6B;">フレーズ</span><span class="phrase-scene">チャット欄に資料を投稿するとき。「drop」は「貼る・投下する」の口語表現。</span></div>\n' +
-'    </div>\n' +
-'    <div class="phrase-cell">\n' +
-'      <div class="phrase-top"><span class="phrase-num">09</span><span class="phrase-en">Can you <span class="em">see my screen</span>?</span></div>\n' +
-'      <div class="phrase-ja">私の画面は見えていますか？</div>\n' +
-'      <div class="phrase-katakana">キャン　ユー　シー　マイ　スクリーン</div>\n' +
-'      <div class="phrase-phonics">/k&aelig;n ju&#720; si&#720; ma&#618; skri&#720;n/</div>\n' +
-'      <div class="phrase-meta"><span class="type-badge" style="background:#1A3B6B;">フレーズ</span><span class="phrase-scene">画面共有を開始した後、相手に見えているか確認する。</span></div>\n' +
-'    </div>\n' +
-'    <div class="phrase-cell">\n' +
-'      <div class="phrase-top"><span class="phrase-num">10</span><span class="phrase-en">Let\'s wait for [Name] &#8212; they should be <span class="em">joining shortly</span>.</span></div>\n' +
-'      <div class="phrase-ja">[名前]さんを待ちましょう、もうすぐ入るはずです。</div>\n' +
-'      <div class="phrase-katakana">レッツ　ウェイト　フォー　——　ゼイ　シュッド　ビー　ジョイニング　ショートリー</div>\n' +
-'      <div class="phrase-phonics">/l&#603;ts we&#618;t f&#601;r &#8212; &#240;e&#618; &#643;&#650;d bi&#720; &#712;d&#658;&#596;&#618;n&#618;&#331; &#712;&#643;&#596;&#720;rtli/</div>\n' +
-'      <div class="phrase-meta"><span class="type-badge" style="background:#1A3B6B;">フレーズ</span><span class="phrase-scene">特定の参加者を待つとき。「they」を一人に使うのは現代英語の標準。</span></div>\n' +
-'    </div>\n' +
+phraseCellsHtml +
 '  </div>\n' +
 '  <div class="footer">\n' +
 '    <span>ENGLEAD Business English Series #001</span>\n' +
