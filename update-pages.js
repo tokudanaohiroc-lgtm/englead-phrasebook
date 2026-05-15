@@ -674,20 +674,9 @@ function renderHowtoPage() {
 }
 
 function renderCtaPage() {
-  var illustSrc = 'data:image/svg+xml;utf8,' + encodeURIComponent(
-    '<svg xmlns="http://www.w3.org/2000/svg" width="1075" height="200">' +
-    '<rect width="1075" height="200" fill="#C8D8EC"/>' +
-    '<text x="537" y="88" font-family="sans-serif" font-size="13" fill="#7A96B8" text-anchor="middle" font-weight="bold">[ 横長イラスト ]</text>' +
-    '<text x="537" y="110" font-family="sans-serif" font-size="10" fill="#9aaec8" text-anchor="middle">男性がZoomカウンセリングを受けている画面の中に日本人女性コーチが映っているシーン</text>' +
-    '</svg>'
-  );
+  var illustSrc = '../assets/cta/banner.png';
   var cardIllus = function(n) {
-    return 'data:image/svg+xml;utf8,' + encodeURIComponent(
-      '<svg xmlns="http://www.w3.org/2000/svg" width="340" height="204">' +
-      '<rect width="340" height="204" fill="#C8D8EC"/>' +
-      '<text x="170" y="106" font-family="sans-serif" font-size="11" fill="#7A96B8" text-anchor="middle" font-weight="bold">[ イラスト 0' + n + ' ]</text>' +
-      '</svg>'
-    );
+    return '../assets/cta/card-0' + n + '.png';
   };
   return '<!DOCTYPE html>\n' +
     '<html lang="ja">\n<head>\n<meta charset="UTF-8">\n<title>無料カウンセリング</title>\n' +
