@@ -673,6 +673,88 @@ function renderHowtoPage() {
     '</div>\n</body>\n</html>';
 }
 
+function renderCtaPage() {
+  return '<!DOCTYPE html>\n' +
+    '<html lang="ja">\n<head>\n<meta charset="UTF-8">\n<title>無料カウンセリング</title>\n' +
+    '<style>\n' +
+    '* { box-sizing: border-box; margin: 0; padding: 0; }\n' +
+    'body { font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif; background: #b8b8b8; padding: 30px; }\n' +
+    '.page { width: 1123px; height: 794px; background: linear-gradient(135deg, #0d1b40 0%, #1B2A5E 55%, #1a3060 100%); display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 6px 32px rgba(0,0,0,0.28); border-top: 5px solid #D4A843; position: relative; }\n' +
+    '.bg-text { position: absolute; right: -20px; bottom: 50px; font-size: 120px; font-weight: 900; color: rgba(255,255,255,0.03); white-space: nowrap; letter-spacing: -0.02em; line-height: 1; pointer-events: none; }\n' +
+    '.top { padding: 16px 40px 0; display: flex; align-items: center; gap: 10px; flex-shrink: 0; }\n' +
+    '.top-logo { height: 17px; width: auto; }\n' +
+    '.top-sep { width: 1px; height: 11px; background: rgba(255,255,255,0.18); }\n' +
+    '.top-series { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; color: rgba(255,255,255,0.28); }\n' +
+    '.main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 56px 8px; }\n' +
+    '.eyebrow { font-size: 10px; font-weight: 800; letter-spacing: 0.22em; color: #D4A843; text-transform: uppercase; margin-bottom: 10px; }\n' +
+    '.headline { font-size: 29px; font-weight: 900; color: #fff; line-height: 1.4; text-align: center; margin-bottom: 6px; }\n' +
+    '.subline { font-size: 12px; color: rgba(255,255,255,0.5); text-align: center; line-height: 1.8; margin-bottom: 26px; }\n' +
+    '.cards { display: flex; gap: 14px; width: 100%; margin-bottom: 22px; }\n' +
+    '.card { flex: 1; background: rgba(255,255,255,0.07); border: 1px solid rgba(212,168,67,0.22); border-radius: 8px; padding: 18px 20px 16px; display: flex; flex-direction: column; gap: 8px; }\n' +
+    '.card-num { width: 28px; height: 28px; border-radius: 50%; background: #D4A843; color: #1B2A5E; font-size: 11px; font-weight: 900; display: flex; align-items: center; justify-content: center; letter-spacing: 0.03em; flex-shrink: 0; }\n' +
+    '.card-title { font-size: 13px; font-weight: 800; color: #fff; line-height: 1.3; }\n' +
+    '.card-desc { font-size: 11px; color: rgba(255,255,255,0.58); line-height: 1.72; }\n' +
+    '.cta-bar { width: 100%; background: #06C755; border-radius: 8px; padding: 13px 22px; display: flex; align-items: center; gap: 18px; }\n' +
+    '.cta-badge { width: 40px; height: 40px; background: rgba(255,255,255,0.95); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 11px; font-weight: 900; color: #06C755; letter-spacing: 0.03em; }\n' +
+    '.cta-text-group { flex: 1; }\n' +
+    '.cta-label { font-size: 9.5px; font-weight: 700; color: rgba(0,60,0,0.7); letter-spacing: 0.1em; margin-bottom: 3px; }\n' +
+    '.cta-main { font-size: 15px; font-weight: 900; color: #fff; line-height: 1.3; }\n' +
+    '.cta-sub { font-size: 10.5px; color: rgba(255,255,255,0.82); margin-top: 3px; }\n' +
+    '.cta-arrow { font-size: 20px; color: rgba(255,255,255,0.65); flex-shrink: 0; }\n' +
+    '.footer { flex-shrink: 0; padding: 10px 40px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: center; align-items: center; gap: 10px; }\n' +
+    '.footer-item { font-size: 9px; color: rgba(255,255,255,0.25); letter-spacing: 0.06em; }\n' +
+    '.footer-dot { width: 2px; height: 2px; border-radius: 50%; background: rgba(255,255,255,0.15); }\n' +
+    '</style>\n</head>\n<body>\n' +
+    '<div class="page">\n' +
+    '  <div class="bg-text">FREE COUNSELING</div>\n' +
+    '  <div class="top">\n' +
+    '    <img class="top-logo" src="' + LOGO_WHITE + '" alt="ENGLEAD">\n' +
+    '    <div class="top-sep"></div>\n' +
+    '    <span class="top-series">Phrasebook No.001 &nbsp;Online Meetings</span>\n' +
+    '  </div>\n' +
+    '  <div class="main">\n' +
+    '    <div class="eyebrow">Next Step</div>\n' +
+    '    <div class="headline">フレーズブックをもっと活かすために、<br>無料カウンセリングを受けてみませんか？</div>\n' +
+    '    <div class="subline">フレーズを知っている ≠ 使いこなせる。コーチとの60〜90分が、あなたの学習を一気に加速させます。</div>\n' +
+    '    <div class="cards">\n' +
+    '      <div class="card">\n' +
+    '        <div class="card-num">01</div>\n' +
+    '        <div class="card-title">フレーズブックの使い方レクチャー</div>\n' +
+    '        <div class="card-desc">どのフレーズをどの順番で練習するか。このフレーズブックを最大限活かす学習法を、コーチがマンツーマンで解説します。</div>\n' +
+    '      </div>\n' +
+    '      <div class="card">\n' +
+    '        <div class="card-num">02</div>\n' +
+    '        <div class="card-title">英語力診断</div>\n' +
+    '        <div class="card-desc">現在の英語力を正確に把握できる診断を実施。強みと弱点が一目でわかる「レベルチャート」をプレゼントします。</div>\n' +
+    '      </div>\n' +
+    '      <div class="card">\n' +
+    '        <div class="card-num">03</div>\n' +
+    '        <div class="card-title">学習相談</div>\n' +
+    '        <div class="card-desc">「何から始めればいいか」「どう続ければいいか」「仕事で使える英語を最短で身につけるには？」気軽にご相談ください。</div>\n' +
+    '      </div>\n' +
+    '    </div>\n' +
+    '    <div class="cta-bar">\n' +
+    '      <div class="cta-badge">LINE</div>\n' +
+    '      <div class="cta-text-group">\n' +
+    '        <div class="cta-label">予約はLINEから &nbsp;&#183;&nbsp; 完全無料 &nbsp;&#183;&nbsp; Zoom &nbsp;&#183;&nbsp; 60〜90分</div>\n' +
+    '        <div class="cta-main">公式LINEのトーク画面からご予約いただけます</div>\n' +
+    '        <div class="cta-sub">LINEを開いて、スタッフへ「カウンセリングを予約したい」とメッセージを送ってください。</div>\n' +
+    '      </div>\n' +
+    '      <div class="cta-arrow">&#8594;</div>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '  <div class="footer">\n' +
+    '    <span class="footer-item">完全無料</span>\n' +
+    '    <span class="footer-dot"></span>\n' +
+    '    <span class="footer-item">完全オンライン（Zoom）</span>\n' +
+    '    <span class="footer-dot"></span>\n' +
+    '    <span class="footer-item">国内・海外どこからでも参加可能</span>\n' +
+    '    <span class="footer-dot"></span>\n' +
+    '    <span class="footer-item">englead.jp</span>\n' +
+    '  </div>\n' +
+    '</div>\n</body>\n</html>';
+}
+
 // ── Generate all pages ────────────────────────────────────────────────────────
 
 var outDir = '/Users/naohirotokuda/englead-phrasebook/output/';
@@ -698,4 +780,7 @@ for (var ci = 0; ci < catDefs.length; ci++) {
   console.log('roleplay-' + numStr + '.html');
 }
 
-console.log('Done. 22 pages generated.');
+fs.writeFileSync(outDir + 'cta.html', renderCtaPage());
+console.log('cta.html');
+
+console.log('Done. 23 pages generated.');

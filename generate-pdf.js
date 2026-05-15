@@ -20,6 +20,7 @@ const SLIDES = [
   'phrase-08.html', 'roleplay-08.html',
   'phrase-09.html', 'roleplay-09.html',
   'phrase-10.html', 'roleplay-10.html',
+  'cta.html',
 ];
 
 (async () => {
