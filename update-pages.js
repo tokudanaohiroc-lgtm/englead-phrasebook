@@ -332,7 +332,7 @@ var PHRASE_CSS = '* { box-sizing: border-box; margin: 0; padding: 0; }\n' +
 '.header-title2 { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.6); letter-spacing: 0.01em; }\n' +
 '.header-right { flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; z-index: 1; }\n' +
 '.header-category { color: #fff; font-size: 11px; font-weight: 800; letter-spacing: 0.08em; padding: 4px 12px; border-radius: 2px; white-space: nowrap; }\n' +
-'.header-range { font-size: 38px; font-weight: 900; color: rgba(255,255,255,0.35); letter-spacing: -0.03em; line-height: 1; }\n' +
+'.header-range { font-size: 38px; font-weight: 900; color: rgba(255,255,255,0.35); letter-spacing: 0.02em; line-height: 1; }\n' +
 '.phrase-grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(5, 1fr); min-height: 0; }\n' +
 '.phrase-cell { padding: 7px 18px 5px 14px; border-right: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; display: flex; flex-direction: column; gap: 2px; overflow: hidden; position: relative; }\n' +
 '.phrase-cell:nth-child(even) { border-right: none; }\n' +
