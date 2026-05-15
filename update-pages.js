@@ -674,83 +674,132 @@ function renderHowtoPage() {
 }
 
 function renderCtaPage() {
+  var illustSrc = 'data:image/svg+xml;utf8,' + encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" width="1123" height="210">' +
+    '<rect width="1123" height="210" fill="#C8D8EC"/>' +
+    '<text x="561" y="96" font-family="sans-serif" font-size="14" fill="#7A96B8" text-anchor="middle" font-weight="bold">[ 横長イラスト ]</text>' +
+    '<text x="561" y="118" font-family="sans-serif" font-size="11" fill="#9aaec8" text-anchor="middle">Zoomカウンセリングのシーン（日本人女性コーチ）</text>' +
+    '</svg>'
+  );
+  var cardIllus = function(n) {
+    return 'data:image/svg+xml;utf8,' + encodeURIComponent(
+      '<svg xmlns="http://www.w3.org/2000/svg" width="340" height="100">' +
+      '<rect width="340" height="100" fill="#C8D8EC"/>' +
+      '<text x="170" y="56" font-family="sans-serif" font-size="11" fill="#7A96B8" text-anchor="middle" font-weight="bold">[ イラスト 0' + n + ' ]</text>' +
+      '</svg>'
+    );
+  };
   return '<!DOCTYPE html>\n' +
     '<html lang="ja">\n<head>\n<meta charset="UTF-8">\n<title>無料カウンセリング</title>\n' +
     '<style>\n' +
     '* { box-sizing: border-box; margin: 0; padding: 0; }\n' +
     'body { font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif; background: #b8b8b8; padding: 30px; }\n' +
-    '.page { width: 1123px; height: 794px; background: linear-gradient(135deg, #0d1b40 0%, #1B2A5E 55%, #1a3060 100%); display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 6px 32px rgba(0,0,0,0.28); border-top: 5px solid #D4A843; position: relative; }\n' +
-    '.bg-text { position: absolute; right: -20px; bottom: 50px; font-size: 120px; font-weight: 900; color: rgba(255,255,255,0.03); white-space: nowrap; letter-spacing: -0.02em; line-height: 1; pointer-events: none; }\n' +
-    '.top { padding: 16px 40px 0; display: flex; align-items: center; gap: 10px; flex-shrink: 0; }\n' +
-    '.top-logo { height: 17px; width: auto; }\n' +
-    '.top-sep { width: 1px; height: 11px; background: rgba(255,255,255,0.18); }\n' +
-    '.top-series { font-size: 10px; font-weight: 700; letter-spacing: 0.14em; color: rgba(255,255,255,0.28); }\n' +
-    '.main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 56px 8px; }\n' +
-    '.eyebrow { font-size: 10px; font-weight: 800; letter-spacing: 0.22em; color: #D4A843; text-transform: uppercase; margin-bottom: 10px; }\n' +
-    '.headline { font-size: 29px; font-weight: 900; color: #fff; line-height: 1.4; text-align: center; margin-bottom: 6px; }\n' +
-    '.subline { font-size: 12px; color: rgba(255,255,255,0.5); text-align: center; line-height: 1.8; margin-bottom: 26px; }\n' +
-    '.cards { display: flex; gap: 14px; width: 100%; margin-bottom: 22px; }\n' +
-    '.card { flex: 1; background: rgba(255,255,255,0.07); border: 1px solid rgba(212,168,67,0.22); border-radius: 8px; padding: 18px 20px 16px; display: flex; flex-direction: column; gap: 8px; }\n' +
-    '.card-num { width: 28px; height: 28px; border-radius: 50%; background: #D4A843; color: #1B2A5E; font-size: 11px; font-weight: 900; display: flex; align-items: center; justify-content: center; letter-spacing: 0.03em; flex-shrink: 0; }\n' +
-    '.card-title { font-size: 13px; font-weight: 800; color: #fff; line-height: 1.3; }\n' +
-    '.card-desc { font-size: 11px; color: rgba(255,255,255,0.58); line-height: 1.72; }\n' +
-    '.cta-bar { width: 100%; background: #06C755; border-radius: 8px; padding: 13px 22px; display: flex; align-items: center; gap: 18px; }\n' +
-    '.cta-badge { width: 40px; height: 40px; background: rgba(255,255,255,0.95); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 11px; font-weight: 900; color: #06C755; letter-spacing: 0.03em; }\n' +
-    '.cta-text-group { flex: 1; }\n' +
-    '.cta-label { font-size: 9.5px; font-weight: 700; color: rgba(0,60,0,0.7); letter-spacing: 0.1em; margin-bottom: 3px; }\n' +
-    '.cta-main { font-size: 15px; font-weight: 900; color: #fff; line-height: 1.3; }\n' +
-    '.cta-sub { font-size: 10.5px; color: rgba(255,255,255,0.82); margin-top: 3px; }\n' +
-    '.cta-arrow { font-size: 20px; color: rgba(255,255,255,0.65); flex-shrink: 0; }\n' +
-    '.footer { flex-shrink: 0; padding: 10px 40px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: center; align-items: center; gap: 10px; }\n' +
-    '.footer-item { font-size: 9px; color: rgba(255,255,255,0.25); letter-spacing: 0.06em; }\n' +
-    '.footer-dot { width: 2px; height: 2px; border-radius: 50%; background: rgba(255,255,255,0.15); }\n' +
+    '.page { width: 1123px; height: 794px; background: #fff; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 6px 32px rgba(0,0,0,0.22); border-top: 5px solid #D4A843; }\n' +
+    '.hdr { background: #1B2A5E; flex-shrink: 0; height: 42px; display: flex; align-items: center; padding: 0 28px; gap: 10px; }\n' +
+    '.hdr-logo { height: 16px; width: auto; }\n' +
+    '.hdr-sep { width: 1px; height: 12px; background: rgba(255,255,255,0.2); }\n' +
+    '.hdr-series { font-size: 9.5px; font-weight: 700; letter-spacing: 0.14em; color: rgba(255,255,255,0.35); }\n' +
+    '.hdr-badge { margin-left: auto; background: #D4A843; color: #1B2A5E; font-size: 9px; font-weight: 800; letter-spacing: 0.1em; padding: 3px 10px; border-radius: 2px; }\n' +
+    '.hl { flex-shrink: 0; padding: 13px 0 11px; text-align: center; border-bottom: 1px solid #eee; }\n' +
+    '.hl-eyebrow { font-size: 9px; font-weight: 800; letter-spacing: 0.22em; color: #D4A843; text-transform: uppercase; margin-bottom: 4px; }\n' +
+    '.hl-title { font-size: 19px; font-weight: 900; color: #1B2A5E; line-height: 1.4; }\n' +
+    '.img-sec { flex-shrink: 0; height: 210px; position: relative; overflow: hidden; border-bottom: 1px solid #e0e0e0; }\n' +
+    '.img-sec img { width: 100%; height: 100%; object-fit: cover; display: block; }\n' +
+    '.stats-bar { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(27,42,94,0.88); display: flex; }\n' +
+    '.stat { flex: 1; padding: 8px 0; display: flex; flex-direction: column; align-items: center; justify-content: center; border-right: 1px solid rgba(255,255,255,0.12); gap: 1px; }\n' +
+    '.stat:last-child { border-right: none; }\n' +
+    '.stat-n { font-size: 22px; font-weight: 900; color: #fff; line-height: 1; letter-spacing: -0.02em; }\n' +
+    '.stat-n .u { font-size: 12px; font-weight: 700; }\n' +
+    '.stat-l { font-size: 8.5px; font-weight: 600; color: rgba(255,255,255,0.65); letter-spacing: 0.04em; }\n' +
+    '.cards-sec { flex: 1; display: flex; flex-direction: column; padding: 11px 20px 0; min-height: 0; }\n' +
+    '.cards-lbl { font-size: 9px; font-weight: 800; letter-spacing: 0.14em; color: #1B2A5E; text-transform: uppercase; border-left: 3px solid #D4A843; padding-left: 8px; margin-bottom: 9px; flex-shrink: 0; }\n' +
+    '.cards-row { display: flex; gap: 12px; flex: 1; min-height: 0; padding-bottom: 10px; }\n' +
+    '.card { flex: 1; border: 1px solid #e0e6f0; border-radius: 8px; background: #fff; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 2px 8px rgba(27,42,94,0.06); }\n' +
+    '.card-il { width: 100%; flex-shrink: 0; overflow: hidden; }\n' +
+    '.card-il img { width: 100%; height: 100%; object-fit: cover; display: block; }\n' +
+    '.card-body { padding: 9px 12px 10px; display: flex; flex-direction: column; gap: 4px; flex: 1; }\n' +
+    '.card-head { display: flex; align-items: center; gap: 7px; margin-bottom: 2px; }\n' +
+    '.card-num { width: 20px; height: 20px; border-radius: 50%; background: #1B2A5E; color: #fff; font-size: 8.5px; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }\n' +
+    '.card-title { font-size: 11.5px; font-weight: 800; color: #1B2A5E; line-height: 1.3; }\n' +
+    '.card-desc { font-size: 10px; color: #555; line-height: 1.65; }\n' +
+    '.bottom { flex-shrink: 0; height: 86px; border-top: 1px solid #e0e0e0; display: flex; }\n' +
+    '.promo { width: 260px; flex-shrink: 0; background: #FFF8E8; border-right: 1px solid #F0D880; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 0 20px; }\n' +
+    '.promo-tag { background: #C0392B; color: #fff; font-size: 8px; font-weight: 800; padding: 2px 8px; border-radius: 2px; letter-spacing: 0.1em; }\n' +
+    '.promo-t { font-size: 18px; font-weight: 900; color: #C0392B; line-height: 1.2; }\n' +
+    '.promo-s { font-size: 9px; color: #999; }\n' +
+    '.cta { flex: 1; background: #06C755; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 0 28px; }\n' +
+    '.cta-badge { background: #fff; border-radius: 4px; padding: 2px 9px; font-size: 10px; font-weight: 900; color: #06C755; flex-shrink: 0; }\n' +
+    '.cta-row { display: flex; align-items: center; gap: 10px; }\n' +
+    '.cta-main { font-size: 15px; font-weight: 900; color: #fff; }\n' +
+    '.cta-sub { font-size: 10px; color: rgba(255,255,255,0.85); }\n' +
+    '.footer { flex-shrink: 0; height: 24px; border-top: 1px solid #eee; background: #fafafa; display: flex; align-items: center; justify-content: center; gap: 8px; }\n' +
+    '.fi { font-size: 8.5px; color: #bbb; }\n' +
+    '.fd { width: 2px; height: 2px; border-radius: 50%; background: #ddd; }\n' +
     '</style>\n</head>\n<body>\n' +
     '<div class="page">\n' +
-    '  <div class="bg-text">FREE COUNSELING</div>\n' +
-    '  <div class="top">\n' +
-    '    <img class="top-logo" src="' + LOGO_WHITE + '" alt="ENGLEAD">\n' +
-    '    <div class="top-sep"></div>\n' +
-    '    <span class="top-series">Phrasebook No.001 &nbsp;Online Meetings</span>\n' +
+    '  <div class="hdr">\n' +
+    '    <img class="hdr-logo" src="' + LOGO_WHITE + '" alt="ENGLEAD">\n' +
+    '    <div class="hdr-sep"></div>\n' +
+    '    <span class="hdr-series">Phrasebook No.001 &nbsp;Online Meetings</span>\n' +
+    '    <span class="hdr-badge">FREE COUNSELING</span>\n' +
     '  </div>\n' +
-    '  <div class="main">\n' +
-    '    <div class="eyebrow">Next Step</div>\n' +
-    '    <div class="headline">フレーズブックをもっと活かすために、<br>無料カウンセリングを受けてみませんか？</div>\n' +
-    '    <div class="subline">フレーズを知っている ≠ 使いこなせる。コーチとの60〜90分が、あなたの学習を一気に加速させます。</div>\n' +
-    '    <div class="cards">\n' +
+    '  <div class="hl">\n' +
+    '    <div class="hl-eyebrow">Next Step</div>\n' +
+    '    <div class="hl-title">フレーズブックを活かすために、無料カウンセリングを受けてみませんか？</div>\n' +
+    '  </div>\n' +
+    '  <div class="img-sec">\n' +
+    '    <img src="' + illustSrc + '" alt="counseling">\n' +
+    '    <div class="stats-bar">\n' +
+    '      <div class="stat"><div class="stat-n">97<span class="u">%</span></div><div class="stat-l">カウンセリング満足度</div></div>\n' +
+    '      <div class="stat"><div class="stat-n">10,000<span class="u">人+</span></div><div class="stat-l">学習相談の累計人数</div></div>\n' +
+    '      <div class="stat"><div class="stat-n">0<span class="u">円</span></div><div class="stat-l">カウンセリング費用</div></div>\n' +
+    '    </div>\n' +
+    '  </div>\n' +
+    '  <div class="cards-sec">\n' +
+    '    <div class="cards-lbl">カウンセリングでできること</div>\n' +
+    '    <div class="cards-row">\n' +
     '      <div class="card">\n' +
-    '        <div class="card-num">01</div>\n' +
-    '        <div class="card-title">フレーズブックの使い方レクチャー</div>\n' +
-    '        <div class="card-desc">どのフレーズをどの順番で練習するか。このフレーズブックを最大限活かす学習法を、コーチがマンツーマンで解説します。</div>\n' +
+    '        <div class="card-il" style="height:88px;"><img src="' + cardIllus(1) + '" alt=""></div>\n' +
+    '        <div class="card-body">\n' +
+    '          <div class="card-head"><div class="card-num">01</div><div class="card-title">フレーズブックの使い方レクチャー</div></div>\n' +
+    '          <div class="card-desc">このフレーズブックを最大限に活かす学習法を、コーチがマンツーマンで解説します。</div>\n' +
+    '        </div>\n' +
     '      </div>\n' +
     '      <div class="card">\n' +
-    '        <div class="card-num">02</div>\n' +
-    '        <div class="card-title">英語力診断</div>\n' +
-    '        <div class="card-desc">現在の英語力を正確に把握できる診断を実施。強みと弱点が一目でわかる「レベルチャート」をプレゼントします。</div>\n' +
+    '        <div class="card-il" style="height:88px;"><img src="' + cardIllus(2) + '" alt=""></div>\n' +
+    '        <div class="card-body">\n' +
+    '          <div class="card-head"><div class="card-num">02</div><div class="card-title">英語力診断</div></div>\n' +
+    '          <div class="card-desc">現在の英語力を正確に把握する診断を実施。強みと弱点が一目でわかる「レベルチャート」をプレゼントします。</div>\n' +
+    '        </div>\n' +
     '      </div>\n' +
     '      <div class="card">\n' +
-    '        <div class="card-num">03</div>\n' +
-    '        <div class="card-title">学習相談</div>\n' +
-    '        <div class="card-desc">「何から始めればいいか」「どう続ければいいか」「仕事で使える英語を最短で身につけるには？」気軽にご相談ください。</div>\n' +
+    '        <div class="card-il" style="height:88px;"><img src="' + cardIllus(3) + '" alt=""></div>\n' +
+    '        <div class="card-body">\n' +
+    '          <div class="card-head"><div class="card-num">03</div><div class="card-title">学習相談</div></div>\n' +
+    '          <div class="card-desc">「何から始めれば？」「どう続ける？」「仕事で使える英語を最短で身につけるには？」なんでもどうぞ。</div>\n' +
+    '        </div>\n' +
     '      </div>\n' +
     '    </div>\n' +
-    '    <div class="cta-bar">\n' +
-    '      <div class="cta-badge">LINE</div>\n' +
-    '      <div class="cta-text-group">\n' +
-    '        <div class="cta-label">予約はLINEから &nbsp;&#183;&nbsp; 完全無料 &nbsp;&#183;&nbsp; Zoom &nbsp;&#183;&nbsp; 60〜90分</div>\n' +
+    '  </div>\n' +
+    '  <div class="bottom">\n' +
+    '    <div class="promo">\n' +
+    '      <div class="promo-tag">TODAY ONLY</div>\n' +
+    '      <div class="promo-t">入会金 ¥20,000 OFF</div>\n' +
+    '      <div class="promo-s">今だけ限定の特別割引</div>\n' +
+    '    </div>\n' +
+    '    <div class="cta">\n' +
+    '      <div class="cta-row">\n' +
+    '        <div class="cta-badge">LINE</div>\n' +
     '        <div class="cta-main">公式LINEのトーク画面からご予約いただけます</div>\n' +
-    '        <div class="cta-sub">LINEを開いて、スタッフへ「カウンセリングを予約したい」とメッセージを送ってください。</div>\n' +
     '      </div>\n' +
-    '      <div class="cta-arrow">&#8594;</div>\n' +
+    '      <div class="cta-sub">LINEを開いて、スタッフへ「カウンセリングを予約したい」とメッセージを送ってください。</div>\n' +
     '    </div>\n' +
     '  </div>\n' +
     '  <div class="footer">\n' +
-    '    <span class="footer-item">完全無料</span>\n' +
-    '    <span class="footer-dot"></span>\n' +
-    '    <span class="footer-item">完全オンライン（Zoom）</span>\n' +
-    '    <span class="footer-dot"></span>\n' +
-    '    <span class="footer-item">国内・海外どこからでも参加可能</span>\n' +
-    '    <span class="footer-dot"></span>\n' +
-    '    <span class="footer-item">englead.jp</span>\n' +
+    '    <span class="fi">完全無料</span><span class="fd"></span>\n' +
+    '    <span class="fi">完全オンライン（Zoom）</span><span class="fd"></span>\n' +
+    '    <span class="fi">国内・海外どこからでも参加可能</span><span class="fd"></span>\n' +
+    '    <span class="fi">englead.jp</span>\n' +
     '  </div>\n' +
     '</div>\n</body>\n</html>';
 }
