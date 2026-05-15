@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Prototype v2 - Side Panel Layout</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif;
+  background: #c8c8c8;
+  padding: 30px;
+}
+
+/* A4 Landscape 1123 × 794px */
+.page {
+  width: 1123px;
+  height: 794px;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.25);
+  overflow: hidden;
+}
+
+/* ── Left: Illustration Panel ── */
+.illus-panel {
+  width: 340px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.illus-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+.illus-brand {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 20px 16px 16px;
+  background: linear-gradient(transparent, rgba(27,42,94,0.85));
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.illus-brand-name {
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  color: #D4A843;
+}
+.illus-series-num {
+  font-size: 10px;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.08em;
+}
+
+/* ── Right: Content Panel ── */
+.content-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header block */
+.content-header {
+  background: #1B2A5E;
+  padding: 18px 24px 16px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+.content-header::after {
+  content: '';
+  position: absolute;
+  right: -20px; top: -20px;
+  width: 120px; height: 120px;
+  background: rgba(212,168,67,0.12);
+  border-radius: 50%;
+}
+.header-category {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #D4A843;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.header-title {
+  font-size: 22px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+.header-subtitle {
+  font-size: 11px;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.04em;
+}
+.header-page {
+  position: absolute;
+  top: 18px; right: 24px;
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(255,255,255,0.5);
+}
+
+/* Phrase grid: 2 col × 3 row */
+.phrase-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.phrase-cell {
+  padding: 10px 14px 8px;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  overflow: hidden;
+}
+.phrase-cell:nth-child(even)   { border-right: none; }
+.phrase-cell:nth-child(5),
+.phrase-cell:nth-child(6)      { border-bottom: none; }
+
+.phrase-top {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+}
+.phrase-num {
+  font-size: 13px;
+  font-weight: 900;
+  color: #D4A843;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.phrase-en {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.3;
+}
+.em { color: #C0392B; font-weight: 800; }
+
+.phrase-ja {
+  font-size: 11px;
+  color: #555;
+  line-height: 1.3;
+  padding-left: 20px;
+}
+.phrase-katakana {
+  font-size: 10.5px;
+  color: #888;
+  letter-spacing: 0.06em;
+  padding-left: 20px;
+}
+.phrase-phonics {
+  font-family: "Courier New", monospace;
+  font-size: 9.5px;
+  color: #aaa;
+  padding-left: 20px;
+}
+.phrase-meta {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  padding-left: 20px;
+  flex-wrap: wrap;
+  margin-top: 1px;
+}
+.type-badge {
+  font-size: 9px;
+  font-weight: 700;
+  color: #fff;
+  padding: 1px 6px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.phrase-scene {
+  font-size: 10px;
+  color: #666;
+  line-height: 1.5;
+}
+.street-note {
+  font-size: 9.5px;
+  color: #8B4513;
+  background: #FFF8F0;
+  border-left: 2px solid #D4A843;
+  padding: 2px 6px;
+  border-radius: 0 2px 2px 0;
+  line-height: 1.4;
+  margin-left: 20px;
+  margin-top: 1px;
+}
+
+/* Footer */
+.footer {
+  height: 28px;
+  flex-shrink: 0;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 9.5px;
+  color: #bbb;
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- Left: Illustration -->
+  <div class="illus-panel">
+    <img src="../assets/illustrations/home-office-start.png" alt="">
+    <div class="illus-brand">
+      <span class="illus-brand-name">ENGLEAD</span>
+      <span class="illus-series-num">Business English Series No.1</span>
+    </div>
+  </div>
+
+  <!-- Right: Content -->
+  <div class="content-panel">
+
+    <div class="content-header">
+      <div class="header-category">接続・開始 &nbsp;/&nbsp; Connection &amp; Start</div>
+      <div class="header-title">オンライン会議で<br>使える英語</div>
+      <div class="header-subtitle">Online Meetings — 100 Phrases</div>
+      <div class="header-page">01–06</div>
+    </div>
+
+    <div class="phrase-grid">
+
+      <div class="phrase-cell">
+        <div class="phrase-top">
+          <span class="phrase-num">01</span>
+          <span class="phrase-en">Can everyone <span class="em">hear me okay</span>?</span>
+        </div>
+        <div class="phrase-ja">皆さん、聞こえていますか？</div>
+        <div class="phrase-katakana">キャン　エブリワン　ヒア　ミー　オーケー</div>
+        <div class="phrase-phonics">/kæn ˈɛvriˌwʌn hɪr miː oʊˈkeɪ/</div>
+        <div class="phrase-meta">
+          <span class="type-badge" style="background:#1A3B6B;">フレーズ</span>
+          <span class="phrase-scene">会議開始直後の定番マイク確認。全員への問いかけ感が出る。</span>
+        </div>
+      </div>
+
+      <div class="phrase-cell">
+        <div class="phrase-top">
+          <span class="phrase-num">02</span>
+          <span class="phrase-en">You're <span class="em">on mute</span>.</span>
+        </div>
+        <div class="phrase-ja">ミュートになっていますよ。</div>
+        <div class="phrase-katakana">ユア　オン　ミュート</div>
+        <div class="phrase-phonics">/jʊər ɒn mjuːt/</div>
+        <div class="phrase-meta">
+          <span class="type-badge" style="background:#1A3B6B;">フレーズ</span>
+          <span class="phrase-scene">発言しようとした参加者がミュートのまま話しているとき。</span>
+        </div>
+        <div class="street-note">💡「You're muted!」とも。短く端的でOK。</div>
+      </div>
+
+      <div class="phrase-cell">
+        <div class="phrase-top">
+          <span class="phrase-num">03</span>
+          <span class="phrase-en">Let's <span class="em">go ahead</span> and <span class="em">get started</span>.</span>
+        </div>
+        <div class="phrase-ja">それでは始めましょう。</div>
+        <div class="phrase-katakana">レッツ　ゴー　アヘッド　アンド　ゲット　スターテッド</div>
+        <div class="phrase-phonics">/lɛts ɡoʊ əˈhɛd ænd ɡɛt ˈstɑːrtɪd/</div>
+        <div class="phrase-meta">
+          <span class="type-badge" style="background:#1A3B6B;">フレーズ</span>
+          <span class="phrase-scene">時間になったら使う開始宣言。「go ahead」が踏み出しのニュアンスを加える。</span>
+        </div>
+      </div>
+
+      <div class="phrase-cell">
+        <div class="phrase-top">
+          <span class="phrase-num">04</span>
+          <span class="phrase-en">We'll <span class="em">give it another minute</span> for people to join.</span>
+        </div>
+        <div class="phrase-ja">もう少し入室を待ちましょう。</div>
+        <div class="phrase-katakana">ウィル　ギブ　イット　アナザー　ミニット　フォー　ピープル</div>
+        <div class="phrase-phonics">/wiːl ɡɪv ɪt əˈnʌðər ˈmɪnɪt fər ˈpiːpəl tə dʒɔɪn/</div>
+        <div class="phrase-meta">
+          <span class="type-badge" style="background:#1A3B6B;">フレーズ</span>
+          <span class="phrase-scene">参加者がまだ揃っていないとき、少し待つことを全員に伝える。</span>
+        </div>
+      </div>
+
+      <div class="phrase-cell">
+        <div class="phrase-top">
+          <span class="phrase-num">05</span>
+          <span class="phrase-en">I'm going to <span class="em">share my screen</span>.</span>
+        </div>
+        <div class="phrase-ja">画面を共有します。</div>
+        <div class="phrase-katakana">アイム　ゴーイング　トゥ　シェア　マイ　スクリーン</div>
+        <div class="phrase-phonics">/aɪm ˈɡoʊɪŋ tə ʃɛr maɪ skriːn/</div>
+        <div class="phrase-meta">
+          <span class="type-badge" style="background:#1A3B6B;">フレーズ</span>
+          <span class="phrase-scene">資料を見せる前の事前告知。いきなり共有より先に言うのがマナー。</span>
+        </div>
+      </div>
+
+      <div class="phrase-cell">
+        <div class="phrase-top">
+          <span class="phrase-num">06</span>
+          <span class="phrase-en">Just a <span class="em">heads-up</span> — I'm <span class="em">recording this call</span>.</span>
+        </div>
+        <div class="phrase-ja">念のため、この通話を録音します。</div>
+        <div class="phrase-katakana">ジャスト　ア　ヘッズアップ　アイム　レコーディング　ジス　コール</div>
+        <div class="phrase-phonics">/dʒʌst ə ˈhɛdzˌʌp aɪm rɪˈkɔːrdɪŋ ðɪs kɔːl/</div>
+        <div class="phrase-meta">
+          <span class="type-badge" style="background:#C0392B;">イディオム</span>
+          <span class="phrase-scene">録音の事前告知。「heads-up」は「念のためお知らせ」のニュアンス。</span>
+        </div>
+        <div class="street-note">💡「heads-up」は単独でも前置き表現として汎用的に使える。</div>
+      </div>
+
+    </div><!-- /phrase-grid -->
+
+    <div class="footer">
+      <span>ENGLEAD Business English Series No.1</span>
+      <span style="color:#1B2A5E; font-weight:700;">接続・開始</span>
+    </div>
+
+  </div><!-- /content-panel -->
+</div><!-- /page -->
+
+</body>
+</html>

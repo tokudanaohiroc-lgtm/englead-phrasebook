@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Option B — No Photo, 2×5</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif; background: #c0c0c0; padding: 30px; }
+p.label { font-size:13px; font-weight:700; color:#444; margin-bottom:10px; }
+
+.page {
+  width: 1123px; height: 794px;
+  background: #fff;
+  display: flex; flex-direction: column;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.25);
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  background: #1B2A5E;
+  padding: 16px 32px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.header::before {
+  content: '';
+  position: absolute;
+  right: -40px; top: -40px;
+  width: 180px; height: 180px;
+  border: 28px solid rgba(212,168,67,0.18);
+  border-radius: 50%;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  right: 60px; bottom: -60px;
+  width: 130px; height: 130px;
+  border: 20px solid rgba(212,168,67,0.1);
+  border-radius: 50%;
+}
+.header-left {}
+.header-eyebrow {
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 0.14em; color: #D4A843;
+  text-transform: uppercase; margin-bottom: 5px;
+}
+.header-title {
+  font-size: 24px; font-weight: 900;
+  color: #fff; letter-spacing: 0.02em; line-height: 1.1;
+}
+.header-right {
+  text-align: right;
+  z-index: 1;
+}
+.header-category {
+  font-size: 12px; font-weight: 700;
+  color: rgba(255,255,255,0.6); margin-bottom: 4px;
+}
+.header-range {
+  font-size: 28px; font-weight: 900;
+  color: rgba(255,255,255,0.2); letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+/* Phrase grid 2×5 */
+.phrase-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  overflow: hidden;
+}
+.phrase-cell {
+  padding: 8px 20px 6px;
+  border-right: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  display: flex; flex-direction: column; gap: 2px;
+  overflow: hidden;
+  position: relative;
+}
+.phrase-cell:nth-child(even) { border-right: none; }
+.phrase-cell:nth-child(9),
+.phrase-cell:nth-child(10)  { border-bottom: none; }
+
+/* Category color accent bar on left */
+.phrase-cell::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 10px; bottom: 10px;
+  width: 3px;
+  background: #2E5896;
+  border-radius: 0 2px 2px 0;
+}
+
+.phrase-top { display: flex; align-items: baseline; gap: 7px; }
+.phrase-num { font-size: 11px; font-weight: 900; color: #2E5896; flex-shrink: 0; min-width: 22px; }
+.phrase-en  { font-size: 13.5px; font-weight: 700; color: #111; line-height: 1.3; }
+.em { color: #C0392B; font-weight: 800; }
+.phrase-ja  { font-size: 10.5px; color: #555; line-height: 1.3; padding-left: 29px; }
+.phrase-katakana { font-size: 10px; color: #888; letter-spacing: 0.06em; padding-left: 29px; }
+.phrase-phonics  { font-family: "Courier New", monospace; font-size: 9px; color: #bbb; padding-left: 29px; }
+.phrase-meta { display: flex; align-items: flex-start; gap: 5px; padding-left: 29px; flex-wrap: wrap; margin-top: 1px; }
+.type-badge { font-size: 9px; font-weight: 700; color: #fff; padding: 1px 5px; border-radius: 2px; flex-shrink: 0; margin-top: 1px; }
+.phrase-scene { font-size: 9.5px; color: #666; line-height: 1.5; }
+.street-note { font-size: 9px; color: #8B4513; background: #FFF8F0; border-left: 2px solid #D4A843; padding: 2px 6px; border-radius: 0 2px 2px 0; line-height: 1.4; margin-left: 29px; }
+
+.footer { height: 26px; flex-shrink: 0; border-top: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; font-size: 9.5px; color: #bbb; }
+</style>
+</head>
+<body>
+<p class="label">Option B ― イラストなし・2列×5行（10フレーズ）</p>
+<div class="page">
+  <div class="header">
+    <div class="header-left">
+      <div class="header-eyebrow">Business English Series No.1 &nbsp;/&nbsp; 接続・開始</div>
+      <div class="header-title">オンライン会議で<br>使える英語</div>
+    </div>
+    <div class="header-right">
+      <div class="header-category">Online Meetings</div>
+      <div class="header-range">01–10</div>
+    </div>
+  </div>
+
+  <div class="phrase-grid">
+    <div class="phrase-cell">
+      <div class="phrase-top"><span class="phrase-num">01</span><span class="phrase-en">Can everyone <span class="em">hear me okay</span>?</span></div>
+      <div class="phrase-ja">皆さん、聞こえていますか？</div>
+      <div class="phrase-katakana">キャン　エブリワン　ヒア　ミー　オーケー</div>
+      <div class="phrase-phonics">/kæn ˈɛvriˌwʌn hɪr miː oʊˈkeɪ/</div>
+      <div class="phrase-meta"><span class="type-badge" style="background:#1A3B6B;">フレーズ</span><span class="phrase-scene">会議開始直後の定番マイク確認。全員への問いかけ感が出る。</span></div>
+    </div>
+    <div class="phrase-cell">
+      <div class="phrase-top"><span class="phrase-num">02</span><span class="phrase-en">You're <span class="em">on mute</span>.</span></div>
+      <div class="phrase-ja">ミュートになっていますよ。</div>
+      <div class="phrase-katakana">ユア　オン　ミュート</div>
+      <div class="phrase-phonics">/jʊər ɒn mjuːt/</div>
+      <div class="phrase-meta"><span class="type-badge" style="background:#1A3B6B;">フレーズ</span><span class="phrase-scene">発言しようとした参加者がミュートのまま話しているとき。</span></div>
+      <div class="street-note">💡「You're muted!」とも。短く端的でOK。</div>
+    </div>
+    <div class="phrase-cell">
+      <div class="phrase-top"><span class="phrase-num">03</span><span class="phrase-en">Let's <span class="em">go ahead</span> and <span class="em">get started</span>.</span></div>
+      <div class="phrase-ja">それでは始めましょう。</div>
+      <div class="phrase-katakana">レッツ　ゴー　アヘッド　アンド　ゲット　スターテッド</div>
+      <div class="phrase-phonics">/lɛts ɡoʊ əˈhɛd ænd ɡɛt ˈstɑːrtɪd/</div>
+      <div class="phrase-meta"><span class="type-badge" style="background:#1A3B6B;">フレーズ</span><span class="phrase-scene">時間になったら使う開始宣言。「go ahead」が踏み出しのニュアンスを加える。</span></div>
+    </div>
+    <div class="phrase-cell">
+      <div class="phrase-top"><span class="phrase-num">04</span><span class="phrase-en">We'll <span class="em">give it another minute</span> for people to join.</span></div>
+      <div class="phrase-ja">もう少し入室を待ちましょう。</div>
+      <div class="phrase-katakana">ウィル　ギブ　イット　アナザー　ミニット…</div>
+      <div class="phrase-phonics">/wiːl ɡɪv ɪt əˈnʌðər ˈmɪnɪt fər ˈpiːpəl tə dʒɔɪn/</div>
+      <div class="phrase-meta"><span class="type-badge" style="background:#1A3B6B;">フレーズ</span><span class="phrase-scene">まだ参加者が揃っていないとき、少し待つことを全員に伝える。</span></div>
+    </div>
+    <div class="phrase-cell">
+      <div class="phrase-top"><span class="phrase-num">05</span><span class="phrase-en">I'm going to <span class="em">share my screen</span>.</span></div>
+      <div class="phrase-ja">画面を共有します。</div>
+      <div class="phrase-katakana">アイム　ゴーイング　トゥ　シェア　マイ　スクリーン</div>
+      <div class="phrase-phonics">/aɪm ˈɡoʊɪŋ tə ʃɛr maɪ skriːn/</div>
+      <div class="phrase-meta"><span class="type-badge" style="background:#1A3B6B;">フレーズ</span><span class="phrase-scene">資料を見せる前の事前告知。いきなり共有より先に言うのがマナー。</span></div>
+    </div>
+    <div class="phrase-cell">
+      <div class="phrase-top"><span class="phrase-num">06</span><span class="phrase-en">Just a <span class="em">heads-up</span> — I'm <span class="em">recording this call</span>.</span></div>
+      <div class="phrase-ja">念のため、この通話を録音します。</div>
+      <div class="phrase-katakana">ジャスト　ア　ヘッズアップ　アイム　レコーディング　ジス　コール</div>
+      <div class="phrase-phonics">/dʒʌst ə ˈhɛdzˌʌp aɪm rɪˈkɔːrdɪŋ ðɪs kɔːl/</div>
+      <div class="phrase-meta"><span class="type-badge" style="background:#C0392B;">イディオム</span><span class="phrase-scene">録音の事前告知。「heads-up」は「念のためお知らせ」のニュアンス。</span></div>
+      <div class="street-note">💡「heads-up」は単独でも前置き表現として汎用的に使える。</div>
+    </div>
+    <div class="phrase-cell">
+      <div class="phrase-top"><span class="phrase-num">07</span><span class="phrase-en"><span class="em">Feel free to</span> use the chat if you have questions.</span></div>
+      <div class="phrase-ja">質問はチャットに気軽に入れてください。</div>
+      <div class="phrase-katakana">フィール　フリー　トゥ　ユーズ　ザ　チャット…</div>
+      <div class="phrase-phonics">/fiːl friː tə juːz ðə tʃæt ɪf juː hæv ˈkwɛstʃənz/</div>
+      <div class="phrase-meta"><span class="type-badge" style="background:#1A3B6B;">フレーズ</span><span class="phrase-scene">気軽にチャットを使うよう促す。「feel free to」は丁寧な許可の表現。</span></div>
+    </div>
+    <div class="phrase-cell">
+      <div class="phrase-top"><span class="phrase-num">08</span><span class="phrase-en">I'll <span class="em">drop</span> the agenda <span class="em">in the chat</span>.</span></div>
+      <div class="phrase-ja">アジェンダをチャットに貼ります。</div>
+      <div class="phrase-katakana">アイル　ドロップ　ジ　アジェンダ　イン　ザ　チャット</div>
+      <div class="phrase-phonics">/aɪl drɒp ðɪ əˈdʒɛndə ɪn ðə tʃæt/</div>
+      <div class="phrase-meta"><span class="type-badge" style="background:#1A3B6B;">フレーズ</span><span class="phrase-scene">チャット欄に資料を投稿するとき。「drop」は「貼る・投下する」の口語表現。</span></div>
+    </div>
+    <div class="phrase-cell">
+      <div class="phrase-top"><span class="phrase-num">09</span><span class="phrase-en">Can you <span class="em">see my screen</span>?</span></div>
+      <div class="phrase-ja">私の画面は見えていますか？</div>
+      <div class="phrase-katakana">キャン　ユー　シー　マイ　スクリーン</div>
+      <div class="phrase-phonics">/kæn juː siː maɪ skriːn/</div>
+      <div class="phrase-meta"><span class="type-badge" style="background:#1A3B6B;">フレーズ</span><span class="phrase-scene">画面共有を開始した後、相手に見えているか確認する。</span></div>
+    </div>
+    <div class="phrase-cell">
+      <div class="phrase-top"><span class="phrase-num">10</span><span class="phrase-en">Let's wait for [Name] — they should be <span class="em">joining shortly</span>.</span></div>
+      <div class="phrase-ja">[名前]さんを待ちましょう、もうすぐ入るはずです。</div>
+      <div class="phrase-katakana">レッツ　ウェイト　フォー　——　ゼイ　シュッド　ビー　ジョイニング　ショートリー</div>
+      <div class="phrase-phonics">/lɛts weɪt fər — ðeɪ ʃʊd biː ˈdʒɔɪnɪŋ ˈʃɔːrtli/</div>
+      <div class="phrase-meta"><span class="type-badge" style="background:#1A3B6B;">フレーズ</span><span class="phrase-scene">特定の参加者を待つとき。「they」を一人に使うのは現代英語の標準。</span></div>
+    </div>
+  </div>
+
+  <div class="footer"><span>ENGLEAD Business English Series No.1</span><span style="color:#1B2A5E;font-weight:700;">接続・開始</span></div>
+</div>
+</body>
+</html>
