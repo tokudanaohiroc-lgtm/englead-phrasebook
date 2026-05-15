@@ -16,12 +16,28 @@ const STYLE = `flat vector illustration, bold clean outlines, solid color fills,
 
 const avatars = [
   {
+    name: 'kenta',
+    prompt: `Portrait of a professional Japanese man in his mid-30s, smart business casual attire, calm confident expression, neat short black hair, on a plain light gray background. ${STYLE}. Bust-up portrait, centered, square crop. Character for a business English learning material.`
+  },
+  {
+    name: 'akari',
+    prompt: `Portrait of a professional Japanese woman in her early 30s, smart business casual attire, composed and friendly expression, shoulder-length black hair, on a plain light gray background. ${STYLE}. Bust-up portrait, centered, square crop. Character for a business English learning material.`
+  },
+  {
     name: 'sarah',
     prompt: `Portrait of a professional American woman in her early 30s, business casual attire, warm smile, short to medium length hair, on a plain light gray background. ${STYLE}. Bust-up portrait, centered, square crop. Character for a business English learning material.`
   },
   {
+    name: 'marcus',
+    prompt: `Portrait of a professional Black American man in his late 20s, smart casual tech attire, confident relaxed expression, short hair, on a plain light gray background. ${STYLE}. Bust-up portrait, centered, square crop. Character for a business English learning material.`
+  },
+  {
     name: 'tom',
     prompt: `Portrait of a professional European man in his early 30s, business casual attire, friendly expression, slight stubble, on a plain light gray background. ${STYLE}. Bust-up portrait, centered, square crop. Character for a business English learning material.`
+  },
+  {
+    name: 'mei',
+    prompt: `Portrait of a professional Chinese-Singaporean woman in her early 30s, business casual attire, sharp composed expression, medium-length dark hair, on a plain light gray background. ${STYLE}. Bust-up portrait, centered, square crop. Character for a business English learning material.`
   }
 ];
 

@@ -16,9 +16,10 @@ body { font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif; 
 .cover-ja-title { font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.75); margin-bottom: 20px; }
 .cover-tagline { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.5); letter-spacing: 0.06em; margin-bottom: 36px; }
 .cover-desc { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.85; border-left: 3px solid rgba(212,168,67,0.4); padding-left: 18px; }
-.cover-right { flex-shrink: 0; width: 400px; height: 420px; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; }
-.illus-ph { background: rgba(255,255,255,0.05); border: 1.5px dashed rgba(212,168,67,0.3); border-radius: 4px; display: flex; align-items: center; justify-content: center; }
-.illus-ph-label { font-size: 9px; font-weight: 700; letter-spacing: 0.1em; color: rgba(212,168,67,0.35); text-transform: uppercase; }
+.cover-right { flex-shrink: 0; width: 400px; height: 420px; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 10px; }
+.illus-tile { position: relative; border-radius: 6px; overflow: hidden; background: rgba(255,255,255,0.06); border: 1px solid rgba(212,168,67,0.2); }
+.illus-tile img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+.illus-tile-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.6)); padding: 14px 10px 7px; font-size: 11px; font-weight: 800; color: #fff; letter-spacing: 0.04em; }
 </style>
 </head>
 <body>
@@ -35,10 +36,10 @@ body { font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif; 
       <div class="cover-desc">外国人チームとのオンライン会議で、もう「えーっと...」と詰まらないために。<br>駐在員が現場で本当に使うフレーズだけを厳選しました。</div>
     </div>
     <div class="cover-right">
-      <div class="illus-ph"><span class="illus-ph-label">Illustration</span></div>
-      <div class="illus-ph"><span class="illus-ph-label">Illustration</span></div>
-      <div class="illus-ph"><span class="illus-ph-label">Illustration</span></div>
-      <div class="illus-ph"><span class="illus-ph-label">Illustration</span></div>
+      <div class="illus-tile"><img src="../assets/illustrations/home-office-start.png" alt="接続・開始"><div class="illus-tile-label">接続・開始</div></div>
+      <div class="illus-tile"><img src="../assets/illustrations/conference-room.png" alt="会議の進行"><div class="illus-tile-label">会議の進行</div></div>
+      <div class="illus-tile"><img src="../assets/illustrations/whiteboard-discussion.png" alt="意見・提案"><div class="illus-tile-label">意見・提案</div></div>
+      <div class="illus-tile"><img src="../assets/illustrations/goodbye.png" alt="クロージング"><div class="illus-tile-label">クロージング</div></div>
     </div>
   </div>
 </div>

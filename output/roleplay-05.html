@@ -21,8 +21,11 @@ body { font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif; 
 .body { flex: 1; display: flex; gap: 0; overflow: hidden; min-height: 0; }
 .left-col { width: 288px; flex-shrink: 0; display: flex; flex-direction: column; border-right: 1px solid #e8e8e8; overflow: hidden; }
 .scene-illus { height: 210px; overflow: hidden; position: relative; flex-shrink: 0; background: linear-gradient(150deg, #1a2750 0%, #253980 100%); }
-.scene-illus img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
-.scene-illus-overlay { position: absolute; inset: 0; background: linear-gradient(transparent 50%, rgba(27,42,94,0.6)); }
+.scene-illus img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; position: absolute; inset: 0; }
+.scene-illus-overlay { position: absolute; inset: 0; background: linear-gradient(transparent 40%, rgba(27,42,94,0.75)); }
+.scene-illus-text { position: absolute; bottom: 0; left: 0; right: 0; padding: 12px 14px 10px; z-index: 2; }
+.scene-illus-cat { font-size: 9px; font-weight: 800; letter-spacing: 0.18em; color: #D4A843; text-transform: uppercase; margin-bottom: 3px; }
+.scene-illus-title { font-size: 13px; font-weight: 800; color: #fff; line-height: 1.3; }
 .scene-box { flex: 1; background: #F4F6FB; padding: 10px 13px; display: flex; flex-direction: column; gap: 6px; overflow: hidden; }
 .scene-label { font-size: 8.5px; font-weight: 800; letter-spacing: 0.14em; color: #D4A843; text-transform: uppercase; }
 .scene-title { font-size: 12px; font-weight: 800; color: #1B2A5E; line-height: 1.3; }
@@ -46,8 +49,8 @@ body { font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif; 
 .bubble-wrap { display: flex; flex-direction: column; gap: 1px; max-width: 68%; }
 .bubble-row.right .bubble-wrap { align-items: flex-end; }
 .bubble-name { font-size: 9px; font-weight: 700; color: #888; padding: 0 4px; }
-.bubble { padding: 5px 10px; border-radius: 12px; font-size: 13px; font-weight: 500; line-height: 1.4; color: #111; }
-.bubble.kenji { background: #EEF2FB; border-radius: 4px 12px 12px 12px; }
+.bubble { padding: 6px 11px; border-radius: 12px; font-size: 15px; font-weight: 500; line-height: 1.45; color: #111; }
+.bubble.kenta { background: #EEF2FB; border-radius: 4px 12px 12px 12px; }
 .bubble.other { background: #F5F5F5; border-radius: 12px 4px 12px 12px; }
 .bubble strong { color: #C0392B; font-weight: 800; }
 .phrase-ref { display: inline-flex; align-items: center; background: #D4A843; color: #fff; font-size: 8.5px; font-weight: 800; padding: 1px 5px; border-radius: 10px; margin-left: 4px; vertical-align: middle; white-space: nowrap; }
@@ -79,8 +82,12 @@ body { font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif; 
   <div class="body">
     <div class="left-col">
       <div class="scene-illus">
-        <img src="../assets/illustrations/negotiation.png" alt="">
+        <img src="../assets/illustrations/negotiation.png" alt="" onerror="this.style.display='none'">
         <div class="scene-illus-overlay"></div>
+        <div class="scene-illus-text">
+          <div class="scene-illus-cat">Scene &mdash; Agreement & Pushback</div>
+          <div class="scene-illus-title">プロジェクト期日交渉</div>
+        </div>
       </div>
       <div class="scene-box">
         <div class="scene-label">Scene</div>
@@ -88,21 +95,33 @@ body { font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif; 
         <div class="scene-desc">納期を2週間前倒しにする提案が出て、<br>各メンバーが立場を表明する場面。<br>譲歩と確認を繰り返して典型的な著地点を探る。</div>
         <div class="characters">
           <div class="char-row">
-            <div class="char-avatar-circle" style="background:#1B2A5E;">健</div>
-            <div><div class="char-name">Kenji（健二）</div><div class="char-role">シカゴ駐在・チームリード</div></div>
+            <img class="char-photo" src="../assets/avatars/kenta.png" alt="Kenta" onerror="this.outerHTML='<div class=&quot;char-avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'">
+            <div><div class="char-name">Kenta</div><div class="char-role">シカゴ駐在・チームリード</div></div>
+          </div>
+          <div class="char-row">
+            <img class="char-photo" src="../assets/avatars/akari.png" alt="Akari" onerror="this.outerHTML='<div class=&quot;char-avatar-circle&quot; style=&quot;background:#8E4A1E;&quot;>A</div>'">
+            <div><div class="char-name">Akari</div><div class="char-role">東京本社・マーケター</div></div>
           </div>
           <div class="char-row">
             <img class="char-photo" src="../assets/avatars/sarah.png" alt="Sarah">
             <div><div class="char-name">Sarah</div><div class="char-role">NY オフィス</div></div>
           </div>
           <div class="char-row">
+            <img class="char-photo" src="../assets/avatars/marcus.png" alt="Marcus" onerror="this.outerHTML='<div class=&quot;char-avatar-circle&quot; style=&quot;background:#1E5E7A;&quot;>M</div>'">
+            <div><div class="char-name">Marcus</div><div class="char-role">LA・ITエンジニア</div></div>
+          </div>
+          <div class="char-row">
             <img class="char-photo" src="../assets/avatars/tom.png" alt="Tom">
             <div><div class="char-name">Tom</div><div class="char-role">ベルリン リモート</div></div>
+          </div>
+          <div class="char-row">
+            <img class="char-photo" src="../assets/avatars/mei.png" alt="Mei" onerror="this.outerHTML='<div class=&quot;char-avatar-circle&quot; style=&quot;background:#3E5E3E;&quot;>M</div>'">
+            <div><div class="char-name">Mei</div><div class="char-role">シンガポール・マーケター</div></div>
           </div>
         </div>
         <div class="culture-note">
           <div class="culture-label">Note</div>
-          <div class="culture-text">英語の交渉では「完全拒否」でなく「条件付き許容」の形で帝めるのがプロフェッショナル。「これは受け入れられない」と「これなら許容できる」を明確に伝えることが大切。</div>
+          <div class="culture-text">英語の交渉では「完全拒否」でなく「条件付き許容」の形でまとめるのがプロフェッショナル。「これは受け入れられない」と「これなら許容できる」を明確に伝えることが大切。</div>
         </div>
       </div>
     </div>
@@ -110,52 +129,52 @@ body { font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif; 
       <div class="convo-area">
         <div class="convo-label">Conversation</div>
         <div class="bubble-row">
-          <div class="avatar-circle" style="background:#1B2A5E;">健</div>
-          <div class="bubble-wrap"><div class="bubble-name">Kenji</div>
-          <div class="bubble kenji">We're proposing to move the launch up by two weeks. Thoughts?</div></div>
+          <img class="avatar" src="../assets/avatars/kenta.png" alt="Kenta" onerror="this.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'">
+          <div class="bubble-wrap"><div class="bubble-name">Kenta</div>
+          <div class="bubble kenta">We're proposing to move the launch up by two weeks. Thoughts?</div></div>
         </div>
         <div class="bubble-row right">
-          <img class="avatar" src="../assets/avatars/sarah.png" alt="Sarah">
+          <img class="avatar" src="../assets/avatars/sarah.png" alt="Sarah" onerror="this.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'">
           <div class="bubble-wrap"><div class="bubble-name">Sarah</div>
           <div class="bubble other"><strong>That makes total sense</strong> from a competitive standpoint. <span class="phrase-ref">42</span></div></div>
         </div>
         <div class="bubble-row right">
-          <img class="avatar" src="../assets/avatars/tom.png" alt="Tom">
+          <img class="avatar" src="../assets/avatars/tom.png" alt="Tom" onerror="this.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'">
           <div class="bubble-wrap"><div class="bubble-name">Tom</div>
           <div class="bubble other"><strong>I see your point</strong>, but <strong>I have some reservations</strong> about the dev timeline. <span class="phrase-ref">43</span> <span class="phrase-ref">44</span></div></div>
         </div>
         <div class="bubble-row">
-          <div class="avatar-circle" style="background:#1B2A5E;">健</div>
-          <div class="bubble-wrap"><div class="bubble-name">Kenji</div>
-          <div class="bubble kenji">Tom, is a two-week pull-forward workable at all?</div></div>
+          <img class="avatar" src="../assets/avatars/kenta.png" alt="Kenta" onerror="this.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'">
+          <div class="bubble-wrap"><div class="bubble-name">Kenta</div>
+          <div class="bubble kenta">Tom, is a two-week pull-forward workable at all?</div></div>
         </div>
         <div class="bubble-row right">
-          <img class="avatar" src="../assets/avatars/tom.png" alt="Tom">
+          <img class="avatar" src="../assets/avatars/tom.png" alt="Tom" onerror="this.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'">
           <div class="bubble-wrap"><div class="bubble-name">Tom</div>
           <div class="bubble other">Honestly, two weeks is <strong>a no-go for me</strong>. <span class="phrase-ref">45</span></div></div>
         </div>
         <div class="bubble-row right">
-          <img class="avatar" src="../assets/avatars/sarah.png" alt="Sarah">
+          <img class="avatar" src="../assets/avatars/sarah.png" alt="Sarah" onerror="this.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'">
           <div class="bubble-wrap"><div class="bubble-name">Sarah</div>
           <div class="bubble other">What about one week? <strong>I can live with</strong> one week. <span class="phrase-ref">46</span></div></div>
         </div>
         <div class="bubble-row right">
-          <img class="avatar" src="../assets/avatars/tom.png" alt="Tom">
+          <img class="avatar" src="../assets/avatars/tom.png" alt="Tom" onerror="this.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'">
           <div class="bubble-wrap"><div class="bubble-name">Tom</div>
           <div class="bubble other">One week... <strong>I'm not sold on it yet</strong>, but I'm open to discussing. <span class="phrase-ref">47</span></div></div>
         </div>
         <div class="bubble-row right">
-          <img class="avatar" src="../assets/avatars/sarah.png" alt="Sarah">
+          <img class="avatar" src="../assets/avatars/sarah.png" alt="Sarah" onerror="this.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'">
           <div class="bubble-wrap"><div class="bubble-name">Sarah</div>
           <div class="bubble other">Kenji, <strong>you've convinced me</strong> on the urgency angle. <span class="phrase-ref">48</span></div></div>
         </div>
         <div class="bubble-row">
-          <div class="avatar-circle" style="background:#1B2A5E;">健</div>
-          <div class="bubble-wrap"><div class="bubble-name">Kenji</div>
-          <div class="bubble kenji">If we can't land on a number now, let's <strong>agree to disagree</strong> and loop in the VP. <span class="phrase-ref">49</span></div></div>
+          <img class="avatar" src="../assets/avatars/kenta.png" alt="Kenta" onerror="this.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'">
+          <div class="bubble-wrap"><div class="bubble-name">Kenta</div>
+          <div class="bubble kenta">If we can't land on a number now, let's <strong>agree to disagree</strong> and loop in the VP. <span class="phrase-ref">49</span></div></div>
         </div>
         <div class="bubble-row right">
-          <img class="avatar" src="../assets/avatars/tom.png" alt="Tom">
+          <img class="avatar" src="../assets/avatars/tom.png" alt="Tom" onerror="this.outerHTML='<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>'">
           <div class="bubble-wrap"><div class="bubble-name">Tom</div>
           <div class="bubble other">No, no — one week, <strong>I'm on board with that</strong>. And <strong>I'm with you on this one</strong>, Kenji. <span class="phrase-ref">41</span> <span class="phrase-ref">50</span></div></div>
         </div>
@@ -165,7 +184,7 @@ body { font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif; 
         <div class="key-points-grid">
           <div class="key-point-item">
             <div class="kp-phrase">"no-go"</div>
-            <div class="kp-desc">完全に受け入れられないことを明確に伝える。使い常しは注意が必要。</div>
+            <div class="kp-desc">完全に受け入れられないことを明確に伝える。使いすぎには注意が必要。</div>
           </div>
           <div class="key-point-item">
             <div class="kp-phrase">"I can live with that"</div>
@@ -173,7 +192,7 @@ body { font-family: "Helvetica Neue", "Hiragino Sans", "Yu Gothic", sans-serif; 
           </div>
           <div class="key-point-item">
             <div class="kp-phrase">"agree to disagree"</div>
-            <div class="kp-desc">対立を残さず認識の相違を認めて先に進む。拒否でなく着地の検索。</div>
+            <div class="kp-desc">対立を残さず認識の相違を認めて先に進む。拒否でなく着地点を探すフレーズ。</div>
           </div>
         </div>
       </div>

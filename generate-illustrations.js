@@ -49,6 +49,10 @@ const SCENES = [
   {
     id: 'goodbye',
     desc: 'A Japanese man in his mid-30s in smart business casual sits relaxed with a brief professional smile, beginning to close his laptop as a video meeting ends. Expression is calm and satisfied.'
+  },
+  {
+    id: 'presentation',
+    desc: 'A Japanese man in his mid-30s in smart business casual sits beside a laptop showing a data chart on the screen, one hand pointing confidently at the display as if walking an audience through slides. Expression is clear, composed, and professional.'
   }
 ];
 

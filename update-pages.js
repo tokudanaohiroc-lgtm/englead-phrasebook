@@ -39,18 +39,16 @@ function renderPhraseCell(p) {
 }
 
 function renderBubble(speaker, textHtml, refs) {
-  var isRight = speaker !== 'kenji';
-  var name = speaker === 'kenji' ? 'Kenji' : (speaker.charAt(0).toUpperCase() + speaker.slice(1));
-  var avatarHtml = speaker === 'kenji'
-    ? '<div class="avatar-circle" style="background:#1B2A5E;">健</div>'
-    : '<img class="avatar" src="../assets/avatars/' + speaker + '.png" alt="' + name + '">';
+  var isRight = speaker !== 'kenta';
+  var name = speaker === 'kenta' ? 'Kenta' : (speaker.charAt(0).toUpperCase() + speaker.slice(1));
+  var avatarHtml = '<img class="avatar" src="../assets/avatars/' + speaker + '.png" alt="' + name + '" onerror="this.outerHTML=\'<div class=&quot;avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>\'">';
   var refsHtml = '';
   if (refs && refs.length) {
     for (var r = 0; r < refs.length; r++) {
       refsHtml += ' <span class="phrase-ref">' + pad(refs[r]) + '</span>';
     }
   }
-  var bubbleClass = speaker === 'kenji' ? 'bubble kenji' : 'bubble other';
+  var bubbleClass = speaker === 'kenta' ? 'bubble kenta' : 'bubble other';
   var rowClass = isRight ? 'bubble-row right' : 'bubble-row';
   return '        <div class="' + rowClass + '">\n' +
     '          ' + avatarHtml + '\n' +
@@ -84,15 +82,15 @@ var rpDefs = {
     imageFile: 'home-office-start.png',
     cultureText: '米国のオンライン会議では、ホストが音声確認から始めるのが慣例。全員に「聴こえてる？」と問いかけることで共通のスタートラインを作る。録音の事前告知もエチケットとして定着しており、無告知の録音は信頼関係を損ねることがある。',
     bubbles: [
-      { speaker: 'kenji', text: 'Hey, can everyone <strong>hear me okay</strong>?', refs: [1] },
+      { speaker: 'kenta', text: 'Hey, can everyone <strong>hear me okay</strong>?', refs: [1] },
       { speaker: 'sarah', text: 'Loud and clear! Tom — <strong>you\'re on mute</strong>.', refs: [2] },
       { speaker: 'tom',   text: 'Sorry about that! Can you hear me now?', refs: [] },
-      { speaker: 'kenji', text: 'Perfect. Let\'s <strong>go ahead and get started</strong>. I\'ll <strong>drop the agenda in the chat</strong>.', refs: [3, 7] },
+      { speaker: 'kenta', text: 'Perfect. Let\'s <strong>go ahead and get started</strong>. I\'ll <strong>drop the agenda in the chat</strong>.', refs: [3, 7] },
       { speaker: 'sarah', text: 'Got it. <strong>Can you see my screen</strong>? I want to pull up the deck.', refs: [6] },
-      { speaker: 'kenji', text: 'Yep, all good. <strong>Just a heads-up</strong> — I\'m <strong>recording this call</strong>.', refs: [8] },
+      { speaker: 'kenta', text: 'Yep, all good. <strong>Just a heads-up</strong> — I\'m <strong>recording this call</strong>.', refs: [8] },
       { speaker: 'sarah', text: 'No problem. Everyone, <strong>feel free to use the chat</strong> for questions!', refs: [9] },
       { speaker: 'tom',   text: 'Thanks. <strong>I\'m going to share my screen</strong> for the Berlin numbers — just getting it ready.', refs: [5] },
-      { speaker: 'kenji', text: 'Take your time. <strong>We\'ll give it another minute</strong>.', refs: [4] }
+      { speaker: 'kenta', text: 'Take your time. <strong>We\'ll give it another minute</strong>.', refs: [4] }
     ],
     keyPoints: [
       { phrase: '"hear me okay?"', desc: '"Can you hear me?" より全員への問いかけ感が強い。会議開始直後の定番確認。' },
@@ -101,22 +99,22 @@ var rpDefs = {
     ]
   },
   'facilitation': {
-    sceneTitle: '製品レビュー週次MTG',
-    sceneTitleEn: 'Weekly Product Sync',
-    sceneDesc: 'Kenjiがファシリテーター。<br>議題3項目だが議論が脱線しがち。<br>フレーズを駆使いして転柄する。',
+    sceneTitle: 'Q3週次チームシンク',
+    sceneTitleEn: 'Q3 Weekly Team Sync',
+    sceneDesc: 'Kentaがファシリテーター。<br>議題3項目だが議論が脱線しがち。<br>フレーズを駆使して会議を舵取りする。',
     imageFile: 'conference-room.png',
-    cultureText: 'ファシリテーターの役割は議論に参加するだけでなく、時間内に全議題を終わらせる管理者としての負被も大きい。脳内の話顔が脱線する前に、積極的に軸修正する素直さがまくる主辺の会議を作る。',
+    cultureText: 'ファシリテーターの役割は議論に参加するだけでなく、時間内に全議題を終わらせる管理者としての責任も大きい。話が脱線しそうになる前に積極的に軸修正できる素早さが、引き締まった会議を作る。',
     bubbles: [
-      { speaker: 'kenji', text: 'OK everyone. Let\'s <strong>kick things off</strong> with the Q3 update.', refs: [11] },
-      { speaker: 'kenji', text: '<strong>Today\'s agenda</strong> has three <strong>items</strong>.', refs: [12] },
+      { speaker: 'kenta', text: 'OK everyone. Let\'s <strong>kick things off</strong> with the Q3 update.', refs: [11] },
+      { speaker: 'kenta', text: '<strong>Today\'s agenda</strong> has three <strong>items</strong>.', refs: [12] },
       { speaker: 'tom',   text: 'Before we start — I have a quick update on Berlin.', refs: [] },
-      { speaker: 'kenji', text: '<strong>Can we hold that thought</strong>, Tom? We\'ve got a lot to cover. We\'ve got 30 minutes, so let\'s <strong>dive right in</strong>.', refs: [19, 16] },
-      { speaker: 'kenji', text: '<strong>Take it away</strong>, Sarah.', refs: [17] },
+      { speaker: 'kenta', text: '<strong>Can we hold that thought</strong>, Tom? We\'ve got a lot to cover. We\'ve got 30 minutes, so let\'s <strong>dive right in</strong>.', refs: [19, 16] },
+      { speaker: 'kenta', text: '<strong>Take it away</strong>, Sarah.', refs: [17] },
       { speaker: 'sarah', text: 'Thanks. So Q3 revenue came in at 112% of target...', refs: [] },
       { speaker: 'tom',   text: 'That connects to the Berlin rollout issue, actually —', refs: [] },
-      { speaker: 'kenji', text: 'I want to <strong>keep us on track</strong>. Let\'s <strong>park that and come back to it</strong>.', refs: [14, 18] },
-      { speaker: 'kenji', text: '<strong>Moving on to</strong> item two.', refs: [13] },
-      { speaker: 'kenji', text: 'OK, let\'s <strong>circle back</strong> to Tom\'s point now. And then I\'d like to <strong>open it up for discussion</strong>.', refs: [15, 20] }
+      { speaker: 'kenta', text: 'I want to <strong>keep us on track</strong>. Let\'s <strong>park that and come back to it</strong>.', refs: [14, 18] },
+      { speaker: 'kenta', text: '<strong>Moving on to</strong> item two.', refs: [13] },
+      { speaker: 'kenta', text: 'OK, let\'s <strong>circle back</strong> to Tom\'s point now. And then I\'d like to <strong>open it up for discussion</strong>.', refs: [15, 20] }
     ],
     keyPoints: [
       { phrase: '"kick things off"', desc: '開始の宣言に使う定番。スポーツ由来で動きのある言い出し。' },
@@ -127,25 +125,25 @@ var rpDefs = {
   'opinions': {
     sceneTitle: '市場参入戦略議論',
     sceneTitleEn: 'Market Entry Strategy',
-    sceneDesc: '新規市場参入の提案をめぐり、<br>Kenjiが見解を示し、Sarahが反論、<br>Tomが折蝿案を出す場面。',
+    sceneDesc: '新規市場参入の提案をめぐり、<br>Kentaが見解を示し、Sarahが反論、<br>Tomが折衷案を出す場面。',
     imageFile: 'whiteboard-discussion.png',
-    cultureText: '英語ネイティブは「反対」と思っても直接言わないことが多い。「その立場はわかる、だが…」のように「認めつつ推す」形式は日本語より渗透している。「反論」より「別の角度を加える」という指屠で辺ってみよう。',
+    cultureText: '英語ネイティブは「反対」と思っても直接言わないことが多い。「その立場はわかる、だが…」のように「認めつつ推す」形式は日本語より浸透している。「反論」より「別の角度を加える」という姿勢で挑んでみよう。',
     bubbles: [
-      { speaker: 'kenji', text: '<strong>From my perspective</strong>, we should target the mid-market segment first.', refs: [21] },
+      { speaker: 'kenta', text: '<strong>From my perspective</strong>, we should target the mid-market segment first.', refs: [21] },
       { speaker: 'sarah', text: 'I\'d like to <strong>add something here</strong>. That\'s valid, but we need to consider risk.', refs: [22] },
       { speaker: 'tom',   text: 'Just to <strong>throw it out there</strong> — what if we piloted one city first?', refs: [23] },
-      { speaker: 'kenji', text: '<strong>Here\'s my take on it</strong>: the data actually supports a phased approach.', refs: [24] },
+      { speaker: 'kenta', text: '<strong>Here\'s my take on it</strong>: the data actually supports a phased approach.', refs: [24] },
       { speaker: 'sarah', text: '<strong>To be honest with you</strong>, I think we\'re underestimating the competition.', refs: [25] },
-      { speaker: 'kenji', text: 'I think we need to <strong>push back on that</strong> timeline. It\'s too aggressive.', refs: [26] },
+      { speaker: 'kenta', text: 'I think we need to <strong>push back on that</strong> timeline. It\'s too aggressive.', refs: [26] },
       { speaker: 'tom',   text: '<strong>That\'s a fair point</strong>. Speed vs. stability is the real trade-off here.', refs: [27] },
-      { speaker: 'kenji', text: '<strong>Off the top of my head</strong>, a pilot could save us around 20% in launch costs.', refs: [28] },
+      { speaker: 'kenta', text: '<strong>Off the top of my head</strong>, a pilot could save us around 20% in launch costs.', refs: [28] },
       { speaker: 'sarah', text: '<strong>This is just my gut feeling</strong>, but I think the timing is actually right.', refs: [29] },
-      { speaker: 'tom',   text: '<strong>Building on what</strong> Kenji said, let\'s propose a 3-city pilot to the board.', refs: [30] }
+      { speaker: 'tom',   text: '<strong>Building on what</strong> Kenta said, let\'s propose a 3-city pilot to the board.', refs: [30] }
     ],
     keyPoints: [
       { phrase: '"from my perspective"', desc: '意見の前置き。「私の立場では」と明示できる。"my take on it" も同じ用途。' },
       { phrase: '"push back on that"', desc: '建設的な反論。"disagree" よりニュアンスが柔らか。' },
-      { phrase: '"building on what [Name] said"', desc: '前の発言を踏まえた上次ぎ。チームで考えている感が出る。' }
+      { phrase: '"building on what [Name] said"', desc: '前の発言を踏まえた引き継ぎ。チームで考えている感が出る。' }
     ]
   },
   'questions': {
@@ -153,18 +151,18 @@ var rpDefs = {
     sceneTitleEn: 'Q4 Budget Review',
     sceneDesc: 'Sarahが予算案を発表。<br>KenjiとTomが確認質問を重ねて、<br>認識をすり合わせる場面。',
     imageFile: 'one-on-one.png',
-    cultureText: '英語会議では、理解したつもりで進めるより、こまめに確認する方が高評される。「川柳島流で流す」とそこで殘極まりが酹ってしまうリスクがある。「私の理解では」と言いながら確認する厸鞋さは信頼の証。',
+    cultureText: '英語会議では、理解したつもりで進めるより、こまめに確認する方が好評される。曖昧なまま流すと後で認識のズレが生じるリスクがある。「私の理解では」と言いながら確認するこまめさは信頼の証。',
     bubbles: [
       { speaker: 'sarah', text: 'So we\'re proposing a 15% budget increase for APAC in Q4.', refs: [] },
-      { speaker: 'kenji', text: '<strong>Could you elaborate on that</strong>? What\'s driving the 15%?', refs: [31] },
+      { speaker: 'kenta', text: '<strong>Could you elaborate on that</strong>? What\'s driving the 15%?', refs: [31] },
       { speaker: 'sarah', text: '<strong>Just to clarify</strong> — this covers Q4 only, not the full year.', refs: [32] },
       { speaker: 'tom',   text: '<strong>Can you walk me through</strong> the regional breakdown one more time?', refs: [33] },
-      { speaker: 'kenji', text: 'I want to <strong>make sure I\'m following you</strong> — the bulk is Japan market?', refs: [34] },
+      { speaker: 'kenta', text: 'I want to <strong>make sure I\'m following you</strong> — the bulk is Japan market?', refs: [34] },
       { speaker: 'sarah', text: 'Exactly, Japan is 60% of the proposed increase.', refs: [] },
       { speaker: 'tom',   text: '<strong>So if I understand correctly</strong>, we\'d hit the ceiling by end of March?', refs: [35] },
-      { speaker: 'kenji', text: '<strong>Are we on the same page</strong> then — pilot Japan, review in Q1?', refs: [36] },
+      { speaker: 'kenta', text: '<strong>Are we on the same page</strong> then — pilot Japan, review in Q1?', refs: [36] },
       { speaker: 'sarah', text: 'Yes. <strong>What\'s the timeline looking like</strong> for board approval?', refs: [37] },
-      { speaker: 'kenji', text: '<strong>What\'s the blocker</strong> on our side right now?', refs: [38] },
+      { speaker: 'kenta', text: '<strong>What\'s the blocker</strong> on our side right now?', refs: [38] },
       { speaker: 'tom',   text: 'Legal sign-off. Sarah, <strong>what\'s your bandwidth like</strong> this week?', refs: [40] }
     ],
     keyPoints: [
@@ -178,23 +176,23 @@ var rpDefs = {
     sceneTitleEn: 'Deadline Negotiation',
     sceneDesc: '納期を2週間前倒しにする提案が出て、<br>各メンバーが立場を表明する場面。<br>譲歩と確認を繰り返して典型的な著地点を探る。',
     imageFile: 'negotiation.png',
-    cultureText: '英語の交渉では「完全拒否」でなく「条件付き許容」の形で帝めるのがプロフェッショナル。「これは受け入れられない」と「これなら許容できる」を明確に伝えることが大切。',
+    cultureText: '英語の交渉では「完全拒否」でなく「条件付き許容」の形でまとめるのがプロフェッショナル。「これは受け入れられない」と「これなら許容できる」を明確に伝えることが大切。',
     bubbles: [
-      { speaker: 'kenji', text: 'We\'re proposing to move the launch up by two weeks. Thoughts?', refs: [] },
+      { speaker: 'kenta', text: 'We\'re proposing to move the launch up by two weeks. Thoughts?', refs: [] },
       { speaker: 'sarah', text: '<strong>That makes total sense</strong> from a competitive standpoint.', refs: [42] },
       { speaker: 'tom',   text: '<strong>I see your point</strong>, but <strong>I have some reservations</strong> about the dev timeline.', refs: [43, 44] },
-      { speaker: 'kenji', text: 'Tom, is a two-week pull-forward workable at all?', refs: [] },
+      { speaker: 'kenta', text: 'Tom, is a two-week pull-forward workable at all?', refs: [] },
       { speaker: 'tom',   text: 'Honestly, two weeks is <strong>a no-go for me</strong>.', refs: [45] },
       { speaker: 'sarah', text: 'What about one week? <strong>I can live with</strong> one week.', refs: [46] },
       { speaker: 'tom',   text: 'One week... <strong>I\'m not sold on it yet</strong>, but I\'m open to discussing.', refs: [47] },
       { speaker: 'sarah', text: 'Kenji, <strong>you\'ve convinced me</strong> on the urgency angle.', refs: [48] },
-      { speaker: 'kenji', text: 'If we can\'t land on a number now, let\'s <strong>agree to disagree</strong> and loop in the VP.', refs: [49] },
+      { speaker: 'kenta', text: 'If we can\'t land on a number now, let\'s <strong>agree to disagree</strong> and loop in the VP.', refs: [49] },
       { speaker: 'tom',   text: 'No, no — one week, <strong>I\'m on board with that</strong>. And <strong>I\'m with you on this one</strong>, Kenji.', refs: [41, 50] }
     ],
     keyPoints: [
-      { phrase: '"no-go"', desc: '完全に受け入れられないことを明確に伝える。使い常しは注意が必要。' },
+      { phrase: '"no-go"', desc: '完全に受け入れられないことを明確に伝える。使いすぎには注意が必要。' },
       { phrase: '"I can live with that"', desc: '完璧ではないが許容できるという妛協の言葉。交渉の定番フレーズ。' },
-      { phrase: '"agree to disagree"', desc: '対立を残さず認識の相違を認めて先に進む。拒否でなく着地の検索。' }
+      { phrase: '"agree to disagree"', desc: '対立を残さず認識の相違を認めて先に進む。拒否でなく着地点を探すフレーズ。' }
     ]
   },
   'time': {
@@ -202,21 +200,21 @@ var rpDefs = {
     sceneTitleEn: 'Running-Long Weekly Sync',
     sceneDesc: 'アジェンダが多く、残り5分で議题が3つ。<br>Kenjiが時間管理フレーズを驱使いして<br>会議をのらしにける。',
     imageFile: 'time-pressure.png',
-    cultureText: 'オンライン会議で時間遵守は格別重要。次の予定がある参加者への配慮がプロとしての姿勢を示す。「時間がきたない」と言えるフレーズを持っておくだけで会議のクオリティが上がる。',
+    cultureText: 'オンライン会議で時間遵守は特別重要。次の予定がある参加者への配慮がプロとしての姿勢を示す。時間切れを自然に伝えられるフレーズを持っておくだけで会議のクオリティが上がる。',
     bubbles: [
-      { speaker: 'kenji', text: 'Everyone — <strong>we\'re running short on time</strong>. Three items left, five minutes.', refs: [51] },
+      { speaker: 'kenta', text: 'Everyone — <strong>we\'re running short on time</strong>. Three items left, five minutes.', refs: [51] },
       { speaker: 'tom',   text: 'Should we <strong>table</strong> the compliance update <strong>for now</strong>?', refs: [52] },
       { speaker: 'sarah', text: 'The vendor issue — <strong>can we take that offline</strong>? Just you and me, Kenji.', refs: [53] },
-      { speaker: 'kenji', text: 'Good idea. <strong>Let\'s try to wrap up</strong> in the next three minutes.', refs: [54] },
+      { speaker: 'kenta', text: 'Good idea. <strong>Let\'s try to wrap up</strong> in the next three minutes.', refs: [54] },
       { speaker: 'tom',   text: 'I want to <strong>be mindful of everyone\'s time</strong>, so I\'ll keep this brief.', refs: [55] },
       { speaker: 'sarah', text: '<strong>Can we fast-track</strong> the budget approval? It\'s blocking the team.', refs: [56] },
-      { speaker: 'kenji', text: '<strong>We\'re going a little over</strong> — does anyone need to drop at the hour?', refs: [57] },
-      { speaker: 'kenji', text: '<strong>Can we get a quick show of hands</strong> on the Q1 revenue target?', refs: [58] },
+      { speaker: 'kenta', text: '<strong>We\'re going a little over</strong> — does anyone need to drop at the hour?', refs: [57] },
+      { speaker: 'kenta', text: '<strong>Can we get a quick show of hands</strong> on the Q1 revenue target?', refs: [58] },
       { speaker: 'sarah', text: '<strong>Let\'s keep it brief</strong> — yes or no on the proposal, please.', refs: [59] },
       { speaker: 'tom',   text: 'The vendor contract details are <strong>a conversation for another time</strong>.', refs: [60] }
     ],
     keyPoints: [
-      { phrase: '"running short on time"', desc: '時間切迫の定番表現。胡暑氏にならず全員に共有できる。' },
+      { phrase: '"running short on time"', desc: '時間切迫の定番表現。焦らず自然に全員へ共有できる。' },
       { phrase: '"take this offline"', desc: '全体会議でなく個別に話す提案。ビジネス英語の定番。' },
       { phrase: '"show of hands"', desc: '振り分けや簡易投票に。オンラインではリアクションボタンで代用することも。' }
     ]
@@ -226,16 +224,16 @@ var rpDefs = {
     sceneTitleEn: 'Connection Nightmare Meeting',
     sceneDesc: '次々と技術トラブルが起きる中、<br>Kenjiが冷静に対処しながら<br>会議を進める場面。',
     imageFile: 'tech-trouble.png',
-    cultureText: 'トラブルを辺耗れずに報告できることが重要。「接続が切れている」「エコーが出ている」をすぐに伝えられると会議の流れが度慰えない。トラブル対応をサラッと言える優秀さもプロの証明。',
+    cultureText: 'トラブルを動じずに報告できることが重要。「接続が切れている」「エコーが出ている」をすぐに伝えられると会議の流れが止まらない。トラブル対応をサラッとこなせる落ち着きもプロの証明。',
     bubbles: [
-      { speaker: 'kenji', text: 'So as I was saying, the Q3 forecast shows—', refs: [] },
+      { speaker: 'kenta', text: 'So as I was saying, the Q3 forecast shows—', refs: [] },
       { speaker: 'tom',   text: 'Kenji, <strong>you\'re breaking up</strong> a little. Can you hear us?', refs: [61] },
-      { speaker: 'kenji', text: '<strong>Can you repeat that</strong>? Tom, <strong>you cut out</strong> for a second.', refs: [62] },
+      { speaker: 'kenta', text: '<strong>Can you repeat that</strong>? Tom, <strong>you cut out</strong> for a second.', refs: [62] },
       { speaker: 'sarah', text: '<strong>There\'s a bit of an echo on my end</strong> — let me mute for a sec.', refs: [63] },
       { speaker: 'tom',   text: '<strong>Could you turn off your video</strong>? <strong>The connection seems slow</strong>.', refs: [64] },
-      { speaker: 'kenji', text: '<strong>Sorry, I was on mute</strong>. Starting again—', refs: [65] },
+      { speaker: 'kenta', text: '<strong>Sorry, I was on mute</strong>. Starting again—', refs: [65] },
       { speaker: 'tom',   text: '<strong>Let me try reconnecting</strong> — back in a sec.', refs: [66] },
-      { speaker: 'kenji', text: 'Welcome back, Tom. <strong>Can everyone still see my screen</strong>?', refs: [67] },
+      { speaker: 'kenta', text: 'Welcome back, Tom. <strong>Can everyone still see my screen</strong>?', refs: [67] },
       { speaker: 'sarah', text: '<strong>Sorry about the background noise</strong> — construction outside.', refs: [68] },
       { speaker: 'tom',   text: '<strong>My connection is a bit spotty today</strong> — I\'m at the airport. <strong>Can someone else take over the screen share</strong>?', refs: [69, 70] }
     ],
@@ -250,23 +248,23 @@ var rpDefs = {
     sceneTitleEn: 'Project Planning Wrap-up',
     sceneDesc: 'プロジェクト計画ミーティングの最後10分。<br>アクションアイテムの整理と<br>担当割り当てを行う場面。',
     imageFile: 'wrap-up.png',
-    cultureText: '英語会議の「アクションアイテム」は議事録の心脏。誰がいつまでに何をするかを面「確認し」て会議を終わる文化が洸透している。担当者の名前と期限を必ずセットで確認すること。',
+    cultureText: '英語会議の「アクションアイテム」は議事録の核心。誰がいつまでに何をするかを確認して会議を終わる文化が浸透している。担当者の名前と期限を必ずセットで確認すること。',
     bubbles: [
-      { speaker: 'kenji', text: 'OK, let me <strong>recap</strong> what we discussed today.', refs: [71] },
-      { speaker: 'kenji', text: 'Let me <strong>summarize the action items</strong>: design mock-up by Friday, dev build by Monday EOD.', refs: [72] },
-      { speaker: 'kenji', text: '<strong>Who\'s taking the lead</strong> on the design mock-up?', refs: [73] },
+      { speaker: 'kenta', text: 'OK, let me <strong>recap</strong> what we discussed today.', refs: [71] },
+      { speaker: 'kenta', text: 'Let me <strong>summarize the action items</strong>: design mock-up by Friday, dev build by Monday EOD.', refs: [72] },
+      { speaker: 'kenta', text: '<strong>Who\'s taking the lead</strong> on the design mock-up?', refs: [73] },
       { speaker: 'sarah', text: 'I\'ll <strong>own that</strong>.', refs: [74] },
-      { speaker: 'kenji', text: 'Great. <strong>Let\'s put a deadline on</strong> the dev task — Monday EOD, Tom?', refs: [75] },
+      { speaker: 'kenta', text: 'Great. <strong>Let\'s put a deadline on</strong> the dev task — Monday EOD, Tom?', refs: [75] },
       { speaker: 'tom',   text: 'Works for me. I\'ll <strong>send out a follow-up email</strong> with all the details.', refs: [76] },
-      { speaker: 'kenji', text: 'Sarah, <strong>can you share</strong> the budget breakdown <strong>in writing after the call</strong>?', refs: [77] },
-      { speaker: 'kenji', text: 'We\'ll need to <strong>reconvene</strong> on the legal review next week.', refs: [78] },
-      { speaker: 'kenji', text: '<strong>Any final questions</strong> before we <strong>wrap up</strong>?', refs: [79] },
+      { speaker: 'kenta', text: 'Sarah, <strong>can you share</strong> the budget breakdown <strong>in writing after the call</strong>?', refs: [77] },
+      { speaker: 'kenta', text: 'We\'ll need to <strong>reconvene</strong> on the legal review next week.', refs: [78] },
+      { speaker: 'kenta', text: '<strong>Any final questions</strong> before we <strong>wrap up</strong>?', refs: [79] },
       { speaker: 'tom',   text: 'All good. I\'ll <strong>put together the meeting notes</strong>.', refs: [80] }
     ],
     keyPoints: [
       { phrase: '"recap"', desc: 'recapitulateの略。会議内容を整理する定番の導入詞。' },
-      { phrase: '"own that"', desc: 'れイアウトの責任を受ける。「担当する」より責任感が強い表現。' },
-      { phrase: '"put a deadline on that"', desc: '期限のないタスクは完了しない。アクションアイテムの固定混ん。' }
+      { phrase: '"own that"', desc: 'タスクの責任を受け持つ。「担当する」より責任感が強い表現。' },
+      { phrase: '"put a deadline on that"', desc: '期限のないタスクは完了しない。アクションアイテムの期限固定に使える一言。' }
     ]
   },
   'closing': {
@@ -274,17 +272,17 @@ var rpDefs = {
     sceneTitleEn: 'Quarterly Review Close',
     sceneDesc: 'Q3レビューMTGの最終盤。<br>全員で次のステップを確認し、<br>温かく会議を締めくくる場面。',
     imageFile: 'goodbye.png',
-    cultureText: '会議の締めの挙動にも文化的ニュアンスがある。単なる「さようなら」でなく、次のコンタクトや感謝を残す言葫を使うことで信頼関係を積み重ねられる。',
+    cultureText: '会議の締めにも文化的ニュアンスがある。単なる「さようなら」でなく、次のコンタクトや感謝を残す言葉を使うことで信頼関係を積み重ねられる。',
     bubbles: [
-      { speaker: 'kenji', text: 'Alright, <strong>thanks everyone for joining</strong> today.', refs: [81] },
+      { speaker: 'kenta', text: 'Alright, <strong>thanks everyone for joining</strong> today.', refs: [81] },
       { speaker: 'sarah', text: '<strong>Great discussion</strong> — really productive session.', refs: [82] },
       { speaker: 'tom',   text: '<strong>Looking forward to our next sync</strong> on this topic.', refs: [83] },
-      { speaker: 'kenji', text: '<strong>Same time next week</strong>?', refs: [88] },
+      { speaker: 'kenta', text: '<strong>Same time next week</strong>?', refs: [88] },
       { speaker: 'sarah', text: 'Works for me. I\'ll <strong>send around a meeting summary</strong> by EOD.', refs: [87] },
-      { speaker: 'kenji', text: 'If there are any loose ends, <strong>we\'ll pick this up next time</strong>.', refs: [90] },
+      { speaker: 'kenta', text: 'If there are any loose ends, <strong>we\'ll pick this up next time</strong>.', refs: [90] },
       { speaker: 'tom',   text: 'Sounds good. <strong>Have a good rest of your day</strong>, everyone.', refs: [84] },
       { speaker: 'sarah', text: '<strong>Talk soon</strong>!', refs: [85] },
-      { speaker: 'kenji', text: '<strong>Let\'s touch base</strong> if anything comes up before next week.', refs: [86] },
+      { speaker: 'kenta', text: '<strong>Let\'s touch base</strong> if anything comes up before next week.', refs: [86] },
       { speaker: 'tom',   text: '<strong>Take care</strong>, everyone. Good work today.', refs: [89] }
     ],
     keyPoints: [
@@ -298,18 +296,18 @@ var rpDefs = {
     sceneTitleEn: 'Q4 Report & Product Demo',
     sceneDesc: 'Kenjiがグローバルステークホルダーへ<br>四半期レポートとプロダクトデモを<br>プレゼンする場面。',
     imageFile: 'presentation.png',
-    cultureText: '英語プレゼンは「足し算で話す」のが基本。資料の説明中に听き手への確認を振り入れ、自分が一方的に話す時間を最小化する。「ここで更詳しく」と「ここで短く」の両方が持てるとプメ普強。',
+    cultureText: '英語プレゼンは「足し算で話す」のが基本。資料の説明中に聴き手への確認を挟み込み、一方的に話す時間を最小化する。「ここで詳しく」と「ここで短く」の両方が使い分けられると強い。',
     bubbles: [
-      { speaker: 'kenji', text: 'Thanks for joining. I\'d like to <strong>walk you through</strong> this slide on Q4 performance.', refs: [91] },
-      { speaker: 'kenji', text: '<strong>As you can see here</strong>, conversion is up 18% quarter-on-quarter.', refs: [92] },
+      { speaker: 'kenta', text: 'Thanks for joining. I\'d like to <strong>walk you through</strong> this slide on Q4 performance.', refs: [91] },
+      { speaker: 'kenta', text: '<strong>As you can see here</strong>, conversion is up 18% quarter-on-quarter.', refs: [92] },
       { speaker: 'tom',   text: 'Can you zoom in? The numbers are quite small on my screen.', refs: [] },
-      { speaker: 'kenji', text: 'Sure. <strong>Let me zoom in on that</strong>.', refs: [93] },
-      { speaker: 'kenji', text: '<strong>This chart shows</strong> the regional breakdown across APAC and EMEA.', refs: [94] },
-      { speaker: 'kenji', text: 'I\'ll <strong>pause here for questions</strong> — anyone want to jump in?', refs: [95] },
+      { speaker: 'kenta', text: 'Sure. <strong>Let me zoom in on that</strong>.', refs: [93] },
+      { speaker: 'kenta', text: '<strong>This chart shows</strong> the regional breakdown across APAC and EMEA.', refs: [94] },
+      { speaker: 'kenta', text: 'I\'ll <strong>pause here for questions</strong> — anyone want to jump in?', refs: [95] },
       { speaker: 'sarah', text: 'All good, keep going.', refs: [] },
-      { speaker: 'kenji', text: '<strong>Bear with me</strong> while I <strong>pull this up</strong> — switching to the demo environment.', refs: [96] },
-      { speaker: 'kenji', text: 'Before we dive into the demo, let me <strong>take you back to the big picture</strong>.', refs: [97] },
-      { speaker: 'kenji', text: '<strong>Does anyone have questions so far</strong>? Then: <strong>the key takeaway here is</strong> that retention improved across all regions. I\'ll <strong>leave this link in the chat</strong> for the full report.', refs: [98, 99, 100] }
+      { speaker: 'kenta', text: '<strong>Bear with me</strong> while I <strong>pull this up</strong> — switching to the demo environment.', refs: [96] },
+      { speaker: 'kenta', text: 'Before we dive into the demo, let me <strong>take you back to the big picture</strong>.', refs: [97] },
+      { speaker: 'kenta', text: '<strong>Does anyone have questions so far</strong>? Then: <strong>the key takeaway here is</strong> that retention improved across all regions. I\'ll <strong>leave this link in the chat</strong> for the full report.', refs: [98, 99, 100] }
     ],
     keyPoints: [
       { phrase: '"walk you through"', desc: 'ステップごとに説明するイメージ。プレゼンの導入に最適。' },
@@ -333,8 +331,8 @@ var PHRASE_CSS = '* { box-sizing: border-box; margin: 0; padding: 0; }\n' +
 '.header-title { font-size: 26px; font-weight: 800; color: #fff; letter-spacing: -0.01em; line-height: 1.2; white-space: nowrap; }\n' +
 '.header-title2 { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.6); letter-spacing: 0.01em; }\n' +
 '.header-right { flex-shrink: 0; display: flex; flex-direction: column; align-items: flex-end; gap: 8px; z-index: 1; }\n' +
-'.header-category { color: #1B2A5E; font-size: 11px; font-weight: 800; letter-spacing: 0.08em; padding: 4px 12px; border-radius: 2px; white-space: nowrap; }\n' +
-'.header-range { font-size: 38px; font-weight: 900; color: rgba(255,255,255,0.18); letter-spacing: -0.03em; line-height: 1; }\n' +
+'.header-category { color: #fff; font-size: 11px; font-weight: 800; letter-spacing: 0.08em; padding: 4px 12px; border-radius: 2px; white-space: nowrap; }\n' +
+'.header-range { font-size: 38px; font-weight: 900; color: rgba(255,255,255,0.35); letter-spacing: -0.03em; line-height: 1; }\n' +
 '.phrase-grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(5, 1fr); min-height: 0; }\n' +
 '.phrase-cell { padding: 7px 18px 5px 14px; border-right: 1px solid #e8e8e8; border-bottom: 1px solid #e8e8e8; display: flex; flex-direction: column; gap: 2px; overflow: hidden; position: relative; }\n' +
 '.phrase-cell:nth-child(even) { border-right: none; }\n' +
@@ -370,8 +368,11 @@ var ROLEPLAY_CSS = '* { box-sizing: border-box; margin: 0; padding: 0; }\n' +
 '.body { flex: 1; display: flex; gap: 0; overflow: hidden; min-height: 0; }\n' +
 '.left-col { width: 288px; flex-shrink: 0; display: flex; flex-direction: column; border-right: 1px solid #e8e8e8; overflow: hidden; }\n' +
 '.scene-illus { height: 210px; overflow: hidden; position: relative; flex-shrink: 0; background: linear-gradient(150deg, #1a2750 0%, #253980 100%); }\n' +
-'.scene-illus img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }\n' +
-'.scene-illus-overlay { position: absolute; inset: 0; background: linear-gradient(transparent 50%, rgba(27,42,94,0.6)); }\n' +
+'.scene-illus img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; position: absolute; inset: 0; }\n' +
+'.scene-illus-overlay { position: absolute; inset: 0; background: linear-gradient(transparent 40%, rgba(27,42,94,0.75)); }\n' +
+'.scene-illus-text { position: absolute; bottom: 0; left: 0; right: 0; padding: 12px 14px 10px; z-index: 2; }\n' +
+'.scene-illus-cat { font-size: 9px; font-weight: 800; letter-spacing: 0.18em; color: #D4A843; text-transform: uppercase; margin-bottom: 3px; }\n' +
+'.scene-illus-title { font-size: 13px; font-weight: 800; color: #fff; line-height: 1.3; }\n' +
 '.scene-box { flex: 1; background: #F4F6FB; padding: 10px 13px; display: flex; flex-direction: column; gap: 6px; overflow: hidden; }\n' +
 '.scene-label { font-size: 8.5px; font-weight: 800; letter-spacing: 0.14em; color: #D4A843; text-transform: uppercase; }\n' +
 '.scene-title { font-size: 12px; font-weight: 800; color: #1B2A5E; line-height: 1.3; }\n' +
@@ -395,8 +396,8 @@ var ROLEPLAY_CSS = '* { box-sizing: border-box; margin: 0; padding: 0; }\n' +
 '.bubble-wrap { display: flex; flex-direction: column; gap: 1px; max-width: 68%; }\n' +
 '.bubble-row.right .bubble-wrap { align-items: flex-end; }\n' +
 '.bubble-name { font-size: 9px; font-weight: 700; color: #888; padding: 0 4px; }\n' +
-'.bubble { padding: 5px 10px; border-radius: 12px; font-size: 13px; font-weight: 500; line-height: 1.4; color: #111; }\n' +
-'.bubble.kenji { background: #EEF2FB; border-radius: 4px 12px 12px 12px; }\n' +
+'.bubble { padding: 6px 11px; border-radius: 12px; font-size: 15px; font-weight: 500; line-height: 1.45; color: #111; }\n' +
+'.bubble.kenta { background: #EEF2FB; border-radius: 4px 12px 12px 12px; }\n' +
 '.bubble.other { background: #F5F5F5; border-radius: 12px 4px 12px 12px; }\n' +
 '.bubble strong { color: #C0392B; font-weight: 800; }\n' +
 '.phrase-ref { display: inline-flex; align-items: center; background: #D4A843; color: #fff; font-size: 8.5px; font-weight: 800; padding: 1px 5px; border-radius: 10px; margin-left: 4px; vertical-align: middle; white-space: nowrap; }\n' +
@@ -483,8 +484,12 @@ function renderRoleplayPage(cat, rp) {
     '  <div class="body">\n' +
     '    <div class="left-col">\n' +
     '      <div class="scene-illus">\n' +
-    '        <img src="../assets/illustrations/' + rp.imageFile + '" alt="">\n' +
+    '        <img src="../assets/illustrations/' + rp.imageFile + '" alt="" onerror="this.style.display=\'none\'">\n' +
     '        <div class="scene-illus-overlay"></div>\n' +
+    '        <div class="scene-illus-text">\n' +
+    '          <div class="scene-illus-cat">Scene &mdash; ' + cat.en + '</div>\n' +
+    '          <div class="scene-illus-title">' + rp.sceneTitle + '</div>\n' +
+    '        </div>\n' +
     '      </div>\n' +
     '      <div class="scene-box">\n' +
     '        <div class="scene-label">Scene</div>\n' +
@@ -492,16 +497,28 @@ function renderRoleplayPage(cat, rp) {
     '        <div class="scene-desc">' + rp.sceneDesc + '</div>\n' +
     '        <div class="characters">\n' +
     '          <div class="char-row">\n' +
-    '            <div class="char-avatar-circle" style="background:#1B2A5E;">健</div>\n' +
-    '            <div><div class="char-name">Kenji（健二）</div><div class="char-role">シカゴ駐在・チームリード</div></div>\n' +
+    '            <img class="char-photo" src="../assets/avatars/kenta.png" alt="Kenta" onerror="this.outerHTML=\'<div class=&quot;char-avatar-circle&quot; style=&quot;background:#1B2A5E;&quot;>K</div>\'">\n' +
+    '            <div><div class="char-name">Kenta</div><div class="char-role">シカゴ駐在・チームリード</div></div>\n' +
+    '          </div>\n' +
+    '          <div class="char-row">\n' +
+    '            <img class="char-photo" src="../assets/avatars/akari.png" alt="Akari" onerror="this.outerHTML=\'<div class=&quot;char-avatar-circle&quot; style=&quot;background:#8E4A1E;&quot;>A</div>\'">\n' +
+    '            <div><div class="char-name">Akari</div><div class="char-role">東京本社・マーケター</div></div>\n' +
     '          </div>\n' +
     '          <div class="char-row">\n' +
     '            <img class="char-photo" src="../assets/avatars/sarah.png" alt="Sarah">\n' +
     '            <div><div class="char-name">Sarah</div><div class="char-role">NY オフィス</div></div>\n' +
     '          </div>\n' +
     '          <div class="char-row">\n' +
+    '            <img class="char-photo" src="../assets/avatars/marcus.png" alt="Marcus" onerror="this.outerHTML=\'<div class=&quot;char-avatar-circle&quot; style=&quot;background:#1E5E7A;&quot;>M</div>\'">\n' +
+    '            <div><div class="char-name">Marcus</div><div class="char-role">LA・ITエンジニア</div></div>\n' +
+    '          </div>\n' +
+    '          <div class="char-row">\n' +
     '            <img class="char-photo" src="../assets/avatars/tom.png" alt="Tom">\n' +
     '            <div><div class="char-name">Tom</div><div class="char-role">ベルリン リモート</div></div>\n' +
+    '          </div>\n' +
+    '          <div class="char-row">\n' +
+    '            <img class="char-photo" src="../assets/avatars/mei.png" alt="Mei" onerror="this.outerHTML=\'<div class=&quot;char-avatar-circle&quot; style=&quot;background:#3E5E3E;&quot;>M</div>\'">\n' +
+    '            <div><div class="char-name">Mei</div><div class="char-role">シンガポール・マーケター</div></div>\n' +
     '          </div>\n' +
     '        </div>\n' +
     '        <div class="culture-note">\n' +
@@ -545,9 +562,10 @@ function renderCoverPage() {
     '.cover-ja-title { font-size: 22px; font-weight: 700; color: rgba(255,255,255,0.75); margin-bottom: 20px; }\n' +
     '.cover-tagline { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.5); letter-spacing: 0.06em; margin-bottom: 36px; }\n' +
     '.cover-desc { font-size: 13px; color: rgba(255,255,255,0.65); line-height: 1.85; border-left: 3px solid rgba(212,168,67,0.4); padding-left: 18px; }\n' +
-    '.cover-right { flex-shrink: 0; width: 400px; height: 420px; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 12px; }\n' +
-    '.illus-ph { background: rgba(255,255,255,0.05); border: 1.5px dashed rgba(212,168,67,0.3); border-radius: 4px; display: flex; align-items: center; justify-content: center; }\n' +
-    '.illus-ph-label { font-size: 9px; font-weight: 700; letter-spacing: 0.1em; color: rgba(212,168,67,0.35); text-transform: uppercase; }\n' +
+    '.cover-right { flex-shrink: 0; width: 400px; height: 420px; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 10px; }\n' +
+    '.illus-tile { position: relative; border-radius: 6px; overflow: hidden; background: rgba(255,255,255,0.06); border: 1px solid rgba(212,168,67,0.2); }\n' +
+    '.illus-tile img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }\n' +
+    '.illus-tile-label { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.6)); padding: 14px 10px 7px; font-size: 11px; font-weight: 800; color: #fff; letter-spacing: 0.04em; }\n' +
     '</style>\n</head>\n<body>\n' +
     '<div class="page">\n' +
     '  <div class="cover-body">\n' +
@@ -562,10 +580,10 @@ function renderCoverPage() {
     '      <div class="cover-desc">外国人チームとのオンライン会議で、もう「えーっと...」と詰まらないために。<br>駐在員が現場で本当に使うフレーズだけを厳選しました。</div>\n' +
     '    </div>\n' +
     '    <div class="cover-right">\n' +
-    '      <div class="illus-ph"><span class="illus-ph-label">Illustration</span></div>\n' +
-    '      <div class="illus-ph"><span class="illus-ph-label">Illustration</span></div>\n' +
-    '      <div class="illus-ph"><span class="illus-ph-label">Illustration</span></div>\n' +
-    '      <div class="illus-ph"><span class="illus-ph-label">Illustration</span></div>\n' +
+    '      <div class="illus-tile"><img src="../assets/illustrations/home-office-start.png" alt="接続・開始"><div class="illus-tile-label">接続・開始</div></div>\n' +
+    '      <div class="illus-tile"><img src="../assets/illustrations/conference-room.png" alt="会議の進行"><div class="illus-tile-label">会議の進行</div></div>\n' +
+    '      <div class="illus-tile"><img src="../assets/illustrations/whiteboard-discussion.png" alt="意見・提案"><div class="illus-tile-label">意見・提案</div></div>\n' +
+    '      <div class="illus-tile"><img src="../assets/illustrations/goodbye.png" alt="クロージング"><div class="illus-tile-label">クロージング</div></div>\n' +
     '    </div>\n' +
     '  </div>\n' +
     '</div>\n</body>\n</html>';
