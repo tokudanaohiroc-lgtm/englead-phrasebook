@@ -693,7 +693,7 @@ function renderCtaPage() {
     '.hl-eyebrow { font-size: 8.5px; font-weight: 800; letter-spacing: 0.22em; color: #D4A843; text-transform: uppercase; margin-bottom: 3px; }\n' +
     '.hl-title { font-size: 18px; font-weight: 900; color: #1B2A5E; line-height: 1.35; }\n' +
     '.img-sec { flex-shrink: 0; padding: 9px 24px 7px; }\n' +
-    '.img-inner { position: relative; border-radius: 10px; overflow: hidden; height: 200px; }\n' +
+    '.img-inner { position: relative; border-radius: 10px; overflow: hidden; height: 220px; }\n' +
     '.img-inner img { width: 100%; height: 100%; object-fit: cover; display: block; }\n' +
     '.stats-bar { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(27,42,94,0.9); display: flex; }\n' +
     '.stat { flex: 1; padding: 7px 0; display: flex; flex-direction: column; align-items: center; justify-content: center; border-right: 1px solid rgba(255,255,255,0.12); gap: 1px; }\n' +
@@ -711,12 +711,13 @@ function renderCtaPage() {
     '.card-head { display: flex; align-items: center; gap: 7px; flex-shrink: 0; }\n' +
     '.card-num { width: 20px; height: 20px; border-radius: 50%; background: #1B2A5E; color: #fff; font-size: 8.5px; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }\n' +
     '.card-title { font-size: 12px; font-weight: 800; color: #1B2A5E; line-height: 1.3; }\n' +
-    '.card-desc { font-size: 11.5px; color: #555; line-height: 1.65; overflow: hidden; }\n' +
+    '.card-desc { font-size: 11px; color: #555; line-height: 1.65; overflow: hidden; }\n' +
     '.bottom { flex-shrink: 0; height: 66px; border-top: 1px solid #e0e0e0; display: flex; }\n' +
     '.promo { flex: 1; background: #FFF8E8; border-right: 1px solid #F0D880; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 0 18px; }\n' +
-    '.promo-tag { background: #C0392B; color: #fff; font-size: 7.5px; font-weight: 800; padding: 2px 7px; border-radius: 2px; letter-spacing: 0.06em; }\n' +
-    '.promo-t { font-size: 17px; font-weight: 600; color: #C0392B; line-height: 1.2; }\n' +
-    '.promo-sub { font-size: 8.5px; color: #888; }\n' +
+    '.promo-main { display: flex; align-items: center; gap: 8px; }\n' +
+    '.promo-tag { background: #C0392B; color: #fff; font-size: 8px; font-weight: 800; padding: 3px 8px; border-radius: 2px; letter-spacing: 0.06em; flex-shrink: 0; }\n' +
+    '.promo-t { font-size: 21px; font-weight: 900; color: #C0392B; line-height: 1; }\n' +
+    '.promo-sub { font-size: 8.5px; color: #888; margin-top: 3px; }\n' +
     '.cta { flex: 1; background: #06C755; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 0 32px; }\n' +
     '.cta-row { display: flex; align-items: center; gap: 10px; }\n' +
     '.cta-badge { background: #fff; border-radius: 4px; padding: 2px 9px; font-size: 10px; font-weight: 900; color: #06C755; flex-shrink: 0; }\n' +
@@ -775,8 +776,10 @@ function renderCtaPage() {
     '  </div>\n' +
     '  <div class="bottom">\n' +
     '    <div class="promo">\n' +
-    '      <div class="promo-tag">今だけ限定</div>\n' +
-    '      <div class="promo-t">入会金 ¥20,000 OFF</div>\n' +
+    '      <div class="promo-main">\n' +
+    '        <div class="promo-t">入会金 ¥20,000 OFF</div>\n' +
+    '        <div class="promo-tag">今だけ限定</div>\n' +
+    '      </div>\n' +
     '      <div class="promo-sub">カウンセリング受講者への特別割引</div>\n' +
     '    </div>\n' +
     '    <div class="cta">\n' +
