@@ -39,6 +39,10 @@ const SLIDES = [
 
     await page.goto(url, { waitUntil: 'load' });
 
+    await page.addStyleTag({
+      content: 'body { background: #fff !important; padding: 0 !important; margin: 0 !important; } .page { box-shadow: none !important; margin: 0 !important; }'
+    });
+
     var pdf = await page.pdf({
       format: 'A4',
       landscape: true,
