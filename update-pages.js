@@ -716,7 +716,10 @@ function renderCtaPage() {
     '.promo { flex: 1; background: #FFF8E8; border-right: 1px solid #F0D880; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 0 18px; }\n' +
     '.promo-main { display: flex; align-items: center; gap: 8px; }\n' +
     '.promo-tag { background: #C0392B; color: #fff; font-size: 8px; font-weight: 800; padding: 3px 8px; border-radius: 2px; letter-spacing: 0.06em; flex-shrink: 0; }\n' +
-    '.promo-t { font-size: 21px; font-weight: 900; color: #C0392B; line-height: 1; }\n' +
+    '.promo-price { display: flex; align-items: baseline; gap: 3px; }\n' +
+    '.promo-label { font-size: 12px; font-weight: 700; color: #C0392B; line-height: 1; }\n' +
+    '.promo-amount { font-size: 23px; font-weight: 900; color: #C0392B; line-height: 1; font-family: "Helvetica Neue", Arial, sans-serif; letter-spacing: -0.02em; }\n' +
+    '.promo-off { font-size: 14px; font-weight: 900; color: #C0392B; line-height: 1; font-family: "Helvetica Neue", Arial, sans-serif; }\n' +
     '.promo-sub { font-size: 8.5px; color: #888; margin-top: 3px; }\n' +
     '.cta { flex: 1; background: #06C755; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 0 32px; }\n' +
     '.cta-row { display: flex; align-items: center; gap: 10px; }\n' +
@@ -777,8 +780,12 @@ function renderCtaPage() {
     '  <div class="bottom">\n' +
     '    <div class="promo">\n' +
     '      <div class="promo-main">\n' +
-    '        <div class="promo-t">入会金 ¥20,000 OFF</div>\n' +
     '        <div class="promo-tag">今だけ限定</div>\n' +
+    '        <div class="promo-price">\n' +
+    '          <span class="promo-label">入会金</span>\n' +
+    '          <span class="promo-amount">¥20,000</span>\n' +
+    '          <span class="promo-off">OFF</span>\n' +
+    '        </div>\n' +
     '      </div>\n' +
     '      <div class="promo-sub">カウンセリング受講者への特別割引</div>\n' +
     '    </div>\n' +
