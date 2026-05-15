@@ -675,17 +675,17 @@ function renderHowtoPage() {
 
 function renderCtaPage() {
   var illustSrc = 'data:image/svg+xml;utf8,' + encodeURIComponent(
-    '<svg xmlns="http://www.w3.org/2000/svg" width="1075" height="155">' +
-    '<rect width="1075" height="155" fill="#C8D8EC"/>' +
-    '<text x="537" y="68" font-family="sans-serif" font-size="13" fill="#7A96B8" text-anchor="middle" font-weight="bold">[ 横長イラスト ]</text>' +
-    '<text x="537" y="88" font-family="sans-serif" font-size="10" fill="#9aaec8" text-anchor="middle">男性がZoomカウンセリングを受けている画面の中に日本人女性コーチが映っているシーン</text>' +
+    '<svg xmlns="http://www.w3.org/2000/svg" width="1075" height="200">' +
+    '<rect width="1075" height="200" fill="#C8D8EC"/>' +
+    '<text x="537" y="88" font-family="sans-serif" font-size="13" fill="#7A96B8" text-anchor="middle" font-weight="bold">[ 横長イラスト ]</text>' +
+    '<text x="537" y="110" font-family="sans-serif" font-size="10" fill="#9aaec8" text-anchor="middle">男性がZoomカウンセリングを受けている画面の中に日本人女性コーチが映っているシーン</text>' +
     '</svg>'
   );
   var cardIllus = function(n) {
     return 'data:image/svg+xml;utf8,' + encodeURIComponent(
-      '<svg xmlns="http://www.w3.org/2000/svg" width="340" height="227">' +
-      '<rect width="340" height="227" fill="#C8D8EC"/>' +
-      '<text x="170" y="118" font-family="sans-serif" font-size="11" fill="#7A96B8" text-anchor="middle" font-weight="bold">[ イラスト 0' + n + ' ]</text>' +
+      '<svg xmlns="http://www.w3.org/2000/svg" width="340" height="204">' +
+      '<rect width="340" height="204" fill="#C8D8EC"/>' +
+      '<text x="170" y="106" font-family="sans-serif" font-size="11" fill="#7A96B8" text-anchor="middle" font-weight="bold">[ イラスト 0' + n + ' ]</text>' +
       '</svg>'
     );
   };
@@ -704,7 +704,7 @@ function renderCtaPage() {
     '.hl-eyebrow { font-size: 8.5px; font-weight: 800; letter-spacing: 0.22em; color: #D4A843; text-transform: uppercase; margin-bottom: 3px; }\n' +
     '.hl-title { font-size: 18px; font-weight: 900; color: #1B2A5E; line-height: 1.35; }\n' +
     '.img-sec { flex-shrink: 0; padding: 9px 24px 7px; }\n' +
-    '.img-inner { position: relative; border-radius: 10px; overflow: hidden; height: 155px; }\n' +
+    '.img-inner { position: relative; border-radius: 10px; overflow: hidden; height: 200px; }\n' +
     '.img-inner img { width: 100%; height: 100%; object-fit: cover; display: block; }\n' +
     '.stats-bar { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(27,42,94,0.9); display: flex; }\n' +
     '.stat { flex: 1; padding: 7px 0; display: flex; flex-direction: column; align-items: center; justify-content: center; border-right: 1px solid rgba(255,255,255,0.12); gap: 1px; }\n' +
@@ -716,15 +716,15 @@ function renderCtaPage() {
     '.cards-lbl { font-size: 13px; font-weight: 800; color: #1B2A5E; border-left: 3px solid #D4A843; padding-left: 9px; margin-bottom: 8px; flex-shrink: 0; }\n' +
     '.cards-row { display: flex; gap: 12px; flex: 1; min-height: 0; padding-bottom: 8px; }\n' +
     '.card { flex: 1; border: 1px solid #e0e6f0; border-radius: 8px; background: #fff; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 2px 8px rgba(27,42,94,0.06); }\n' +
-    '.card-il { width: 100%; flex-shrink: 0; overflow: hidden; aspect-ratio: 3/2; }\n' +
+    '.card-il { width: 100%; flex-shrink: 0; overflow: hidden; aspect-ratio: 5/3; }\n' +
     '.card-il img { width: 100%; height: 100%; object-fit: cover; display: block; }\n' +
     '.card-body { padding: 9px 13px 10px; display: flex; flex-direction: column; gap: 5px; flex: 1; overflow: hidden; }\n' +
     '.card-head { display: flex; align-items: center; gap: 7px; flex-shrink: 0; }\n' +
     '.card-num { width: 20px; height: 20px; border-radius: 50%; background: #1B2A5E; color: #fff; font-size: 8.5px; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }\n' +
     '.card-title { font-size: 12px; font-weight: 800; color: #1B2A5E; line-height: 1.3; }\n' +
-    '.card-desc { font-size: 11px; color: #555; line-height: 1.65; overflow: hidden; }\n' +
+    '.card-desc { font-size: 11.5px; color: #555; line-height: 1.65; overflow: hidden; }\n' +
     '.bottom { flex-shrink: 0; height: 66px; border-top: 1px solid #e0e0e0; display: flex; }\n' +
-    '.promo { width: 248px; flex-shrink: 0; background: #FFF8E8; border-right: 1px solid #F0D880; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 0 18px; }\n' +
+    '.promo { flex: 1; background: #FFF8E8; border-right: 1px solid #F0D880; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 0 18px; }\n' +
     '.promo-tag { background: #C0392B; color: #fff; font-size: 7.5px; font-weight: 800; padding: 2px 7px; border-radius: 2px; letter-spacing: 0.06em; }\n' +
     '.promo-t { font-size: 17px; font-weight: 600; color: #C0392B; line-height: 1.2; }\n' +
     '.promo-sub { font-size: 8.5px; color: #888; }\n' +
