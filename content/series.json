@@ -3,8 +3,15 @@
     "id": "001",
     "topic": "Online Meetings",
     "ja": "オンライン会議で使える英語",
-    "category": "接続・開始",
     "file": "content/01_online-meetings.json",
+    "status": "done",
+    "phrases": 100
+  },
+  {
+    "id": "002",
+    "topic": "Business Phone Calls",
+    "ja": "英語での電話",
+    "file": "content/02_phone-calls.json",
     "status": "done",
     "phrases": 100
   }

@@ -1,0 +1,1029 @@
+{
+  "meta": {
+    "id": "phone-calls",
+    "number": 2,
+    "title": "Business Phone Calls",
+    "title_ja": "英語での電話",
+    "subtitle": "100 Phrases for International Business Calls",
+    "subtitle_ja": "国際電話を制する100フレーズ",
+    "description_ja": "英語の電話は、表情も資料も使えない分、言葉だけで伝え切る力が試されます。Akariと一緒に、実務で本当に使う100のフレーズを身につけましょう。",
+    "cover_color": "#1A3A4E",
+    "accent_color": "#E07A3A",
+    "phrases_per_page": 10,
+    "total_phrases": 100
+  },
+  "categories": [
+    { "id": "answering",      "ja": "電話に出る・取り次ぐ",   "en": "Answering & Transferring",  "color": "#2E6B96", "count": 10 },
+    { "id": "confirming",     "ja": "用件を聞く・確認する",   "en": "Understanding & Confirming", "color": "#1E7A6E", "count": 10 },
+    { "id": "messages",       "ja": "伝言を残す・受ける",     "en": "Leaving & Taking Messages",  "color": "#6B3A8E", "count": 10 },
+    { "id": "callbacks",      "ja": "かけ直す・後で連絡する", "en": "Callbacks & Scheduling",     "color": "#8E5A1E", "count": 10 },
+    { "id": "international",  "ja": "国際電話をかける",       "en": "Making International Calls", "color": "#1E4A8E", "count": 10 },
+    { "id": "urgent",         "ja": "急ぎ・緊急の連絡",       "en": "Urgent Communication",       "color": "#8E2A1E", "count": 10 },
+    { "id": "requests",       "ja": "頼む・お願いをする",     "en": "Making Requests",             "color": "#2A6B3A", "count": 10 },
+    { "id": "clarity",        "ja": "聞き取れないとき",       "en": "When You Can't Hear",        "color": "#5E4A2E", "count": 10 },
+    { "id": "offduty",        "ja": "休日・手が離せないとき", "en": "Off-duty & Can't Talk",      "color": "#4A2E6B", "count": 10 },
+    { "id": "closing",        "ja": "電話を締める",           "en": "Closing the Call",            "color": "#2E5E5E", "count": 10 }
+  ],
+  "phrases": [
+    {
+      "id": "pc-001", "num": 1, "category": "answering",
+      "phrase_en": "Thank you for calling. This is Akari speaking.",
+      "phrase_ja": "お電話ありがとうございます。Akariです。",
+      "phonics": "/θæŋk juː fər ˈkɔːlɪŋ ðɪs ɪz ˈækəri ˈspiːkɪŋ/",
+      "katakana": "サンキュー　フォー　コーリング　ジス　イズ　アカリ　スピーキング",
+      "type": "phrase", "emphasis": ["Thank you for calling", "This is Akari speaking"],
+      "scene": "電話を取ったときの定番フレーズ。会社名→自分の名前の順で言うのが基本。",
+      "street_note": "「Akari speaking」の「speaking」は省略して「This is Akari」でも自然。", "illustration_scene": "phone-desk"
+    },
+    {
+      "id": "pc-002", "num": 2, "category": "answering",
+      "phrase_en": "How may I help you today?",
+      "phrase_ja": "本日はどのようなご用件でしょうか？",
+      "phonics": "/haʊ meɪ aɪ hɛlp juː təˈdeɪ/",
+      "katakana": "ハウ　メイ　アイ　ヘルプ　ユー　トゥデイ",
+      "type": "phrase", "emphasis": ["How may I help you"],
+      "scene": "受電後すぐに用件を聞く丁寧な表現。「Can I help you?」より一段上のフォーマルさ。",
+      "street_note": null, "illustration_scene": "phone-desk"
+    },
+    {
+      "id": "pc-003", "num": 3, "category": "answering",
+      "phrase_en": "Could I have your name, please?",
+      "phrase_ja": "お名前をお聞きしてもよいでしょうか？",
+      "phonics": "/kʊd aɪ hæv jʊər neɪm pliːz/",
+      "katakana": "クッド　アイ　ハブ　ユア　ネーム　プリーズ",
+      "type": "phrase", "emphasis": ["Could I have your name"],
+      "scene": "相手の名前を丁寧に確認するとき。「What's your name?」より柔らかい印象。",
+      "street_note": null, "illustration_scene": "phone-desk"
+    },
+    {
+      "id": "pc-004", "num": 4, "category": "answering",
+      "phrase_en": "Please hold for a moment.",
+      "phrase_ja": "少々お待ちください。",
+      "phonics": "/pliːz hoʊld fər ə ˈmoʊmənt/",
+      "katakana": "プリーズ　ホールド　フォー　ア　モーメント",
+      "type": "phrase", "emphasis": ["hold for a moment"],
+      "scene": "調べる・別の人に取り次ぐなど、相手に待ってもらうときの定番表現。",
+      "street_note": "「Could you hold, please?」でも同じ意味。より丁寧に依頼したいときはこちら。", "illustration_scene": "phone-desk"
+    },
+    {
+      "id": "pc-005", "num": 5, "category": "answering",
+      "phrase_en": "I'll put you through to her right away.",
+      "phrase_ja": "すぐに担当者におつなぎします。",
+      "phonics": "/aɪl pʊt juː θruː tə hɜːr raɪt əˈweɪ/",
+      "katakana": "アイル　プット　ユー　スルー　トゥ　ハー　ライト　アウェイ",
+      "type": "phrase", "emphasis": ["put you through", "right away"],
+      "scene": "別の担当者に転送するときの定番表現。「right away」でスムーズな対応を印象づける。",
+      "street_note": "「put you through」＝電話をつなぐ。「I'll connect you」とも言える。", "illustration_scene": "phone-transfer"
+    },
+    {
+      "id": "pc-006", "num": 6, "category": "answering",
+      "phrase_en": "I'm afraid she's not available right now.",
+      "phrase_ja": "あいにく、ただいま席を外しております。",
+      "phonics": "/aɪm əˈfreɪd ʃiːz nɒt əˈveɪləbl raɪt naʊ/",
+      "katakana": "アイム　アフレイド　シーズ　ノット　アヴェイラブル　ライト　ナウ",
+      "type": "phrase", "emphasis": ["I'm afraid", "not available right now"],
+      "scene": "担当者が不在のとき。「I'm afraid」が残念なニュアンスを添えて、丁寧さを強調する。",
+      "street_note": null, "illustration_scene": "phone-desk"
+    },
+    {
+      "id": "pc-007", "num": 7, "category": "answering",
+      "phrase_en": "Can I ask what this is regarding?",
+      "phrase_ja": "どのようなご用件でしょうか？",
+      "phonics": "/kæn aɪ æsk wɒt ðɪs ɪz rɪˈɡɑːrdɪŋ/",
+      "katakana": "キャン　アイ　アスク　ワット　ジス　イズ　リガーディング",
+      "type": "phrase", "emphasis": ["what this is regarding"],
+      "scene": "転送前に用件を確認するとき。担当者が戻ったときにスムーズに対応するための確認。",
+      "street_note": null, "illustration_scene": "phone-desk"
+    },
+    {
+      "id": "pc-008", "num": 8, "category": "answering",
+      "phrase_en": "I'm sorry, I think you may have the wrong number.",
+      "phrase_ja": "申し訳ありませんが、番号がお間違えではないでしょうか。",
+      "phonics": "/aɪm ˈsɒri aɪ θɪŋk juː meɪ hæv ðə rɒŋ ˈnʌmbər/",
+      "katakana": "アイム　ソーリー　アイ　シンク　ユー　メイ　ハブ　ザ　ロング　ナンバー",
+      "type": "phrase", "emphasis": ["wrong number"],
+      "scene": "間違い電話のとき。断定せず「かもしれません」と柔らかく伝えるのがポイント。",
+      "street_note": null, "illustration_scene": "phone-desk"
+    },
+    {
+      "id": "pc-009", "num": 9, "category": "answering",
+      "phrase_en": "One moment, please — I'll transfer your call now.",
+      "phrase_ja": "少々お待ちください。ただいまおつなぎします。",
+      "phonics": "/wʌn ˈmoʊmənt pliːz aɪl ˈtrænsfɜːr jʊər kɔːl naʊ/",
+      "katakana": "ワン　モーメント　プリーズ　アイル　トランスファー　ユア　コール　ナウ",
+      "type": "phrase", "emphasis": ["transfer your call"],
+      "scene": "転送中に相手に伝える一言。沈黙になる前に声をかけることで安心感を与える。",
+      "street_note": null, "illustration_scene": "phone-transfer"
+    },
+    {
+      "id": "pc-010", "num": 10, "category": "answering",
+      "phrase_en": "Would you like to leave a message?",
+      "phrase_ja": "伝言はいかがでしょうか？",
+      "phonics": "/wʊd juː laɪk tə liːv ə ˈmɛsɪdʒ/",
+      "katakana": "ウッド　ユー　ライク　トゥ　リーブ　ア　メッセージ",
+      "type": "phrase", "emphasis": ["leave a message"],
+      "scene": "担当者が不在の場合に伝言を申し出るとき。オプションとして提示する自然な流れ。",
+      "street_note": null, "illustration_scene": "phone-message"
+    },
+    {
+      "id": "pc-011", "num": 11, "category": "confirming",
+      "phrase_en": "Let me make sure I understand correctly.",
+      "phrase_ja": "正しく理解できているか確認させてください。",
+      "phonics": "/lɛt miː meɪk ʃʊər aɪ ˌʌndərˈstænd kəˈrɛktli/",
+      "katakana": "レット　ミー　メイク　シュア　アイ　アンダースタンド　コレクトリー",
+      "type": "phrase", "emphasis": ["make sure I understand correctly"],
+      "scene": "相手の内容を確認する前の丁寧な前置き。特に複雑な内容のときに使う。",
+      "street_note": null, "illustration_scene": "phone-desk"
+    },
+    {
+      "id": "pc-012", "num": 12, "category": "confirming",
+      "phrase_en": "So just to confirm, you're calling about the shipment?",
+      "phrase_ja": "確認させてください。荷物の件でのお電話ですね？",
+      "phonics": "/soʊ dʒʌst tə kənˈfɜːrm jʊər ˈkɔːlɪŋ əˈbaʊt ðə ˈʃɪpmənt/",
+      "katakana": "ソー　ジャスト　トゥ　コンファーム　ユア　コーリング　アバウト　ザ　シップメント",
+      "type": "phrase", "emphasis": ["just to confirm"],
+      "scene": "理解した内容を相手に確認する。「just to confirm」は電話での定番フレーズ。",
+      "street_note": null, "illustration_scene": "phone-desk"
+    },
+    {
+      "id": "pc-013", "num": 13, "category": "confirming",
+      "phrase_en": "Could you spell that for me, please?",
+      "phrase_ja": "スペルを教えていただけますか？",
+      "phonics": "/kʊd juː spɛl ðæt fər miː pliːz/",
+      "katakana": "クッド　ユー　スペル　ザット　フォー　ミー　プリーズ",
+      "type": "phrase", "emphasis": ["spell that for me"],
+      "scene": "名前や地名などのスペルを確認するとき。書き間違い防止の大切な一言。",
+      "street_note": null, "illustration_scene": "phone-desk"
+    },
+    {
+      "id": "pc-014", "num": 14, "category": "confirming",
+      "phrase_en": "What's the best number to reach you at?",
+      "phrase_ja": "ご連絡先の電話番号をお聞きしてもよいですか？",
+      "phonics": "/wɒts ðə bɛst ˈnʌmbər tə riːtʃ juː æt/",
+      "katakana": "ワッツ　ザ　ベスト　ナンバー　トゥ　リーチ　ユー　アット",
+      "type": "phrase", "emphasis": ["best number to reach you"],
+      "scene": "折り返し先を確認するとき。「your phone number」より自然な口語表現。",
+      "street_note": null, "illustration_scene": "phone-desk"
+    },
+    {
+      "id": "pc-015", "num": 15, "category": "confirming",
+      "phrase_en": "I'll make a note of that.",
+      "phrase_ja": "メモいたしました。",
+      "phonics": "/aɪl meɪk ə noʊt əv ðæt/",
+      "katakana": "アイル　メイク　ア　ノート　オブ　ザット",
+      "type": "phrase", "emphasis": ["make a note of that"],
+      "scene": "重要な情報を受け取ったことを相手に伝える。メモを取っている安心感を与える。",
+      "street_note": null, "illustration_scene": "phone-desk"
+    },
+    {
+      "id": "pc-016", "num": 16, "category": "confirming",
+      "phrase_en": "When would be a good time to call you back?",
+      "phrase_ja": "折り返しのご連絡はいつがよろしいでしょうか？",
+      "phonics": "/wɛn wʊd biː ə ɡʊd taɪm tə kɔːl juː bæk/",
+      "katakana": "ウェン　ウッド　ビー　ア　グッド　タイム　トゥ　コール　ユー　バック",
+      "type": "phrase", "emphasis": ["good time to call you back"],
+      "scene": "すぐに対応できない場合に、相手の都合を聞いて折り返す時間を決める。",
+      "street_note": null, "illustration_scene": "phone-desk"
+    },
+    {
+      "id": "pc-017", "num": 17, "category": "confirming",
+      "phrase_en": "Is there anything else I can help you with?",
+      "phrase_ja": "他にご用件はございますか？",
+      "phonics": "/ɪz ðɛr ˈɛniθɪŋ ɛls aɪ kæn hɛlp juː wɪð/",
+      "katakana": "イズ　ゼア　エニシング　エルス　アイ　キャン　ヘルプ　ユー　ウィズ",
+      "type": "phrase", "emphasis": ["anything else I can help you with"],
+      "scene": "一つの用件が終わったあと、他に要件がないか確認する締めの一言。",
+      "street_note": null, "illustration_scene": "phone-desk"
+    },
+    {
+      "id": "pc-018", "num": 18, "category": "confirming",
+      "phrase_en": "Let me check on that for you.",
+      "phrase_ja": "確認いたします。",
+      "phonics": "/lɛt miː tʃɛk ɒn ðæt fər juː/",
+      "katakana": "レット　ミー　チェック　オン　ザット　フォー　ユー",
+      "type": "phrase", "emphasis": ["check on that for you"],
+      "scene": "すぐに答えが出ない場合に調べる意思を示す。「for you」が相手への配慮を表す。",
+      "street_note": null, "illustration_scene": "phone-desk"
+    },
+    {
+      "id": "pc-019", "num": 19, "category": "confirming",
+      "phrase_en": "I'll look into that and get back to you.",
+      "phrase_ja": "調べてからご連絡いたします。",
+      "phonics": "/aɪl lʊk ˈɪntə ðæt ænd ɡɛt bæk tə juː/",
+      "katakana": "アイル　ルック　イントゥ　ザット　アンド　ゲット　バック　トゥ　ユー",
+      "type": "phrase", "emphasis": ["look into that", "get back to you"],
+      "scene": "その場で回答できないときに使う。「look into」で調査、「get back」で折り返しを約束。",
+      "street_note": null, "illustration_scene": "phone-desk"
+    },
+    {
+      "id": "pc-020", "num": 20, "category": "confirming",
+      "phrase_en": "Just to make sure — you said the order number is 1-2-3-4?",
+      "phrase_ja": "念のため確認ですが、注文番号は1234でよろしいですか？",
+      "phonics": "/dʒʌst tə meɪk ʃʊər juː sɛd ðə ˈɔːrdər ˈnʌmbər ɪz/",
+      "katakana": "ジャスト　トゥ　メイク　シュア　ユー　セッド　ザ　オーダー　ナンバー　イズ",
+      "type": "phrase", "emphasis": ["just to make sure"],
+      "scene": "番号・日付など重要な情報を復唱して確認する。ミスを防ぐ基本テクニック。",
+      "street_note": "数字は一桁ずつ読むのが国際電話での鉄則。「1234」→「one, two, three, four」。", "illustration_scene": "phone-desk"
+    },
+    {
+      "id": "pc-021", "num": 21, "category": "messages",
+      "phrase_en": "Could I leave a message?",
+      "phrase_ja": "伝言をお願いできますか？",
+      "phonics": "/kʊd aɪ liːv ə ˈmɛsɪdʒ/",
+      "katakana": "クッド　アイ　リーブ　ア　メッセージ",
+      "type": "phrase", "emphasis": ["leave a message"],
+      "scene": "担当者が不在のときに伝言を残すことを申し出る。最も基本的な表現。",
+      "street_note": null, "illustration_scene": "phone-message"
+    },
+    {
+      "id": "pc-022", "num": 22, "category": "messages",
+      "phrase_en": "Could you ask him to call me back when he's free?",
+      "phrase_ja": "お手が空いたら折り返しいただけるよう、お伝えいただけますか？",
+      "phonics": "/kʊd juː æsk hɪm tə kɔːl miː bæk wɛn hiːz friː/",
+      "katakana": "クッド　ユー　アスク　ヒム　トゥ　コール　ミー　バック　ウェン　ヒーズ　フリー",
+      "type": "phrase", "emphasis": ["call me back when he's free"],
+      "scene": "担当者への折り返し依頼。「when he's free」で相手の都合を尊重するニュアンス。",
+      "street_note": null, "illustration_scene": "phone-message"
+    },
+    {
+      "id": "pc-023", "num": 23, "category": "messages",
+      "phrase_en": "Please just let her know I called.",
+      "phrase_ja": "Akariからお電話があったとお伝えいただけますか。",
+      "phonics": "/pliːz dʒʌst lɛt hɜːr noʊ aɪ kɔːld/",
+      "katakana": "プリーズ　ジャスト　レット　ハー　ノー　アイ　コールド",
+      "type": "phrase", "emphasis": ["let her know I called"],
+      "scene": "特に用件を伝えなくてもよいとき、「かけた」という事実だけ伝えてもらう表現。",
+      "street_note": null, "illustration_scene": "phone-message"
+    },
+    {
+      "id": "pc-024", "num": 24, "category": "messages",
+      "phrase_en": "I'll make sure she gets the message.",
+      "phrase_ja": "確実にお伝えいたします。",
+      "phonics": "/aɪl meɪk ʃʊər ʃiː ɡɛts ðə ˈmɛsɪdʒ/",
+      "katakana": "アイル　メイク　シュア　シー　ゲッツ　ザ　メッセージ",
+      "type": "phrase", "emphasis": ["make sure she gets the message"],
+      "scene": "伝言を受け取り、確実に届けることを約束する一言。信頼感を与える表現。",
+      "street_note": null, "illustration_scene": "phone-message"
+    },
+    {
+      "id": "pc-025", "num": 25, "category": "messages",
+      "phrase_en": "Could you give me a number where you can be reached?",
+      "phrase_ja": "ご連絡先の番号をお教えいただけますか？",
+      "phonics": "/kʊd juː ɡɪv miː ə ˈnʌmbər wɛr juː kæn biː riːtʃt/",
+      "katakana": "クッド　ユー　ギブ　ミー　ア　ナンバー　ウェア　ユー　キャン　ビー　リーチト",
+      "type": "phrase", "emphasis": ["a number where you can be reached"],
+      "scene": "折り返し先の番号を聞くとき。「be reached」＝連絡がつく、というニュアンス。",
+      "street_note": null, "illustration_scene": "phone-message"
+    },
+    {
+      "id": "pc-026", "num": 26, "category": "messages",
+      "phrase_en": "He'll get back to you as soon as he's available.",
+      "phrase_ja": "手が空き次第、折り返しご連絡するよう伝えます。",
+      "phonics": "/hiːl ɡɛt bæk tə juː æz suːn æz hiːz əˈveɪləbl/",
+      "katakana": "ヒール　ゲット　バック　トゥ　ユー　アズ　スーン　アズ　ヒーズ　アヴェイラブル",
+      "type": "phrase", "emphasis": ["get back to you as soon as he's available"],
+      "scene": "担当者が折り返すことを約束する言葉を相手に伝える表現。",
+      "street_note": null, "illustration_scene": "phone-message"
+    },
+    {
+      "id": "pc-027", "num": 27, "category": "messages",
+      "phrase_en": "Can I take a message?",
+      "phrase_ja": "ご伝言を承りましょうか？",
+      "phonics": "/kæn aɪ teɪk ə ˈmɛsɪdʒ/",
+      "katakana": "キャン　アイ　テイク　ア　メッセージ",
+      "type": "phrase", "emphasis": ["take a message"],
+      "scene": "担当者が不在のときに伝言を受ける意思を示す。受電時の基本フレーズ。",
+      "street_note": "「take a message」と「leave a message」はセット。受けるのがtake、残すのがleave。", "illustration_scene": "phone-message"
+    },
+    {
+      "id": "pc-028", "num": 28, "category": "messages",
+      "phrase_en": "I'll have someone call you back shortly.",
+      "phrase_ja": "すぐに誰かから折り返しご連絡させます。",
+      "phonics": "/aɪl hæv ˈsʌmwʌn kɔːl juː bæk ˈʃɔːrtli/",
+      "katakana": "アイル　ハブ　サムワン　コール　ユー　バック　ショートリー",
+      "type": "phrase", "emphasis": ["have someone call you back", "shortly"],
+      "scene": "自分では対応できないが、他のスタッフが折り返すことを約束するとき。",
+      "street_note": null, "illustration_scene": "phone-message"
+    },
+    {
+      "id": "pc-029", "num": 29, "category": "messages",
+      "phrase_en": "I'll pass your message along right away.",
+      "phrase_ja": "すぐにお伝えいたします。",
+      "phonics": "/aɪl pæs jʊər ˈmɛsɪdʒ əˈlɒŋ raɪt əˈweɪ/",
+      "katakana": "アイル　パス　ユア　メッセージ　アロング　ライト　アウェイ",
+      "type": "phrase", "emphasis": ["pass your message along", "right away"],
+      "scene": "伝言を受け取ったあと、すぐに届けることを強調する表現。",
+      "street_note": null, "illustration_scene": "phone-message"
+    },
+    {
+      "id": "pc-030", "num": 30, "category": "messages",
+      "phrase_en": "I'll have her return your call this afternoon.",
+      "phrase_ja": "午後に担当者から折り返しご連絡させます。",
+      "phonics": "/aɪl hæv hɜːr rɪˈtɜːrn jʊər kɔːl ðɪs ˌæftərˈnuːn/",
+      "katakana": "アイル　ハブ　ハー　リターン　ユア　コール　ジス　アフタヌーン",
+      "type": "phrase", "emphasis": ["return your call", "this afternoon"],
+      "scene": "折り返しの時間帯を具体的に伝える。いつ連絡が来るか分かることで相手が安心する。",
+      "street_note": null, "illustration_scene": "phone-message"
+    },
+    {
+      "id": "pc-031", "num": 31, "category": "callbacks",
+      "phrase_en": "I'm returning your call.",
+      "phrase_ja": "先ほどのお電話の折り返しでご連絡しております。",
+      "phonics": "/aɪm rɪˈtɜːrnɪŋ jʊər kɔːl/",
+      "katakana": "アイム　リターニング　ユア　コール",
+      "type": "phrase", "emphasis": ["returning your call"],
+      "scene": "折り返しの電話をかけたときに最初に言う一言。相手にすぐ状況を理解させる。",
+      "street_note": null, "illustration_scene": "phone-mobile"
+    },
+    {
+      "id": "pc-032", "num": 32, "category": "callbacks",
+      "phrase_en": "I'm sorry I missed your call earlier.",
+      "phrase_ja": "先ほどのお電話に出られず、失礼いたしました。",
+      "phonics": "/aɪm ˈsɒri aɪ mɪst jʊər kɔːl ˈɜːrliər/",
+      "katakana": "アイム　ソーリー　アイ　ミスト　ユア　コール　アーリアー",
+      "type": "phrase", "emphasis": ["I'm sorry I missed your call"],
+      "scene": "折り返しの冒頭で使う謝罪フレーズ。「miss」は出られなかった、というニュアンス。",
+      "street_note": null, "illustration_scene": "phone-mobile"
+    },
+    {
+      "id": "pc-033", "num": 33, "category": "callbacks",
+      "phrase_en": "Is now a good time to talk?",
+      "phrase_ja": "今、お電話は大丈夫ですか？",
+      "phonics": "/ɪz naʊ ə ɡʊd taɪm tə tɔːk/",
+      "katakana": "イズ　ナウ　ア　グッド　タイム　トゥ　トーク",
+      "type": "phrase", "emphasis": ["a good time to talk"],
+      "scene": "折り返し時や急な電話の際、相手に都合を確認する。押しつけない姿勢を示せる。",
+      "street_note": null, "illustration_scene": "phone-mobile"
+    },
+    {
+      "id": "pc-034", "num": 34, "category": "callbacks",
+      "phrase_en": "When is a convenient time for you to talk?",
+      "phrase_ja": "お電話でお話しできるご都合のよいお時間はありますか？",
+      "phonics": "/wɛn ɪz ə kənˈviːniənt taɪm fər juː tə tɔːk/",
+      "katakana": "ウェン　イズ　ア　コンヴィーニエント　タイム　フォー　ユー　トゥ　トーク",
+      "type": "phrase", "emphasis": ["convenient time for you"],
+      "scene": "電話の日程を調整するとき。「convenient」が丁寧さをプラスするキーワード。",
+      "street_note": null, "illustration_scene": "phone-mobile"
+    },
+    {
+      "id": "pc-035", "num": 35, "category": "callbacks",
+      "phrase_en": "I'll call you back in about 30 minutes.",
+      "phrase_ja": "30分ほどで折り返しご連絡します。",
+      "phonics": "/aɪl kɔːl juː bæk ɪn əˈbaʊt ˈθɜːrti ˈmɪnɪts/",
+      "katakana": "アイル　コール　ユー　バック　イン　アバウト　サーティ　ミニッツ",
+      "type": "phrase", "emphasis": ["call you back in about"],
+      "scene": "具体的な時間を伝えて折り返す約束をする。「about」で多少のズレを許容する表現。",
+      "street_note": null, "illustration_scene": "phone-mobile"
+    },
+    {
+      "id": "pc-036", "num": 36, "category": "callbacks",
+      "phrase_en": "I'll be available after 3 PM.",
+      "phrase_ja": "午後3時以降でしたらご対応できます。",
+      "phonics": "/aɪl biː əˈveɪləbl ˈæftər θriː piː ɛm/",
+      "katakana": "アイル　ビー　アヴェイラブル　アフター　スリー　ピーエム",
+      "type": "phrase", "emphasis": ["available after 3 PM"],
+      "scene": "電話に出られる時間帯を相手に伝える。「available」はビジネス英語の必須単語。",
+      "street_note": null, "illustration_scene": "phone-mobile"
+    },
+    {
+      "id": "pc-037", "num": 37, "category": "callbacks",
+      "phrase_en": "Could we schedule a call for tomorrow morning?",
+      "phrase_ja": "明日の午前中にお電話の時間を設定できますか？",
+      "phonics": "/kʊd wiː ˈskɛdʒuːl ə kɔːl fər təˈmɒroʊ ˈmɔːrnɪŋ/",
+      "katakana": "クッド　ウィー　スケジュール　ア　コール　フォー　トゥモロー　モーニング",
+      "type": "phrase", "emphasis": ["schedule a call"],
+      "scene": "電話の日程を調整するとき。「schedule a call」はビジネスで非常によく使われる。",
+      "street_note": null, "illustration_scene": "phone-mobile"
+    },
+    {
+      "id": "pc-038", "num": 38, "category": "callbacks",
+      "phrase_en": "Sorry for calling back so late.",
+      "phrase_ja": "こんな遅い時間に折り返してしまい、失礼いたしました。",
+      "phonics": "/ˈsɒri fər ˈkɔːlɪŋ bæk soʊ leɪt/",
+      "katakana": "ソーリー　フォー　コーリング　バック　ソー　レイト",
+      "type": "phrase", "emphasis": ["calling back so late"],
+      "scene": "夕方や夜遅くに折り返す場合の謝罪。時差のある相手には特に大切な一言。",
+      "street_note": null, "illustration_scene": "phone-mobile"
+    },
+    {
+      "id": "pc-039", "num": 39, "category": "callbacks",
+      "phrase_en": "I tried to reach you a couple of times.",
+      "phrase_ja": "何度かご連絡をお試みしたのですが。",
+      "phonics": "/aɪ traɪd tə riːtʃ juː ə ˈkʌpəl əv taɪmz/",
+      "katakana": "アイ　トライド　トゥ　リーチ　ユー　ア　カップル　オブ　タイムズ",
+      "type": "phrase", "emphasis": ["tried to reach you"],
+      "scene": "複数回かけたが繋がらなかった状況を伝える。責める口調にならない柔らかい表現。",
+      "street_note": null, "illustration_scene": "phone-mobile"
+    },
+    {
+      "id": "pc-040", "num": 40, "category": "callbacks",
+      "phrase_en": "Let me give you a call first thing tomorrow.",
+      "phrase_ja": "明日一番に折り返しご連絡します。",
+      "phonics": "/lɛt miː ɡɪv juː ə kɔːl fɜːrst θɪŋ təˈmɒroʊ/",
+      "katakana": "レット　ミー　ギブ　ユー　ア　コール　ファースト　シング　トゥモロー",
+      "type": "phrase", "emphasis": ["first thing tomorrow"],
+      "scene": "今日は難しいが明日の朝イチに連絡することを約束するとき。",
+      "street_note": "「first thing」＝「まず最初に」「一番に」。日程感の強い口語表現。", "illustration_scene": "phone-mobile"
+    },
+    {
+      "id": "pc-041", "num": 41, "category": "international",
+      "phrase_en": "Hello, this is Akari calling from Tokyo.",
+      "phrase_ja": "もしもし、東京のAkariです。",
+      "phonics": "/həˈloʊ ðɪs ɪz ˈækəri ˈkɔːlɪŋ frəm toʊˈkiːoʊ/",
+      "katakana": "ハロー　ジス　イズ　アカリ　コーリング　フロム　トーキョー",
+      "type": "phrase", "emphasis": ["this is Akari calling from Tokyo"],
+      "scene": "国際電話の冒頭で使う自己紹介。会社名・都市名を加えると相手がすぐ理解できる。",
+      "street_note": null, "illustration_scene": "phone-international"
+    },
+    {
+      "id": "pc-042", "num": 42, "category": "international",
+      "phrase_en": "I'm calling regarding the delivery schedule.",
+      "phrase_ja": "配送スケジュールの件でお電話しております。",
+      "phonics": "/aɪm ˈkɔːlɪŋ rɪˈɡɑːrdɪŋ ðə dɪˈlɪvəri ˈskɛdʒuːl/",
+      "katakana": "アイム　コーリング　リガーディング　ザ　デリバリー　スケジュール",
+      "type": "phrase", "emphasis": ["I'm calling regarding"],
+      "scene": "電話の用件を冒頭で伝える。「regarding」が「〜に関して」の意味を持つビジネス英語の定番。",
+      "street_note": null, "illustration_scene": "phone-international"
+    },
+    {
+      "id": "pc-043", "num": 43, "category": "international",
+      "phrase_en": "I'd like to speak with Mr. Chen if he's available.",
+      "phrase_ja": "できましたらChen様とお話ししたいのですが。",
+      "phonics": "/aɪd laɪk tə spiːk wɪð mɪstər tʃɛn ɪf hiːz əˈveɪləbl/",
+      "katakana": "アイド　ライク　トゥ　スピーク　ウィズ　ミスター　チェン　イフ　ヒーズ　アヴェイラブル",
+      "type": "phrase", "emphasis": ["I'd like to speak with", "if he's available"],
+      "scene": "担当者を指名して繋いでもらうとき。「if he's available」で押し付けない配慮が伝わる。",
+      "street_note": null, "illustration_scene": "phone-international"
+    },
+    {
+      "id": "pc-044", "num": 44, "category": "international",
+      "phrase_en": "I know it's early there — I hope I'm not disturbing you.",
+      "phrase_ja": "お時間帯が早いと思いますが、ご迷惑でなければよいのですが。",
+      "phonics": "/aɪ noʊ ɪts ˈɜːrli ðɛr aɪ hoʊp aɪm nɒt dɪˈstɜːrbɪŋ juː/",
+      "katakana": "アイ　ノー　イッツ　アーリー　ゼア　アイ　ホープ　アイム　ノット　ディスターヴィング　ユー",
+      "type": "phrase", "emphasis": ["I know it's early there", "hope I'm not disturbing you"],
+      "scene": "時差のある相手に電話するときの配慮。こういった一言が国際的なビジネス関係を円滑にする。",
+      "street_note": null, "illustration_scene": "phone-international"
+    },
+    {
+      "id": "pc-045", "num": 45, "category": "international",
+      "phrase_en": "I'm just following up on my email from last week.",
+      "phrase_ja": "先週お送りしたメールのフォローアップでご連絡しております。",
+      "phonics": "/aɪm dʒʌst ˈfɒloʊɪŋ ʌp ɒn maɪ ˈiːmeɪl frəm læst wiːk/",
+      "katakana": "アイム　ジャスト　フォローイング　アップ　オン　マイ　イーメール　フロム　ラスト　ウィーク",
+      "type": "phrase", "emphasis": ["following up on my email"],
+      "scene": "メール後に電話でフォローするとき。文脈を先に伝えることで相手が思い出しやすくなる。",
+      "street_note": null, "illustration_scene": "phone-international"
+    },
+    {
+      "id": "pc-046", "num": 46, "category": "international",
+      "phrase_en": "Could you send me the details by email after this call?",
+      "phrase_ja": "このあとメールで詳細をお送りいただけますか？",
+      "phonics": "/kʊd juː sɛnd miː ðə ˈdiːteɪlz baɪ ˈiːmeɪl ˈæftər ðɪs kɔːl/",
+      "katakana": "クッド　ユー　センド　ミー　ザ　ディーテイルズ　バイ　イーメール　アフター　ジス　コール",
+      "type": "phrase", "emphasis": ["send me the details by email"],
+      "scene": "電話で話した内容を書面で確認したいとき。記録として残すためのお願い。",
+      "street_note": null, "illustration_scene": "phone-international"
+    },
+    {
+      "id": "pc-047", "num": 47, "category": "international",
+      "phrase_en": "I'll confirm everything in writing.",
+      "phrase_ja": "内容は書面にてご確認いたします。",
+      "phonics": "/aɪl kənˈfɜːrm ˈɛvriθɪŋ ɪn ˈraɪtɪŋ/",
+      "katakana": "アイル　コンファーム　エブリシング　イン　ライティング",
+      "type": "phrase", "emphasis": ["confirm everything in writing"],
+      "scene": "電話で話した内容をメールや書類で改めて確認する意思を伝える。トラブル防止に効果的。",
+      "street_note": null, "illustration_scene": "phone-international"
+    },
+    {
+      "id": "pc-048", "num": 48, "category": "international",
+      "phrase_en": "We're working against a tight deadline on this.",
+      "phrase_ja": "こちらは締め切りが厳しい状況でして。",
+      "phonics": "/wɪər ˈwɜːrkɪŋ əˈɡɛnst ə taɪt ˈdɛdlaɪn ɒn ðɪs/",
+      "katakana": "ウィアー　ワーキング　アゲンスト　ア　タイト　デッドライン　オン　ジス",
+      "type": "phrase", "emphasis": ["working against a tight deadline"],
+      "scene": "急ぎの案件であることを穏やかに伝えるとき。「tight deadline」は定番ビジネス英語。",
+      "street_note": null, "illustration_scene": "phone-international"
+    },
+    {
+      "id": "pc-049", "num": 49, "category": "international",
+      "phrase_en": "Thank you for taking my call.",
+      "phrase_ja": "お電話を受けていただきありがとうございます。",
+      "phonics": "/θæŋk juː fər ˈteɪkɪŋ maɪ kɔːl/",
+      "katakana": "サンキュー　フォー　テイキング　マイ　コール",
+      "type": "phrase", "emphasis": ["taking my call"],
+      "scene": "電話をかけた側として、出てもらったことへの感謝を伝える。冒頭または締めに使える。",
+      "street_note": null, "illustration_scene": "phone-international"
+    },
+    {
+      "id": "pc-050", "num": 50, "category": "international",
+      "phrase_en": "I'll keep this brief since I know you're busy.",
+      "phrase_ja": "お忙しいことは存じますので、要点のみお伝えします。",
+      "phonics": "/aɪl kiːp ðɪs briːf sɪns aɪ noʊ jʊər ˈbɪzi/",
+      "katakana": "アイル　キープ　ジス　ブリーフ　シンス　アイ　ノー　ユア　ビジー",
+      "type": "phrase", "emphasis": ["keep this brief"],
+      "scene": "相手の時間を尊重している姿勢を示すフレーズ。冒頭に使うと好印象につながる。",
+      "street_note": null, "illustration_scene": "phone-international"
+    },
+    {
+      "id": "pc-051", "num": 51, "category": "urgent",
+      "phrase_en": "This is urgent — could you put me through right away?",
+      "phrase_ja": "急を要する用件ですので、すぐにおつなぎいただけますか？",
+      "phonics": "/ðɪs ɪz ˈɜːrdʒənt kʊd juː pʊt miː θruː raɪt əˈweɪ/",
+      "katakana": "ジス　イズ　アージェント　クッド　ユー　プット　ミー　スルー　ライト　アウェイ",
+      "type": "phrase", "emphasis": ["This is urgent", "right away"],
+      "scene": "緊急の場合に担当者への即時転送を依頼するとき。「urgent」という言葉が優先度を上げる。",
+      "street_note": null, "illustration_scene": "phone-urgent"
+    },
+    {
+      "id": "pc-052", "num": 52, "category": "urgent",
+      "phrase_en": "I need to reach [name] immediately.",
+      "phrase_ja": "今すぐ〇〇さんと連絡を取る必要があります。",
+      "phonics": "/aɪ niːd tə riːtʃ neɪm ɪˈmiːdiətli/",
+      "katakana": "アイ　ニード　トゥ　リーチ　（ネーム）　イミーディエイトリー",
+      "type": "phrase", "emphasis": ["immediately"],
+      "scene": "特定の人と今すぐ話す必要があると緊急性を伝えるとき。",
+      "street_note": null, "illustration_scene": "phone-urgent"
+    },
+    {
+      "id": "pc-053", "num": 53, "category": "urgent",
+      "phrase_en": "There's been a change of plans — I need to update you.",
+      "phrase_ja": "予定が変わりまして、ご連絡しなければと思いまして。",
+      "phonics": "/ðɛrz bɪn ə tʃeɪndʒ əv plænz aɪ niːd tə ʌpˈdeɪt juː/",
+      "katakana": "ゼアズ　ビン　ア　チェンジ　オブ　プランズ　アイ　ニード　トゥ　アップデイト　ユー",
+      "type": "phrase", "emphasis": ["change of plans", "update you"],
+      "scene": "急きょ状況が変わったことを伝える電話の冒頭フレーズ。「update」がビジネス英語的。",
+      "street_note": null, "illustration_scene": "phone-urgent"
+    },
+    {
+      "id": "pc-054", "num": 54, "category": "urgent",
+      "phrase_en": "We need to sort this out right away.",
+      "phrase_ja": "すぐにこの件を対処する必要があります。",
+      "phonics": "/wiː niːd tə sɔːrt ðɪs aʊt raɪt əˈweɪ/",
+      "katakana": "ウィー　ニード　トゥ　ソート　ジス　アウト　ライト　アウェイ",
+      "type": "phrase", "emphasis": ["sort this out", "right away"],
+      "scene": "問題の即時解決を求めるとき。「sort out」＝解決する、整理する。",
+      "street_note": null, "illustration_scene": "phone-urgent"
+    },
+    {
+      "id": "pc-055", "num": 55, "category": "urgent",
+      "phrase_en": "Is there any way to speed this up?",
+      "phrase_ja": "もう少し早く進められる方法はありますか？",
+      "phonics": "/ɪz ðɛr ˈɛni weɪ tə spiːd ðɪs ʌp/",
+      "katakana": "イズ　ゼア　エニ　ウェイ　トゥ　スピード　ジス　アップ",
+      "type": "phrase", "emphasis": ["speed this up"],
+      "scene": "プロセスを早めてほしいときの依頼。直接的すぎず、選択肢を与える聞き方。",
+      "street_note": null, "illustration_scene": "phone-urgent"
+    },
+    {
+      "id": "pc-056", "num": 56, "category": "urgent",
+      "phrase_en": "I'll need a response by end of day.",
+      "phrase_ja": "今日中にご返答をいただけますでしょうか。",
+      "phonics": "/aɪl niːd ə rɪˈspɒns baɪ ɛnd əv deɪ/",
+      "katakana": "アイル　ニード　ア　レスポンス　バイ　エンド　オブ　デイ",
+      "type": "phrase", "emphasis": ["response by end of day"],
+      "scene": "今日中の返答を求めるときの定番表現。「EOD」と略されることもある。",
+      "street_note": "「by end of day」＝「EOD」。ビジネスメールにも頻繁に登場する略語。", "illustration_scene": "phone-urgent"
+    },
+    {
+      "id": "pc-057", "num": 57, "category": "urgent",
+      "phrase_en": "Can we jump on a quick call?",
+      "phrase_ja": "少しお電話でお話しできますか？",
+      "phonics": "/kæn wiː dʒʌmp ɒn ə kwɪk kɔːl/",
+      "katakana": "キャン　ウィー　ジャンプ　オン　ア　クイック　コール",
+      "type": "phrase", "emphasis": ["jump on a quick call"],
+      "scene": "メールで解決できない問題を電話で直接話したいとき。「quick」で手短に済む安心感を与える。",
+      "street_note": "「jump on a call」はビジネス英語の定番表現。メールやチャットでもよく使われる。", "illustration_scene": "phone-urgent"
+    },
+    {
+      "id": "pc-058", "num": 58, "category": "urgent",
+      "phrase_en": "Something's come up — I need your help.",
+      "phrase_ja": "問題が発生しまして、助けていただきたいのですが。",
+      "phonics": "/ˈsʌmθɪŋz kʌm ʌp aɪ niːd jʊər hɛlp/",
+      "katakana": "サムシングズ　カム　アップ　アイ　ニード　ユア　ヘルプ",
+      "type": "phrase", "emphasis": ["Something's come up"],
+      "scene": "急な問題が生じたことを伝える冒頭フレーズ。「come up」＝問題・予定が発生するの意。",
+      "street_note": null, "illustration_scene": "phone-urgent"
+    },
+    {
+      "id": "pc-059", "num": 59, "category": "urgent",
+      "phrase_en": "I apologize for the short notice.",
+      "phrase_ja": "急なご連絡となりまして、大変申し訳ありません。",
+      "phonics": "/aɪ əˈpɒlədʒaɪz fər ðə ʃɔːrt ˈnoʊtɪs/",
+      "katakana": "アイ　アポロジャイズ　フォー　ザ　ショート　ノーティス",
+      "type": "phrase", "emphasis": ["I apologize for the short notice"],
+      "scene": "急に連絡した際の謝罪フレーズ。「short notice」＝急な連絡、という意味。",
+      "street_note": null, "illustration_scene": "phone-urgent"
+    },
+    {
+      "id": "pc-060", "num": 60, "category": "urgent",
+      "phrase_en": "Could you take a look at this as soon as possible?",
+      "phrase_ja": "できるだけ早く確認していただけますか？",
+      "phonics": "/kʊd juː teɪk ə lʊk æt ðɪs æz suːn æz ˈpɒsɪbl/",
+      "katakana": "クッド　ユー　テイク　ア　ルック　アット　ジス　アズ　スーン　アズ　ポッシブル",
+      "type": "phrase", "emphasis": ["as soon as possible"],
+      "scene": "緊急確認を依頼するとき。「ASAP」の書き言葉版。口頭ではこちらが自然。",
+      "street_note": "「ASAP」＝「as soon as possible」の略。メールではASAPとも書く。", "illustration_scene": "phone-urgent"
+    },
+    {
+      "id": "pc-061", "num": 61, "category": "requests",
+      "phrase_en": "Could you possibly arrange that for me?",
+      "phrase_ja": "手配していただくことはできますか？",
+      "phonics": "/kʊd juː ˈpɒsɪbli əˈreɪndʒ ðæt fər miː/",
+      "katakana": "クッド　ユー　ポッシブリー　アレンジ　ザット　フォー　ミー",
+      "type": "phrase", "emphasis": ["Could you possibly arrange that"],
+      "scene": "相手に何かを手配してもらうときの丁寧な依頼表現。「possibly」が柔らかさを加える。",
+      "street_note": null, "illustration_scene": "phone-office"
+    },
+    {
+      "id": "pc-062", "num": 62, "category": "requests",
+      "phrase_en": "I'd like to place an order for 200 units.",
+      "phrase_ja": "200個の注文をしたいのですが。",
+      "phonics": "/aɪd laɪk tə pleɪs ən ˈɔːrdər fər tuː ˈhʌndrəd ˈjuːnɪts/",
+      "katakana": "アイド　ライク　トゥ　プレイス　アン　オーダー　フォー　トゥー　ハンドレッド　ユニッツ",
+      "type": "phrase", "emphasis": ["place an order"],
+      "scene": "電話で発注するときの表現。「place an order」＝注文を入れる、は必須フレーズ。",
+      "street_note": null, "illustration_scene": "phone-office"
+    },
+    {
+      "id": "pc-063", "num": 63, "category": "requests",
+      "phrase_en": "Could you check the availability for next week?",
+      "phrase_ja": "来週の空き状況を確認していただけますか？",
+      "phonics": "/kʊd juː tʃɛk ðə əˌveɪləˈbɪlɪti fər nɛkst wiːk/",
+      "katakana": "クッド　ユー　チェック　ザ　アヴェイラビリティ　フォー　ネクスト　ウィーク",
+      "type": "phrase", "emphasis": ["check the availability"],
+      "scene": "在庫・予約・スケジュールの空き状況を確認してもらうとき。",
+      "street_note": null, "illustration_scene": "phone-office"
+    },
+    {
+      "id": "pc-064", "num": 64, "category": "requests",
+      "phrase_en": "I'd appreciate it if you could get back to me by Friday.",
+      "phrase_ja": "金曜日までにご連絡いただけますと助かります。",
+      "phonics": "/aɪd əˈpriːʃɪeɪt ɪt ɪf juː kʊd ɡɛt bæk tə miː baɪ ˈfraɪdeɪ/",
+      "katakana": "アイド　アプリーシエイト　イット　イフ　ユー　クッド　ゲット　バック　トゥ　ミー　バイ　フライデイ",
+      "type": "phrase", "emphasis": ["I'd appreciate it if"],
+      "scene": "期限を指定しつつ、押しつけにならない丁寧な依頼の表現。",
+      "street_note": null, "illustration_scene": "phone-office"
+    },
+    {
+      "id": "pc-065", "num": 65, "category": "requests",
+      "phrase_en": "Would it be possible to extend the deadline by one week?",
+      "phrase_ja": "締め切りを1週間延ばすことはできますか？",
+      "phonics": "/wʊd ɪt biː ˈpɒsɪbl tə ɪkˈstɛnd ðə ˈdɛdlaɪn baɪ wʌn wiːk/",
+      "katakana": "ウッド　イット　ビー　ポッシブル　トゥ　エクステンド　ザ　デッドライン　バイ　ワン　ウィーク",
+      "type": "phrase", "emphasis": ["Would it be possible to extend the deadline"],
+      "scene": "期限の延長をお願いするとき。「Would it be possible」が最も断りやすい聞き方。",
+      "street_note": null, "illustration_scene": "phone-office"
+    },
+    {
+      "id": "pc-066", "num": 66, "category": "requests",
+      "phrase_en": "Could you put that in writing and send it over?",
+      "phrase_ja": "書面にしてお送りいただけますか？",
+      "phonics": "/kʊd juː pʊt ðæt ɪn ˈraɪtɪŋ ænd sɛnd ɪt ˈoʊvər/",
+      "katakana": "クッド　ユー　プット　ザット　イン　ライティング　アンド　センド　イット　オーバー",
+      "type": "phrase", "emphasis": ["put that in writing"],
+      "scene": "電話での合意事項を書面・メールで送ってもらうお願い。証拠を残す大切な手順。",
+      "street_note": null, "illustration_scene": "phone-office"
+    },
+    {
+      "id": "pc-067", "num": 67, "category": "requests",
+      "phrase_en": "I'll need to get approval before I can commit to that.",
+      "phrase_ja": "その点につきましては、上長の承認を得てからでないとお答えできません。",
+      "phonics": "/aɪl niːd tə ɡɛt əˈpruːvəl bɪˈfɔːr aɪ kæn kəˈmɪt tə ðæt/",
+      "katakana": "アイル　ニード　トゥ　ゲット　アプルーバル　ビフォア　アイ　キャン　コミット　トゥ　ザット",
+      "type": "phrase", "emphasis": ["get approval", "commit to that"],
+      "scene": "その場で決められない場合に、承認プロセスの必要性を丁寧に伝えるフレーズ。",
+      "street_note": null, "illustration_scene": "phone-office"
+    },
+    {
+      "id": "pc-068", "num": 68, "category": "requests",
+      "phrase_en": "Could you give me a rough estimate?",
+      "phrase_ja": "大まかな見積もりを教えていただけますか？",
+      "phonics": "/kʊd juː ɡɪv miː ə rʌf ˈɛstɪmɪt/",
+      "katakana": "クッド　ユー　ギブ　ミー　ア　ラフ　エスティメイト",
+      "type": "phrase", "emphasis": ["rough estimate"],
+      "scene": "正確な数字は後でいいので、まず概算を知りたいときに使う表現。",
+      "street_note": "「rough」＝大まかな、おおよその。「rough estimate」はビジネスで頻出の組み合わせ。", "illustration_scene": "phone-office"
+    },
+    {
+      "id": "pc-069", "num": 69, "category": "requests",
+      "phrase_en": "I'm hoping we can work something out.",
+      "phrase_ja": "何か折り合いをつけられればと思っているのですが。",
+      "phonics": "/aɪm ˈhoʊpɪŋ wiː kæn wɜːrk ˈsʌmθɪŋ aʊt/",
+      "katakana": "アイム　ホーピング　ウィー　キャン　ワーク　サムシング　アウト",
+      "type": "idiom", "emphasis": ["work something out"],
+      "scene": "交渉や調整を試みたいという意欲を表現するフレーズ。「work out」＝うまくまとめる。",
+      "street_note": null, "illustration_scene": "phone-office"
+    },
+    {
+      "id": "pc-070", "num": 70, "category": "requests",
+      "phrase_en": "Would you be willing to reconsider?",
+      "phrase_ja": "再考していただくことはできますか？",
+      "phonics": "/wʊd juː biː ˈwɪlɪŋ tə ˌriːkənˈsɪdər/",
+      "katakana": "ウッド　ユー　ビー　ウィリング　トゥ　リーコンシダー",
+      "type": "phrase", "emphasis": ["willing to reconsider"],
+      "scene": "断られた提案に再考を求めるときの丁寧な一言。直接「もう一度考えて」より柔らかい。",
+      "street_note": null, "illustration_scene": "phone-office"
+    },
+    {
+      "id": "pc-071", "num": 71, "category": "clarity",
+      "phrase_en": "I'm sorry, I didn't quite catch that.",
+      "phrase_ja": "すみません、少し聞き取れませんでした。",
+      "phonics": "/aɪm ˈsɒri aɪ ˈdɪdnt kwaɪt kætʃ ðæt/",
+      "katakana": "アイム　ソーリー　アイ　ディドント　クワイト　キャッチ　ザット",
+      "type": "phrase", "emphasis": ["didn't quite catch that"],
+      "scene": "聞き取れなかったときの最も自然で丁寧な表現。「catch」＝聞き取る、受け取る。",
+      "street_note": "「catch」は口語で「聞き取る」の意味。「I didn't catch your name」などよく使われる。", "illustration_scene": "phone-clarity"
+    },
+    {
+      "id": "pc-072", "num": 72, "category": "clarity",
+      "phrase_en": "Could you speak a little more slowly, please?",
+      "phrase_ja": "もう少しゆっくり話していただけますか？",
+      "phonics": "/kʊd juː spiːk ə ˈlɪtəl mɔːr ˈsloʊli pliːz/",
+      "katakana": "クッド　ユー　スピーク　ア　リトル　モア　スローリー　プリーズ",
+      "type": "phrase", "emphasis": ["speak a little more slowly"],
+      "scene": "相手のテンポが速すぎて聞き取りにくいときのお願い。「a little」で失礼にならない。",
+      "street_note": null, "illustration_scene": "phone-clarity"
+    },
+    {
+      "id": "pc-073", "num": 73, "category": "clarity",
+      "phrase_en": "Could you say that again, please?",
+      "phrase_ja": "もう一度おっしゃっていただけますか？",
+      "phonics": "/kʊd juː seɪ ðæt əˈɡɛn pliːz/",
+      "katakana": "クッド　ユー　セイ　ザット　アゲン　プリーズ",
+      "type": "phrase", "emphasis": ["say that again"],
+      "scene": "最もシンプルな聞き返しフレーズ。「Could you」で丁寧さが増す。",
+      "street_note": null, "illustration_scene": "phone-clarity"
+    },
+    {
+      "id": "pc-074", "num": 74, "category": "clarity",
+      "phrase_en": "I'm sorry, the line isn't very clear.",
+      "phrase_ja": "すみません、回線の状態があまりよくないようです。",
+      "phonics": "/aɪm ˈsɒri ðə laɪn ˈɪznt ˈvɛri klɪər/",
+      "katakana": "アイム　ソーリー　ザ　ライン　イズント　ベリー　クリアー",
+      "type": "phrase", "emphasis": ["the line isn't very clear"],
+      "scene": "音声品質が悪いときに使う表現。原因を回線に帰することで相手への非難を避ける。",
+      "street_note": null, "illustration_scene": "phone-clarity"
+    },
+    {
+      "id": "pc-075", "num": 75, "category": "clarity",
+      "phrase_en": "You're cutting in and out — could you try again?",
+      "phrase_ja": "音声が途切れ途切れになっています。もう一度おかけ直しいただけますか？",
+      "phonics": "/jʊər ˈkʌtɪŋ ɪn ænd aʊt kʊd juː traɪ əˈɡɛn/",
+      "katakana": "ユア　カッティング　イン　アンド　アウト　クッド　ユー　トライ　アゲン",
+      "type": "phrase", "emphasis": ["cutting in and out"],
+      "scene": "音声が断続的に聞こえる状態の表現。「cut in and out」は電話特有のビジネス英語。",
+      "street_note": null, "illustration_scene": "phone-clarity"
+    },
+    {
+      "id": "pc-076", "num": 76, "category": "clarity",
+      "phrase_en": "I can barely hear you.",
+      "phrase_ja": "ほとんど声が聞こえていない状態です。",
+      "phonics": "/aɪ kæn ˈbɛrli hɪər juː/",
+      "katakana": "アイ　キャン　ベアリー　ヒア　ユー",
+      "type": "phrase", "emphasis": ["barely hear you"],
+      "scene": "音声がほぼ聞こえないときに使う。「barely」＝かろうじて、ほとんど〜ない。",
+      "street_note": null, "illustration_scene": "phone-clarity"
+    },
+    {
+      "id": "pc-077", "num": 77, "category": "clarity",
+      "phrase_en": "Could you repeat the last part?",
+      "phrase_ja": "最後のところをもう一度おっしゃっていただけますか？",
+      "phonics": "/kʊd juː rɪˈpiːt ðə læst pɑːrt/",
+      "katakana": "クッド　ユー　リピート　ザ　ラスト　パート",
+      "type": "phrase", "emphasis": ["repeat the last part"],
+      "scene": "全部ではなく最後の部分だけ聞き取れなかったときの効率的な聞き返し方。",
+      "street_note": null, "illustration_scene": "phone-clarity"
+    },
+    {
+      "id": "pc-078", "num": 78, "category": "clarity",
+      "phrase_en": "Did you say Tuesday or Thursday?",
+      "phrase_ja": "火曜日とおっしゃいましたか？それとも木曜日でしょうか？",
+      "phonics": "/dɪd juː seɪ ˈtjuːzdeɪ ɔːr ˈθɜːrzdeɪ/",
+      "katakana": "ディド　ユー　セイ　チューズデイ　オア　サーズデイ",
+      "type": "phrase", "emphasis": ["Did you say Tuesday or Thursday"],
+      "scene": "紛らわしい単語の聞き直し。TuesdayとThursdayは電話越しに特に混同しやすい。",
+      "street_note": "TとThが混同しやすいのは国際電話あるある。「T for Tokyo / TH for Thursday」と明示するのも有効。", "illustration_scene": "phone-clarity"
+    },
+    {
+      "id": "pc-079", "num": 79, "category": "clarity",
+      "phrase_en": "Let me just read that back to make sure I've got it right.",
+      "phrase_ja": "念のため復唱させていただきます。",
+      "phonics": "/lɛt miː dʒʌst riːd ðæt bæk tə meɪk ʃʊər aɪv ɡɒt ɪt raɪt/",
+      "katakana": "レット　ミー　ジャスト　リード　ザット　バック　トゥ　メイク　シュア　アイブ　ゴット　イット　ライト",
+      "type": "phrase", "emphasis": ["read that back", "make sure I've got it right"],
+      "scene": "重要な情報を復唱して確認するときのフレーズ。番号・日時などのミス防止に必須。",
+      "street_note": null, "illustration_scene": "phone-clarity"
+    },
+    {
+      "id": "pc-080", "num": 80, "category": "clarity",
+      "phrase_en": "Would you mind texting me that information?",
+      "phrase_ja": "その情報をテキストで送っていただけますか？",
+      "phonics": "/wʊd juː maɪnd ˈtɛkstɪŋ miː ðæt ˌɪnfərˈmeɪʃən/",
+      "katakana": "ウッド　ユー　マインド　テクスティング　ミー　ザット　インフォメーション",
+      "type": "phrase", "emphasis": ["texting me that information"],
+      "scene": "複雑な情報は電話より文字の方が確実。テキスト送信を依頼するときの表現。",
+      "street_note": null, "illustration_scene": "phone-clarity"
+    },
+    {
+      "id": "pc-081", "num": 81, "category": "offduty",
+      "phrase_en": "I'm afraid I can't talk right now.",
+      "phrase_ja": "あいにく、今はお電話が難しい状況です。",
+      "phonics": "/aɪm əˈfreɪd aɪ kænt tɔːk raɪt naʊ/",
+      "katakana": "アイム　アフレイド　アイ　キャント　トーク　ライト　ナウ",
+      "type": "phrase", "emphasis": ["I'm afraid", "can't talk right now"],
+      "scene": "電話に出たが話せない状況のとき。「I'm afraid」がビジネス的な丁寧さを加える。",
+      "street_note": null, "illustration_scene": "phone-offduty"
+    },
+    {
+      "id": "pc-082", "num": 82, "category": "offduty",
+      "phrase_en": "Can I call you back in about an hour?",
+      "phrase_ja": "1時間ほどで折り返してもよいでしょうか？",
+      "phonics": "/kæn aɪ kɔːl juː bæk ɪn əˈbaʊt ən ˈaʊər/",
+      "katakana": "キャン　アイ　コール　ユー　バック　イン　アバウト　アン　アワー",
+      "type": "phrase", "emphasis": ["call you back in about an hour"],
+      "scene": "手が離せないときに、折り返す時間を伝えて相手に了承を得るフレーズ。",
+      "street_note": null, "illustration_scene": "phone-offduty"
+    },
+    {
+      "id": "pc-083", "num": 83, "category": "offduty",
+      "phrase_en": "I'm in the middle of something — can I call you right back?",
+      "phrase_ja": "今ちょうど手が離せないのですが、すぐに折り返してよいですか？",
+      "phonics": "/aɪm ɪn ðə ˈmɪdl əv ˈsʌmθɪŋ kæn aɪ kɔːl juː raɪt bæk/",
+      "katakana": "アイム　イン　ザ　ミドル　オブ　サムシング　キャン　アイ　コール　ユー　ライト　バック",
+      "type": "phrase", "emphasis": ["in the middle of something", "call you right back"],
+      "scene": "作業中に電話がかかってきた場合の丁寧な断りと折り返しの約束。",
+      "street_note": "「right back」＝すぐに折り返す。「I'll be right back」とも言える。", "illustration_scene": "phone-offduty"
+    },
+    {
+      "id": "pc-084", "num": 84, "category": "offduty",
+      "phrase_en": "Is this something that can wait until Monday?",
+      "phrase_ja": "月曜日まで待っていただける内容でしょうか？",
+      "phonics": "/ɪz ðɪs ˈsʌmθɪŋ ðæt kæn weɪt ʌnˈtɪl ˈmʌndeɪ/",
+      "katakana": "イズ　ジス　サムシング　ザット　キャン　ウェイト　アンティル　マンデイ",
+      "type": "phrase", "emphasis": ["can wait until Monday"],
+      "scene": "休日の電話に、月曜日まで待てるかを確認するフレーズ。緊急度を相手に判断させる。",
+      "street_note": null, "illustration_scene": "phone-offduty"
+    },
+    {
+      "id": "pc-085", "num": 85, "category": "offduty",
+      "phrase_en": "I'll look into it first thing when I'm back in the office.",
+      "phrase_ja": "出社次第、真っ先に確認いたします。",
+      "phonics": "/aɪl lʊk ˈɪntə ɪt fɜːrst θɪŋ wɛn aɪm bæk ɪn ðə ˈɒfɪs/",
+      "katakana": "アイル　ルック　イントゥ　イット　ファースト　シング　ウェン　アイム　バック　イン　ザ　オフィス",
+      "type": "phrase", "emphasis": ["first thing when I'm back in the office"],
+      "scene": "今日は対応できないが、出社後すぐに動くことを約束するフレーズ。",
+      "street_note": null, "illustration_scene": "phone-offduty"
+    },
+    {
+      "id": "pc-086", "num": 86, "category": "offduty",
+      "phrase_en": "I'm off today, but I'll make sure someone gets back to you.",
+      "phrase_ja": "本日は休暇を取っておりますが、誰かが折り返すよう手配いたします。",
+      "phonics": "/aɪm ɒf təˈdeɪ bʌt aɪl meɪk ʃʊər ˈsʌmwʌn ɡɛts bæk tə juː/",
+      "katakana": "アイム　オフ　トゥデイ　バット　アイル　メイク　シュア　サムワン　ゲッツ　バック　トゥ　ユー",
+      "type": "phrase", "emphasis": ["off today", "make sure someone gets back to you"],
+      "scene": "休日に着信があり、対応の責任は持ちつつも自分では動けない状況を伝えるフレーズ。",
+      "street_note": null, "illustration_scene": "phone-offduty"
+    },
+    {
+      "id": "pc-087", "num": 87, "category": "offduty",
+      "phrase_en": "Let me step outside and call you right back.",
+      "phrase_ja": "少し外に出て、すぐにかけ直します。",
+      "phonics": "/lɛt miː stɛp aʊtˈsaɪd ænd kɔːl juː raɪt bæk/",
+      "katakana": "レット　ミー　ステップ　アウトサイド　アンド　コール　ユー　ライト　バック",
+      "type": "phrase", "emphasis": ["step outside", "right back"],
+      "scene": "電車・会議室など、今は話せない場所にいるときに外へ出て折り返すことを伝える。",
+      "street_note": null, "illustration_scene": "phone-offduty"
+    },
+    {
+      "id": "pc-088", "num": 88, "category": "offduty",
+      "phrase_en": "Is this an emergency, or can it wait?",
+      "phrase_ja": "緊急のご用件ですか？それとも後ほどでもよろしいでしょうか？",
+      "phonics": "/ɪz ðɪs ən ɪˈmɜːrdʒənsi ɔːr kæn ɪt weɪt/",
+      "katakana": "イズ　ジス　アン　エマージェンシー　オア　キャン　イット　ウェイト",
+      "type": "phrase", "emphasis": ["emergency", "can it wait"],
+      "scene": "着信した際、対応の優先度を確認するための直接的なフレーズ。休日や外出中に有効。",
+      "street_note": null, "illustration_scene": "phone-offduty"
+    },
+    {
+      "id": "pc-089", "num": 89, "category": "offduty",
+      "phrase_en": "Could you send me a quick email with the details?",
+      "phrase_ja": "詳細をメールで簡単にお送りいただけますか？",
+      "phonics": "/kʊd juː sɛnd miː ə kwɪk ˈiːmeɪl wɪð ðə ˈdiːteɪlz/",
+      "katakana": "クッド　ユー　センド　ミー　ア　クイック　イーメール　ウィズ　ザ　ディーテイルズ",
+      "type": "phrase", "emphasis": ["send me a quick email with the details"],
+      "scene": "今は話せないが、内容を把握したいときにメールで概要を送ってもらうお願い。",
+      "street_note": null, "illustration_scene": "phone-offduty"
+    },
+    {
+      "id": "pc-090", "num": 90, "category": "offduty",
+      "phrase_en": "Thanks for reaching out. I'll get back to you shortly.",
+      "phrase_ja": "ご連絡ありがとうございます。すぐにご対応いたします。",
+      "phonics": "/θæŋks fər ˈriːtʃɪŋ aʊt aɪl ɡɛt bæk tə juː ˈʃɔːrtli/",
+      "katakana": "サンクス　フォー　リーチング　アウト　アイル　ゲット　バック　トゥ　ユー　ショートリー",
+      "type": "phrase", "emphasis": ["reaching out", "get back to you shortly"],
+      "scene": "連絡をもらったことへの感謝と、すぐに対応する旨を伝えるフレーズ。",
+      "street_note": "「reach out」＝連絡する、手を伸ばす。ビジネスメールでも頻繁に登場する表現。", "illustration_scene": "phone-offduty"
+    },
+    {
+      "id": "pc-091", "num": 91, "category": "closing",
+      "phrase_en": "Thank you so much for your time today.",
+      "phrase_ja": "本日はお時間をいただきありがとうございました。",
+      "phonics": "/θæŋk juː soʊ mʌtʃ fər jʊər taɪm təˈdeɪ/",
+      "katakana": "サンキュー　ソー　マッチ　フォー　ユア　タイム　トゥデイ",
+      "type": "phrase", "emphasis": ["Thank you so much for your time"],
+      "scene": "電話の締めで使う感謝のフレーズ。「your time」と言うことで相手の時間を尊重する。",
+      "street_note": null, "illustration_scene": "phone-closing"
+    },
+    {
+      "id": "pc-092", "num": 92, "category": "closing",
+      "phrase_en": "I'll get right on that.",
+      "phrase_ja": "すぐに取り掛かります。",
+      "phonics": "/aɪl ɡɛt raɪt ɒn ðæt/",
+      "katakana": "アイル　ゲット　ライト　オン　ザット",
+      "type": "phrase", "emphasis": ["get right on that"],
+      "scene": "指示や依頼を受けたあと、即座に動く意思を示す表現。電話の締めで使いやすい。",
+      "street_note": null, "illustration_scene": "phone-closing"
+    },
+    {
+      "id": "pc-093", "num": 93, "category": "closing",
+      "phrase_en": "Please don't hesitate to call if you need anything.",
+      "phrase_ja": "何かございましたら、いつでもお電話ください。",
+      "phonics": "/pliːz doʊnt ˈhɛzɪteɪt tə kɔːl ɪf juː niːd ˈɛniθɪŋ/",
+      "katakana": "プリーズ　ドント　ヘジテイト　トゥ　コール　イフ　ユー　ニード　エニシング",
+      "type": "phrase", "emphasis": ["don't hesitate to call"],
+      "scene": "電話の締めで使う定番フレーズ。相手への気遣いと窓口の開放感を示す。",
+      "street_note": null, "illustration_scene": "phone-closing"
+    },
+    {
+      "id": "pc-094", "num": 94, "category": "closing",
+      "phrase_en": "It was great speaking with you.",
+      "phrase_ja": "お話しできてよかったです。",
+      "phonics": "/ɪt wɒz ɡreɪt ˈspiːkɪŋ wɪð juː/",
+      "katakana": "イット　ウォズ　グレート　スピーキング　ウィズ　ユー",
+      "type": "phrase", "emphasis": ["great speaking with you"],
+      "scene": "電話の締めで親しみを込めた一言。初めての相手にも使いやすいフレーズ。",
+      "street_note": null, "illustration_scene": "phone-closing"
+    },
+    {
+      "id": "pc-095", "num": 95, "category": "closing",
+      "phrase_en": "I'll be in touch.",
+      "phrase_ja": "またご連絡いたします。",
+      "phonics": "/aɪl biː ɪn tʌtʃ/",
+      "katakana": "アイル　ビー　イン　タッチ",
+      "type": "phrase", "emphasis": ["be in touch"],
+      "scene": "次の連絡を示唆する締めの言葉。定期的にやりとりがある相手に特に自然。",
+      "street_note": "「stay in touch」は「連絡を取り合いましょう」の意。こちらは自分から連絡すると示すニュアンス。", "illustration_scene": "phone-closing"
+    },
+    {
+      "id": "pc-096", "num": 96, "category": "closing",
+      "phrase_en": "Have a good rest of your day.",
+      "phrase_ja": "残りの一日もよい時間をお過ごしください。",
+      "phonics": "/hæv ə ɡʊd rɛst əv jʊər deɪ/",
+      "katakana": "ハブ　ア　グッド　レスト　オブ　ユア　デイ",
+      "type": "phrase", "emphasis": ["rest of your day"],
+      "scene": "電話の締めの挨拶。アメリカで特によく使われる温かみのある一言。",
+      "street_note": null, "illustration_scene": "phone-closing"
+    },
+    {
+      "id": "pc-097", "num": 97, "category": "closing",
+      "phrase_en": "I look forward to working with you on this.",
+      "phrase_ja": "ご一緒できることを楽しみにしております。",
+      "phonics": "/aɪ lʊk ˈfɔːrwərd tə ˈwɜːrkɪŋ wɪð juː ɒn ðɪs/",
+      "katakana": "アイ　ルック　フォワード　トゥ　ワーキング　ウィズ　ユー　オン　ジス",
+      "type": "phrase", "emphasis": ["look forward to working with you"],
+      "scene": "新しい取引や共同プロジェクトの始まりを締めくくるフォーマルなフレーズ。",
+      "street_note": null, "illustration_scene": "phone-closing"
+    },
+    {
+      "id": "pc-098", "num": 98, "category": "closing",
+      "phrase_en": "We'll talk soon.",
+      "phrase_ja": "またすぐにお話ししましょう。",
+      "phonics": "/wiːl tɔːk suːn/",
+      "katakana": "ウィル　トーク　スーン",
+      "type": "phrase", "emphasis": ["talk soon"],
+      "scene": "定期的に連絡を取り合う相手への気軽な締め。カジュアルで親しみやすい。",
+      "street_note": null, "illustration_scene": "phone-closing"
+    },
+    {
+      "id": "pc-099", "num": 99, "category": "closing",
+      "phrase_en": "Thanks again for your help.",
+      "phrase_ja": "改めて、ご協力ありがとうございました。",
+      "phonics": "/θæŋks əˈɡɛn fər jʊər hɛlp/",
+      "katakana": "サンクス　アゲン　フォー　ユア　ヘルプ",
+      "type": "phrase", "emphasis": ["Thanks again"],
+      "scene": "電話中に何かをしてもらった場合に、締めで改めて感謝を伝えるフレーズ。",
+      "street_note": null, "illustration_scene": "phone-closing"
+    },
+    {
+      "id": "pc-100", "num": 100, "category": "closing",
+      "phrase_en": "Take care. Goodbye.",
+      "phrase_ja": "お気をつけて。では失礼いたします。",
+      "phonics": "/teɪk kɛr ɡʊdˈbaɪ/",
+      "katakana": "テイク　ケア　グッドバイ",
+      "type": "phrase", "emphasis": ["Take care"],
+      "scene": "最後の一言。「Goodbye」だけより温かみが増す。どんな相手にも使えるシンプルな締め。",
+      "street_note": null, "illustration_scene": "phone-closing"
+    }
+  ]
+}
